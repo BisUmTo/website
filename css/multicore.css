@@ -1,0 +1,122 @@
+:root {
+    --light-blue: #64b5f6;
+    --blue: #2196f3;
+    --dark-blue: #2962ff;
+    --darker-blue: #0d47a1;
+    --almost-black: #282828;
+    --darker-gray: #323232;
+    --dark-gray: #424242;
+    --almost-white: #e0e0e0;
+    --youtube-red: #ff0000;
+    --redcraft-red: #b71c1c;
+    --green: #43a047;
+    --yellow: #ffb300;
+}
+.separator {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--redcraft-red);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.block {
+    padding-top: 2.5em;
+    padding-bottom: 3em;
+}
+.block h1 {
+    margin-bottom: 0.7em;
+}
+.margin-lr {
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+.bg-blue {
+    background-color: var(--dark-blue);
+    color: white;
+}
+.bg-blue .link {
+    color: var(--almost-white);
+    text-decoration: underline;
+}
+.bg-blue .link:hover {
+    color: white;
+    text-decoration: underline;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.50);
+}
+.bg-blue .button {
+    display: inline-block;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    color: var(--dark-blue);
+    margin: 10px;
+    padding: 0.65em 0.7em 0.65em 0.7em;
+    font-size: 105%;
+    font-variant: small-caps;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.30);
+}
+.bg-blue .button:hover {
+    color: var(--darker-blue);
+    text-decoration: none;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.50);
+}
+.bg-blue h1, .bg-blue h2, .bg-blue h3, .bg-blue h4, .bg-blue h5, .bg-blue h6 {
+    color: white;
+}
+.bg-white {
+    background-color: white;
+    color: var(--almost-black);
+}
+.bg-white .link {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+.bg-white .link:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.50);
+}
+.bg-white .button {
+    display: inline-block;
+    background-color: var(--redcraft-red);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    margin: 10px;
+    padding: 0.65em 0.7em 0.65em 0.7em;
+    font-size: 105%;
+    font-variant: small-caps;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.30);
+}
+.bg-white .button:hover {
+    color: var(--almost-white);
+    background-color: var(--redcraft-red);
+    text-decoration: none;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.50);
+}
+.bg-gray {
+    background-color: var(--almost-black);
+    color: white;
+}
+.bg-gray .link {
+    color: var(--almost-white);
+    text-decoration: underline;
+}
+.bg-gray .link:hover {
+    color: white;
+    text-decoration: underline;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.50);
+}
+.bg-red {
+    background-color: var(--redcraft-red);
+    color: white;
+}

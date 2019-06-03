@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--Header:-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Il sito ufficiale di BisUmTo">
+    <meta name="keywords" content="multicore network, multicore, bisumto">
+    <meta name="author" content="LoreSchaeffer, BisUmTo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#282828">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/multicore.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+    <script src="../js/scripts.js" defer></script>
+    <!--:Header-->
+
+    <title>BisUmTo - Biloma</title>
+    <script src="../js/pages/biloma.js" defer></script>
+    <link rel="stylesheet" href="../css/pages/biloma.css">
+</head>
+<body>
+    <div w3-include-html="../components/navbar.html"></div> 
+    <section id="header" class="bg-red">
+        <div class="container-fluid block">
+            <h1>Biloma<br><small>Motion Calculator</small></h1>
+        </div>
+    </section>
+    <section id="content">
+        <div class="container-fluid bg-gray block">
+            <h2 id="title">Di cosa si tratta?</h2>
+            <p id="subtitle">Questo piccolo algoritmo ti permetterà di capire la <i>motion</i> da applicare ad un <i>falling_block</i> per compiere una determinata traiettoria.</p>
+        </div>
+        <div class="container-fluid bg-white block">
+            <h4>Istruzioni:</h4>
+            <p>
+                Inserisci nei campi qui sotto le coordinate di origine, quelle di destinazione, la velocità in tick e il nome del blocco (esempio <i>minecraft:stone</i>).
+                <br>
+                Spunta la casella in fondo se vuoi che vengano utilizzate coordinate relative.
+                <br>
+                Inseriti i dati troverai il comado da eseguire per ottenere la traiettoria desiderata.
+            </p>
+            <div class="row">
+                <div class="col-md-5">
+                    <form>
+                        <label for="origin">Origine/Origin:</label>
+                        <div id="origin" class="form-group row">
+                            <div class="form-row col-md-auto">
+                                <input type="number" class="form-control" id="originX" name="originX" placeholder="X" onchange="update()">
+                            </div>
+                            <div class="form-row col-md-auto">
+                                <input type="number" class="form-control" id="originY" name="originY" placeholder="Y" onchange="update()">
+                            </div>
+                            <div class="form-row col-md-auto">
+                                <input type="number" class="form-control" id="originZ" name="originZ" placeholder="Z" onchange="update()">
+                            </div>
+                        </div>
+                        <label for="destination">Destinazione/Destination:</label>
+                        <div id="destination" class="form-group row">
+                            <div class="form-row col-md-auto">
+                                <input type="number" class="form-control" id="destinationX" name="destinationX" placeholder="X" onchange="update()">
+                            </div>
+                            <div class="form-row col-md-auto">
+                                <input type="number" class="form-control" id="destinationY" name="destinationY" placeholder="Y" onchange="update()">
+                            </div>
+                            <div class="form-row col-md-auto">
+                                <input type="number" class="form-control" id="destinationZ" name="destinationZ" placeholder="Z" onchange="update()">
+                            </div>
+                        </div>
+                        <label for="tickAndBlock">Ticks &amp; Block:</label>
+                        <div id="tickAndBlock" class="form-group row">
+                            <div class="form-row col-md-auto">
+                                <input type="number" class="form-control" id="ticks" name="ticks" placeholder="Ticks" onchange="update()">
+                                <div class="invalid-feedback">Il valore deve essere maggiore o uguale a 1</div>
+                            </div>
+                            <div class="form-row col-md-auto">
+                                <input type="text" class="form-control" id="block" name="block" placeholder="Block Name" onchange="update()">
+                            </div>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="relative" checked onchange="update()">
+                            <label class="form-check-label" for="relative">Cordinate relative/Relative cords</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-7">
+                    <code id="bilomaOutput">
+                        /summon falling_block <span id="outOriginX">~</span> <span id="outOriginY">~</span> <span id="outOriginZ">~</span> {Motion:[<span id="outMotionX">0.0</span>,<span id="outMotionY">0.0</span>,<span id="outMotionZ">0.0</span>],BlockState:{Name:"minecraft:<span id="outBlock">stone</span>"},Time:1,DropItem:0}
+                    </code>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div w3-include-html="../components/footer.html"></div> 
+    <script> includeHTML(); </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+footer {
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    background-color: var(--almost-black);
+    color: white;
+    text-align: center;
+}
+.navbar-brand img {
+    max-height: 50px;
+}
+.bg-dark {
+    background-color: var(--almost-black) !important;
+}
+.navbar .dropdown:hover>.dropdown-menu {
+    display: block;
+}
+.navbar .navbar-nav .nav-link {
+    margin-right: 0.2em;
+    color: var(--almost-white);
+}
+.navbar .navbar-nav .nav-link:hover {
+    background-color: var(--redcraft-red);
+    border-radius: 25px;
+    color: white;
+}
+.navbar .dropdown-menu {
+    background-color: var(--almost-black);
+}
+.navbar .dropdown-item {
+    color: var(--almost-white);
+}
+.navbar .dropdown-item:hover {
+    background-color: var(--redcraft-red);
+    border-radius: 25px;
+    color: white;
+}
+.navbar .active {
+    background-color: var(--redcraft-red);
+    border-radius: 25px;
+    color: white;
+}
+.usermenu-toggle:hover {
+    background-color: var(--almost-black) !important;
+}
+.video-container {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+.video-container iframe, .video-container object, .video-container embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.bg-primary {
+    background-color: var(--redcraft-red) !important;
+  }

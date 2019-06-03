@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--Header:-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Il sito ufficiale di BisUmTo">
+    <meta name="keywords" content="multicore network, multicore, bisumto">
+    <meta name="author" content="LoreSchaeffer, BisUmTo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#282828">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/multicore.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+    <!--:Header-->
+
+    <title>BisUmTo - Official Site</title>
+    <script src="js/pages/home.js" defer></script>
+    <link rel="stylesheet" href="css/pages/home.css">
+</head>
+<body>
+    <nav id="mainNavbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/"><img class="img-responsive" src="images/navbar-brand.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bisMenu" aria-controls="bisMenu" aria-expanded="false" aria-label="Apri/Chiudi menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="bisMenu">
+            <ul class="navbar-nav mr-auto">
+                <li id="nav-link-home" class="nav-item"><a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li id="nav-link-biloma" class="nav-item"><a class="nav-link" href="biloma"><i class="fas fa-share"></i> Biloma</a></li>
+                <li id="nav-link-redcraft2" class="nav-item"><a class="nav-link" href="redcraft2"><i class="fas fa-signal"></i> RedCraft 2</a></li>
+                <li id="nav-link-multicore" class="nav-item"><a class="nav-link" href="https://multicore.network" target="_blank"><i class="fas fa-globe"></i> MultiCore</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="height: 76px;"></div>
+    <section id="header" class="bg-red">
+        <div class="container-fluid block">
+            <h1>BisUmTo</h1>
+        </div>
+    </section>
+    <section id="content">
+        <div class="container-fluid bg-white block">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <iframe id="youtubeVideo" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Ciao, sono BisUmTo e questo è il mio sito!</h4>
+                    <p>
+                        Forse sarebbe meglio dire sarà, perché al momento come puoi ben vedere non c'è molto visto che è ancora in construzione.
+                        <br>
+                        Però non temere! Nuovi contenuti arriveranno presto!
+                        <br>
+                        Nel frattempo cosa ne dici di guardarti il mio ultimo video!?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div w3-include-html="components/footer.html"></div> 
+
+    <script> includeHTML(); </script>
+</body>
+</html>

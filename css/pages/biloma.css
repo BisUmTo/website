@@ -1,0 +1,27 @@
+#header {
+    text-align: center;
+    font-variant: small-caps;
+}
+#header h1 {
+    line-height: 1;
+}
+#title {
+    text-align: center;
+    font-variant: small-caps;
+}
+#subtitle {
+    text-align: center;
+}
+#bilomaOutput {
+    display: none;
+    word-wrap: break-word;
+}
+form {
+    margin-left: 8%;
+}
+.form-control {
+    max-width: 100px;
+}
+#block {
+    max-width: 200px;
+}
