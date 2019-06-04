@@ -16,7 +16,9 @@
 .bg-white .card .bg-primary {
     background-color: var(--redcraft-red)!important;
 }
-
+h2 {
+    font-variant: small-caps;
+}
 .btn {
     background-color: var(--youtube-red);
     border: none;
