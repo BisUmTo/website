@@ -18,6 +18,7 @@ footer {
 .navbar .navbar-nav .nav-link {
     margin-right: 0.2em;
     color: var(--almost-white);
+    text-align: center;
 }
 .navbar .navbar-nav .nav-link:hover {
     background-color: var(--redcraft-red);
