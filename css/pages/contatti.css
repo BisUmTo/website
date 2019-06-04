@@ -1,0 +1,38 @@
+#header {
+    text-align: center;
+    font-variant: small-caps;
+}
+
+section h1{
+    font-variant:small-caps
+}
+.block p{
+    font-size:110%
+}
+/*.bg-white h1{
+    color:var(--redcraft-red)
+}*/
+.row{
+    margin-top:2em}
+.card{
+    text-align:center
+}
+.card h5.card-title{
+    font-size:800%;color:white
+}
+.card h3{
+    color:white
+}
+.card p{
+    font-size:150%
+}
+.separator{
+    margin:1em 5%;
+    border-color:white
+}
+.top-buffer {
+    margin-top:20px;
+}
+.extra {
+    font-size: 10px
+}
