@@ -13,12 +13,15 @@ section h1{
     color:var(--redcraft-red)
 }*/
 .row{
-    margin-top:2em}
+    margin-top:2em
+}
 .card{
-    text-align:center
+    text-align:center;
+    margin-bottom:1em
 }
 .card h5.card-title{
-    font-size:800%;color:white
+    font-size:800%;
+    color:white
 }
 .card h3{
     color:white
@@ -36,3 +39,13 @@ section h1{
 .extra {
     font-size: 10px
 }
+
+.bg-card-youtube:hover { transition: 0.5s;background-color:#ff0000 }
+.bg-card-teamspeak:hover { transition: 0.5s;background-color:#2980c3 }
+.bg-card-telegram:hover { transition: 0.5s;background-color:#0088cc }
+.bg-card-instagram:hover { transition: 0.5s;background-color:#c32aa3 }
+.bg-card-twitter:hover { transition: 0.5s;background-color:#1da1f2 }
+.bg-card-discord:hover { transition: 0.5s;background-color:#7289da }
+.bg-card-github:hover { transition: 0.5s;background-color:#24292e }
+.bg-card-twitch:hover { transition: 0.5s;background-color:#6441a4 }
+.bg-card-email:hover { transition: 0.5s;background-color:#565656 }

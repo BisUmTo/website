@@ -22,6 +22,7 @@ footer {
 }
 .navbar .navbar-nav .nav-link:hover {
     background-color: var(--redcraft-red);
+    transition: 0.2s;
     border-radius: 25px;
     color: white;
 }
@@ -33,6 +34,7 @@ footer {
 }
 .navbar .dropdown-item:hover {
     background-color: var(--redcraft-red);
+    transition: 0.2s;
     border-radius: 25px;
     color: white;
 }
