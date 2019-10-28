@@ -1,0 +1,35 @@
+#header {
+    text-align: center;
+    font-variant: small-caps;
+}
+#header h1 {
+    line-height: 1;
+}
+#downloadButton {
+    float: right;
+    margin-right: 5%;
+}
+.resourceButton {
+    float: right;
+    margin-right: 5%;
+}
+.bg-white .card .bg-primary {
+    background-color: var(--redcraft-red)!important;
+}
+h2 {
+    font-variant: small-caps;
+}
+.btn {
+    background-color: var(--youtube-red);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.btn:hover {
+    background-color: var(--redcraft-red);
+}
+.versione {
+    font-size: 10px;
+}

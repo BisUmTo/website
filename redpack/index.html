@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--Header:-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Il sito ufficiale di BisUmTo">
+    <meta name="keywords" content="multicore network, multicore, bisumto">
+    <meta name="author" content="LoreSchaeffer, BisUmTo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#282828">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/multicore.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+    <script src="../js/scripts.js" defer></script>
+    <!--:Header-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146517603-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146517603-1');
+    </script>   
+
+    <title>BisUmTo - RedPack</title>
+    <script src='https://stuk.github.io/jszip/dist/jszip.js' defer></script>
+    <script src='https://stuk.github.io/jszip-utils/dist/jszip-utils.js' defer></script>
+    <script src='https://stuk.github.io/jszip/vendor/FileSaver.js' defer></script>
+    <script src="../js/pages/redpack.js" defer></script>
+    <link rel="stylesheet" href="../css/pages/redpack.css">
+</head>
+<body>
+    <div w3-include-html="../components/navbar.html"></div> 
+    <section id="header" class="bg-red">
+        <div class="container-fluid block">
+            <h1>RedPack<br><small> Modular Datapack</small><br><small id="datapackVersion">v.</small></h1>
+        </div>
+    </section>
+    <section id="contant">
+        <div class="container-fluid bg-white block">
+            <div class="row">
+                
+            </div>
+        </div>
+    </section>
+    <div w3-include-html="../components/footer.html"></div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            document.getElementById("nav-link-redcraft2").classList.add("active");
+        };
+        includeHTML(); 
+    </script>
+    <h3>Please select your files</h3>
+    <form action="#" id="download_form">
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox" data-url="files/a.txt" checked />
+                    a.txt
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" data-url="files/b.txt" />
+                    b.txt
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" data-url="files/c.txt" />
+                    c.txt
+                </label>
+            </li>
+        </ul>
+
+        <button type="submit" class="btn btn-primary">pack them !</button>
+    </form>
+
+    <div class="progress hide" id="progress_bar">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+        </div>
+    </div>
+
+    <p class="hide" id="result"></p>
+</body>
+</html>
