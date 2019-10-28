@@ -42,16 +42,63 @@
     <div w3-include-html="../components/navbar.html"></div> 
     <section id="header" class="bg-red">
         <div class="container-fluid block">
-            <h1>RedPack<br><small> Modular Datapack</small><br><small id="datapackVersion">v.</small></h1>
+            <h1>RedPack<br><small> Modular Datapack</small></h1>
         </div>
     </section>
     <section id="contant">
         <div class="container-fluid bg-white block">
             <div class="row">
-                
+                <h3>Seleziona i pacchetti che vuoi avere</h3>
+                <form action="#" id="download_form">
+                    <ul>
+                        <li>
+                            <label>
+                                <input type="checkbox" data-url="https://github.com/BisUmTo/RedPack/raw/master/RedPack%20-%20Gamemode%20Changer/RedPack%20-%20Gamemode%20Changer%20-%20v0.1.0.zip" checked />
+                                RedPack - Gamemode Changer
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" data-url="https://github.com/BisUmTo/RedPack/raw/master/RedPack%20-%20Grave/RedPack%20-%20Grave%20-%20v0.1.0.zip" checked />
+                                RedPack - Grave
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" data-url="https://github.com/BisUmTo/RedPack/raw/master/RedPack%20-%20Instant%20Bed/RedPack%20-%20Instant%20Bed%20-%20v0.1.0.zip" checked />
+                                RedPack - Instant Bed
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" data-url="https://github.com/BisUmTo/RedPack/raw/master/RedPack%20-%20Last%20Death%20Coordinates/RedPack%20-%20Last%20Death%20Coordinates%20-%20v0.1.0.zip" checked />
+                                RedPack - Last Death Coordinates
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" data-url="https://github.com/BisUmTo/RedPack/raw/master/RedPack%20-%20Multiplayer%20Bed/RedPack%20-%20Multiplayer%20Bed%20-%20v0.1.0.zip" checked />
+                                RedPack - Multiplayer Bed
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" data-url="https://github.com/BisUmTo/RedPack/raw/master/RedPack%20-%20Timebar/RedPack%20-%20Timebar%20-%20v0.1.0.zip" checked />
+                                RedPack - Timebar
+                            </label>
+                        </li>
+                    </ul>
+                    <a href="#" class="button" onclick="document.getElementById('myform').submit()"><i class="fa fa-download"></i> Crea il tuo RedPack!</a>
+                </form>
+                <div class="progress hide" id="progress_bar">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    </div>
+                </div>
+                <p class="hide" id="result"></p>
             </div>
         </div>
-    </section>
+    </section>   
+    
     <div w3-include-html="../components/footer.html"></div>
     <script>
         function includeHTML() {
@@ -75,41 +122,9 @@
                 return;
                 }
             }
-            document.getElementById("nav-link-redcraft2").classList.add("active");
+            //document.getElementById("nav-link-redcraft2").classList.add("active");
         };
         includeHTML(); 
     </script>
-    <h3>Please select your files</h3>
-    <form action="#" id="download_form">
-        <ul>
-            <li>
-                <label>
-                    <input type="checkbox" data-url="files/a.txt" checked />
-                    a.txt
-                </label>
-            </li>
-            <li>
-                <label>
-                    <input type="checkbox" data-url="files/b.txt" />
-                    b.txt
-                </label>
-            </li>
-            <li>
-                <label>
-                    <input type="checkbox" data-url="files/c.txt" />
-                    c.txt
-                </label>
-            </li>
-        </ul>
-
-        <button type="submit" class="btn btn-primary">pack them !</button>
-    </form>
-
-    <div class="progress hide" id="progress_bar">
-        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
-        </div>
-    </div>
-
-    <p class="hide" id="result"></p>
 </body>
 </html>
