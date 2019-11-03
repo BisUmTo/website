@@ -12,3 +12,14 @@
 #subtitle {
     text-align: center;
 }
+@media (max-width: 728px) {
+    .banner-pc {display: none}
+    .banner-mobile {display: block}
+}
+@media (min-width: 728px) {
+    .banner-pc {display: block}
+    .banner-mobile {display: none}
+}
+.prodotto {
+    margin:auto;
+}
