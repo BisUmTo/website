@@ -21,5 +21,8 @@
     .banner-mobile {display: none}
 }
 .prodotto {
-    margin:auto;
+    margin:5px;
+}
+.row {
+    margin:0px;
 }
