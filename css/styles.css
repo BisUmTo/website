@@ -63,4 +63,22 @@ footer {
 
 .bg-primary {
     background-color: var(--redcraft-red) !important;
-  }
+}
+
+#cookieconsent {
+    position:fixed;
+    padding:20px;
+    left:0;
+    bottom:0;
+    background-color:#000;
+    color:#FFF;
+    text-align:center;
+    width:100%;
+    z-index:99999;
+}
+#cookieclose {
+    color:var(--youtube-red);
+    position: absolute;
+    right:10px;
+    top:5px;
+}

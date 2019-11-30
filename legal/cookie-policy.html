@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--Header:-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Il sito ufficiale di BisUmTo">
+    <meta name="keywords" content="multicore network, multicore, bisumto">
+    <meta name="author" content="LoreSchaeffer, BisUmTo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#282828">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/multicore.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+    <script src="../js/scripts.js" defer></script>
+    <!--:Header-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146517603-1" defer></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146517603-1');
+    </script>   
+
+    <title>BisUmTo - Informativa sui Cookie</title>
+    <script src="../js/pages/legal.js" defer></script>
+    <link rel="stylesheet" href="../css/pages/legal.css">
+</head>
+<body>
+    <div include-html="../components/navbar.html"></div> 
+    <section id="header" class="bg-red">
+        <div class="container-fluid block">
+            <h1>Informativa sui Cookie</h1>
+        </div>
+    </section>
+    <section id="content">
+        <div class="container-fluid block bg-white">
+            <h2>Cookie</h2>
+            <h4>Cosa sono e a cosa servono</h4>
+            <p>
+                Un cookie &egrave; una piccola quantit&agrave; di dati inviati al tuo browser da un server web e che vengono successivamente
+                memorizzati sul disco fisso del tuo dispositivo. Il cookie viene poi riletto e riconosciuto dal sito web che
+                lo ha inviato ogni qualvolta effettui una connessione successiva. Come parte dei servizi personalizzati per i
+                suoi utenti, il nostro sito utilizza dei cookie per memorizzare e talvolta tenere traccia di alcuni dei dati
+                personali forniti dagli utenti stessi.
+                <br>
+                Ti ricordiamo che il browser è quel software che ti permette di navigare velocemente nella Rete tramite la
+                visualizzazione e il trasferimento delle informazioni sul disco fisso del tuo computer.
+                <br>
+                Se le preferenze del tuo browser sono settate in modo da accettare i cookie, qualsiasi sito web può inviare i
+                suoi cookie al tuo browser, ma – al fine di proteggere la tua privacy – può rilevare solo ed esclusivamente
+                quelli inviati dal sito stesso, e non quelli invece inviati al tuo browser da altri siti.
+                <br>
+                Se vuoi saperne di pi&ugrave; poi consultare la nostra <a href="../legal/privacy-policy.html">Informativa sulla Privacy</a>. Puoi accettare i cookies e proseguire,
+                oppure puoi abbandonare il sito.
+            </p>
+            <h4>Consenso</h4>
+            <p>
+                L'eventuale consenso dell'utente viene memorizzato mediante un cookie tecnico, l'utente viene informato sia
+                mediante l'informativa breve (banner) sia mediante questa informativa estesa. L'utente garantisce il consenso
+                all'utilizzo dei cookies premendo sul pulsante all'interno dell'informativa breve o continuando la navigazione
+                all'interno del sito.
+            </p>
+            <h4>Cookies utilizzati</h4>
+            <p>
+                All'interno di questo sito vengono utilizzate le seguenti tipologie di cookies:
+                <br>
+                - <b>Cookie tecnici</b> indispensabili per il corretto funzionamento del sito e per memorizzare il consenso dell'utente.
+                <br>
+                - <b>Cookie analitici</b> utilizzati a fini di analisi aggregata delle visite al sito, mediante ricorso ad un servizio di terza parte.
+            </p>
+            <h4>Cookies di terze parti</h4>
+            <p>Di seguito sono elencati i link alle privacy policy delle relative terze parti:<br>
+                <b>Google Analytics:</b> <a target="_blank" href="http://www.google.com/intl/it_ALL/analytics/learn/privacy.html">http://www.google.com/intl/it_ALL/analytics/learn/privacy.html</a>
+            </p>
+        </div>
+    </section>
+    <div include-html="../components/footer.html"></div> 
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    elmnt.removeAttribute("include-html");
+                    includeHTML();
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if(document.getElementById('footerPush') != null && document.body.clientHeight - document.getElementById('mainNavbar').clientHeight - document.getElementById('mainFooter').clientHeight < $(window).height()) {
+                document.getElementById('footerPush').style.height = ($(window).height() - document.body.clientHeight) + 'px';
+            }
+        };
+        includeHTML();
+    </script>
+</body>
+</html>

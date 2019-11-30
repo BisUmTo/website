@@ -2,33 +2,19 @@ $(document).on('click', function() {
     $('.collapse').collapse('hide');
 });
 
-$(window).on("load", function() {
-    var pathname = window.location.pathname;
-
-    if(pathname === "/") {
-        pathname = "home";
-    } else {
-        pathname = pathname.substring(1);
+(function() {
+    if (!localStorage.getItem('cookieconsent')) {
+        document.body.innerHTML += '\
+        <div id="cookieconsent">\
+            <i class="fas fa-exclamation-triangle"></i>\
+            Questo sito fa uso di cookie per migliorare l\'esperienza di navigazione degli utenti, per presentare annunci pubblicitari personalizzati e per raccogliere informazioni sull\'utilizzo del sito stesso. Usando il sito accetti questo utilizzo. Consulta l\'<a href="../legal/cookie-policy.html" target="_blank">Informativa sui cookie</a>. \
+            <a href="#" id="cookieclose"><i class="fas fa-times"></i></a>\
+        </div>\
+        ';
+        $('#cookieclose').on('click', function(e) {
+            e.preventDefault();
+            $('#cookieconsent').hide();
+            localStorage.setItem('cookieconsent', true);
+        });
     }
-
-    var element = document.getElementById("nav-link-" + pathname);
-    if(element !== null) {
-        element.classList.add("active");
-
-        for (i = 0; i < element.classList.length; i++) {
-            var clazz = element.classList.item(i);
-            if (clazz.startsWith("drop-")) {
-                pathname = clazz.substring(5);
-            }
-        }
-
-        element = document.getElementById("nav-link-" + pathname);
-        element.classList.add("active");
-
-        includeHTML()
-    }
-
-    if(document.getElementById('footerPush') != null && document.body.clientHeight - document.getElementById('mainNavbar').clientHeight - document.getElementById('mainFooter').clientHeight < $(window).height()) {
-        document.getElementById('footerPush').style.height = ($(window).height() - document.body.clientHeight) + 'px';
-    }
-});
+})();

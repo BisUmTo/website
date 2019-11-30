@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--Header:-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Il sito ufficiale di BisUmTo">
+    <meta name="keywords" content="multicore network, multicore, bisumto">
+    <meta name="author" content="LoreSchaeffer, BisUmTo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#282828">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/multicore.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+    <script src="../js/scripts.js" defer></script>
+    <!--:Header-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146517603-1" defer></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146517603-1');
+    </script>   
+
+    <title>BisUmTo - Dowloads</title>
+    <script src="../js/pages/downloads.js" defer></script>
+    <link rel="stylesheet" href="../css/pages/downloads.css">
+</head>
+<body>
+    <div include-html="../components/navbar.html"></div> 
+    <section id="header" class="bg-red">
+        <div class="container-fluid block">
+            <h1>Downloads</h1>
+        </div>
+    </section>
+    <section id="content">
+        <div class="container-fluid bg-gray block">
+            <h2 id="title">Dove trovo i CODICI?</h2>
+            <p id="subtitle">I codici vengono consegnati agli <a href="https://youtube.com/bisumto/join" target="_blank">ABBONATI</a> nella sezione <a href="https://youtube.com/bisumto/community" target="_blank">Community</a> di YouTube.</p>
+        </div>
+        <div class="container-fluid block">
+            <form>
+                <script>
+                    function update(){
+                        document.getElementById('download').href = 'http://www.mediafire.com/file/' + 
+                        document.getElementById('password').value;
+                    }
+                </script>
+                <input type="text" class="form-control" id="password" placeholder="CODICE" onchange="update()"> 
+                <br />
+                <a href="/" id="download" target="_blank">DOWNLOAD</a>
+            </form>
+        </div>
+        <br /><br /><br /><br />
+    </section>
+
+    <div include-html="../components/footer.html"></div> 
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    elmnt.removeAttribute("include-html");
+                    includeHTML();
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            document.getElementById("nav-link-downloads").classList.add("active");
+            if(document.getElementById('footerPush') != null && document.body.clientHeight - document.getElementById('mainNavbar').clientHeight - document.getElementById('mainFooter').clientHeight < $(window).height()) {
+                document.getElementById('footerPush').style.height = ($(window).height() - document.body.clientHeight) + 'px';
+            }
+        };
+        includeHTML();
+    </script>
+</body>
+</html>

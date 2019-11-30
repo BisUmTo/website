@@ -77,6 +77,7 @@ var $form = $("#download_form").on("submit", function () {
         var url = $this.data("url");
         var filename = url.replace(/.*\//g, "");
         zip.file(filename, urlToPromise(url), {binary:true});
+    
     });
 
     // when everything has been downloaded, we can trigger the dl

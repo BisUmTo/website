@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/multicore.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.js" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" defer></script>
@@ -22,8 +22,8 @@
     <!--:Header-->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146517603-1"></script>
-    <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146517603-1" defer></script>
+    <script defer>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -32,8 +32,8 @@
     </script>   
 
     <title>BisUmTo - RedPack</title>
-    <script src='https://stuk.github.io/jszip/dist/jszip.js' defer></script>
-    <script src='https://stuk.github.io/jszip-utils/dist/jszip-utils.js' defer></script>
+    <script src='https://stuk.github.io/jszip/dist/jszip.min.js' defer></script>
+    <script src='https://stuk.github.io/jszip-utils/dist/jszip-utils.min.js' defer></script>
     <script src='https://stuk.github.io/jszip/vendor/FileSaver.js' defer></script>
     <script src="../js/pages/redpack.js" defer></script>
     <link rel="stylesheet" href="../css/pages/redpack.css">
@@ -51,7 +51,7 @@
                 <h3>Seleziona i pacchetti che vuoi avere</h3>
                 <form action="#" id="download_form">
                     <ul>
-                        <li>
+                        <!--<li>
                             <label>
                                 <input type="checkbox" data-url="https://github.com/BisUmTo/RedPack/raw/master/RedPack%20-%20Gamemode%20Changer/RedPack%20-%20Gamemode%20Changer%20-%20v0.1.0.zip" checked />
                                 RedPack - Gamemode Changer
@@ -86,9 +86,27 @@
                                 <input type="checkbox" data-url="https://github.com/BisUmTo/RedPack/raw/master/RedPack%20-%20Timebar/RedPack%20-%20Timebar%20-%20v0.1.0.zip" checked />
                                 RedPack - Timebar
                             </label>
+                        </li>-->
+                        <li>
+                            <label>
+                                <input type="checkbox" data-url="files/a.zip" checked />
+                                a
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" data-url="files/b.zip" checked />
+                                b
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox" data-url="files/c.zip" checked />
+                                c
+                            </label>
                         </li>
                     </ul>
-                    <button type="submit" class="btn" >Crea il tuo RedPack!</button>
+                    <button type="submit" class="btn" ><i class="fa fa-download"></i> Crea il tuo RedPack!</button>
                 </form>
                 <div class="progress hide" id="progress_bar">
                     <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">

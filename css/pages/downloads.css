@@ -1,0 +1,65 @@
+#header {
+    text-align: center;
+    font-variant: small-caps;
+}
+#header h1 {
+    line-height: 1;
+}
+#title {
+    text-align: center;
+    font-variant: small-caps;
+}
+#subtitle {
+    text-align: center;
+}
+#bilomaOutput {
+    display: none;
+    word-wrap: break-word;
+}
+form {
+    text-align: center;
+}
+#password {
+    margin:auto;
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 250px;
+    padding: 10px 20px;
+    border: 0 solid #b7b7b7;
+    border-bottom: 2px solid var(--redcraft-red);
+    font: normal 12px/normal "lato", Helvetica, sans-serif;
+    color: var(--redcraft-red);
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    text-shadow: 1px 1px 0 #b7b7b7;
+    margin-bottom: 5px;
+}
+#download {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    width: 150px;
+    padding: 10px 20px;
+    border: 1px solid var(--redcraft-red);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal 16px/normal "lato", Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: var(--youtube-red);
+}
+#download.hover {
+    background: var(--redcraft-red);
+}
+.form-control {
+    max-width: 250px;
+}
+#block {
+    max-width: 200px;
+}
