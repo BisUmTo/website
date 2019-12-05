@@ -4,7 +4,6 @@ let COL = [];
 BACKGROUND_COLOR = 0
 let GRID = [];
 let SOLUTION = [];
-let OVERLAY;
 
 let SHP = [
 	{
@@ -36,9 +35,6 @@ let PREVIEW_POS = {};
 let TOUCH_N = 0;
 let SHOW_PREVIEW = false;
 let SCREEN_NEEDS_UPDATE = true;
-
-//STATS:
-let start = 0;
 
 let IMAGES=[];
 function preload() {
@@ -358,9 +354,6 @@ function reset_piece(index){
 function touchStarted(){
 	if(TOUCH_N==0){
 		mousePressed();
-	} else if (mouseX > PREVIEW_POS.x && mouseX < PREVIEW_POS.x+PREVIEW_POS.dx && mouseY > PREVIEW_POS.y && mouseY < PREVIEW_POS.y+PREVIEW_POS.dy) {
-		SHOW_PREVIEW = true;
-		SCREEN_NEEDS_UPDATE = true;
 	}
 	TOUCH_N++;
 	return false;
@@ -369,9 +362,6 @@ function touchStarted(){
 function touchEnded(){
 	if(TOUCH_N==1){
 		mouseReleased();
-	} else if (!(mouseX > PREVIEW_POS.x && mouseX < PREVIEW_POS.x+PREVIEW_POS.dx && mouseY > PREVIEW_POS.y && mouseY < PREVIEW_POS.y+PREVIEW_POS.dy)) {
-		SHOW_PREVIEW = false;
-		SCREEN_NEEDS_UPDATE = true;
 	}
 	TOUCH_N--;
  	return false;
