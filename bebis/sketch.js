@@ -316,15 +316,19 @@ function mouseReleased() {
 				}
 			}
 			if(!valid_move) {
-				PIECES[i].hitbox={
-					x:(PIECES_POS.x+PIECES_POS.dx*i-(PIECES[i].cell.x*PIECES[i].s.l/2)),
-					y:(PIECES_POS.y-(PIECES[i].cell.y*PIECES[i].s.h/2)),
-					fx:(PIECES_POS.x+PIECES_POS.dx*i-(PIECES[i].cell.x*PIECES[i].s.l/2))+PIECES[i].cell.x*PIECES[i].s.l,
-					fy:(PIECES_POS.y-(PIECES[i].cell.y*PIECES[i].s.h/2))+PIECES[i].cell.y*PIECES[i].s.h
-				}
+				reset_piece(i);
 			}
 		}
 	}
+}
+
+function reset_piece(index){
+	PIECES[index].hitbox={
+		x:(PIECES_POS.x+PIECES_POS.dx*index-(PIECES[index].cell.x*PIECES[index].s.l/2)),
+		y:(PIECES_POS.y+PIECES_POS.dy*index-(PIECES[index].cell.y*PIECES[index].s.h/2)),
+		fx:(PIECES_POS.x+PIECES_POS.dx*index-(PIECES[index].cell.x*PIECES[index].s.l/2))+PIECES[index].cell.x*PIECES[index].s.l,
+		fy:(PIECES_POS.y+PIECES_POS.dy*index-(PIECES[index].cell.y*PIECES[index].s.h/2))+PIECES[index].cell.y*PIECES[index].s.h
+	};
 }
 
 function touchStarted(){
@@ -344,6 +348,7 @@ function touchEnded(){
 }
 
 function layout(){
+	createCanvas(windowWidth, windowHeight).center('horizontal');
 	if (windowWidth<windowHeight){
 		let mr = 0.01*windowWidth;
 		let wh = min(windowHeight,2.5*windowWidth);
@@ -395,9 +400,13 @@ function layout(){
 	}
 }
 
+function windowResized(){
+	layout();
+	for(let i;i<PIECES.length;i++) reset_piece(i);
+}
+
 function setup() {
 	solution_from_image(randomInt(IMAGES.length));
-	createCanvas(windowWidth, windowHeight).center('horizontal');
 	layout();
 	initialize_grid(); 
 	PIECES = new_pieces();
