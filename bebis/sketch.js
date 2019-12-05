@@ -1,21 +1,9 @@
 let PIECES = [];
-let DIM = {l:10,h:10};
-let COL = ['#99ccff','#0099ff','#b81f1f','#780606'];
+let DIM = {};
+let COL = [];
 BACKGROUND_COLOR = 0
-let GRID;
-let SOLUTION = [
-	[0,0,2,0,0,0,0,2,0,0],
-	[1,2,1,2,1,1,2,1,2,1],
-	[0,0,2,2,2,2,2,2,0,0],
-	[1,1,2,2,2,2,2,2,1,1],
-	[0,2,2,3,2,2,3,2,2,0],
-	[1,2,2,2,2,2,2,2,2,1],
-	[0,2,2,2,2,2,2,2,2,0],
-	[1,2,2,3,2,2,3,2,2,1],
-	[0,0,2,2,3,3,2,2,0,0],
-	[1,1,1,2,2,2,2,1,1,1]
-];
-
+let GRID = [];
+let SOLUTION = [];
 
 let SHP = [
 	{
@@ -40,21 +28,23 @@ let SHP = [
 	}
 ];
 
-let PIECES_POS={x:120,dx:180,y:1120};
-let GRID_POS={x:20,y:460,dx:560,dy:560};
-let PREVIEW_POS={x:100,y:40,dx:400,dy:400};
+let PIECES_POS = {};
+let GRID_POS = {};
+let PREVIEW_POS = {};
+
+let TOUCH_N = 0;
 
 let IMAGES=[];
 function preload() {
 	IMAGES.push(loadImage('lvl/albero.bmp'));
 	IMAGES.push(loadImage('lvl/cuore.bmp'));
-	IMAGES.push(loadImage('lvl/paperella.bmp'));
-        IMAGES.push(loadImage('lvl/mela.png'));
-        IMAGES.push(loadImage('lvl/barca.png'));
-        IMAGES.push(loadImage('lvl/gelato.png'));
-        IMAGES.push(loadImage('lvl/ananas.png'));
-        IMAGES.push(loadImage('lvl/ciliegia.png'));
-        IMAGES.push(loadImage('lvl/moneta.png'));
+	//IMAGES.push(loadImage('lvl/paperella.bmp'));
+    IMAGES.push(loadImage('lvl/mela.png'));
+    IMAGES.push(loadImage('lvl/barca.png'));
+    IMAGES.push(loadImage('lvl/gelato.png'));
+    IMAGES.push(loadImage('lvl/ananas.png'));
+    IMAGES.push(loadImage('lvl/ciliegia.png'));
+    IMAGES.push(loadImage('lvl/moneta.png'));
 }
 
 function solution_from_image(number){
@@ -218,9 +208,9 @@ function new_pieces(){
 		};
 		ret[i].hitbox={
 			x:(PIECES_POS.x+PIECES_POS.dx*i-(ret[i].cell.x*ret[i].s.l/2)),
-			y:(PIECES_POS.y-(ret[i].cell.y*ret[i].s.h/2)),
+			y:(PIECES_POS.y+PIECES_POS.dy*i-(ret[i].cell.y*ret[i].s.h/2)),
 			fx:(PIECES_POS.x+PIECES_POS.dx*i-(ret[i].cell.x*ret[i].s.l/2))+ret[i].cell.x*ret[i].s.l,
-			fy:(PIECES_POS.y-(ret[i].cell.y*ret[i].s.h/2))+ret[i].cell.y*ret[i].s.h
+			fy:(PIECES_POS.y+PIECES_POS.dy*i-(ret[i].cell.y*ret[i].s.h/2))+ret[i].cell.y*ret[i].s.h
 		};
 		ret[i].drag={dragging:false};
 	}
@@ -338,24 +328,80 @@ function mouseReleased() {
 }
 
 function touchStarted(){
- mousePressed()
- return false;
+	if(TOUCH_N==0){
+		mousePressed();
+	}
+	TOUCH_N++;
+	return false;
 }
 
 function touchEnded(){
- mouseReleased();
- return false;
+	if(TOUCH_N==1){
+		mouseReleased();
+	}
+	TOUCH_N--;
+ 	return false;
+}
+
+function layout(){
+	if (windowWidth<windowHeight){
+		let mr = 0.01*windowWidth;
+		let wh = min(windowHeight,2.5*windowWidth);
+		let ww = min(windowWidth,0.5*windowHeight);
+		let sl = (wh-(ww+2*mr));
+		
+		PREVIEW_POS={
+			x:(windowWidth-Math.min((DIM.h-3)/DIM.h*sl,ww-2*mr))/2,
+			y:mr,
+			dx:Math.min((DIM.h-3)/DIM.h*sl,ww-2*mr),
+			dy:Math.min((DIM.h-3)/DIM.h*sl,ww-2*mr)
+		};
+		GRID_POS={
+			x:(windowWidth-(ww-2*mr))/2,
+			y:PREVIEW_POS.dy+2*mr,
+			dx:ww-2*mr,
+			dy:ww-2*mr
+		};
+		PIECES_POS={
+			x:(windowWidth-(ww-2*mr))/2+(ww-2*mr)/6,
+			y:wh-1.5/DIM.h*(ww-2*mr)-mr,
+			dx:(ww-2*mr)/3,
+			dy:0
+		};
+	} else {
+		let mr = 0.01*windowHeight;
+		let wh = min(windowWidth,2.5*windowHeight);
+		let ww = min(windowHeight,0.5*windowWidth);
+		let sl = (wh-(ww+2*mr));
+		
+		PREVIEW_POS={
+			y:(windowHeight-Math.min((DIM.h-3)/DIM.h*sl,ww-2*mr))/2,
+			x:mr,
+			dy:Math.min((DIM.h-3)/DIM.h*sl,ww-2*mr),
+			dx:Math.min((DIM.h-3)/DIM.h*sl,ww-2*mr)
+		};
+		GRID_POS={
+			y:(windowHeight-(ww-2*mr))/2,
+			x:PREVIEW_POS.dx+2*mr,
+			dy:ww-2*mr,
+			dx:ww-2*mr
+		};
+		PIECES_POS={
+			y:(windowHeight-(ww-2*mr))/2+(ww-2*mr)/6,
+			x:wh-1.5/DIM.h*(ww-2*mr)-mr,
+			dy:(ww-2*mr)/3,
+			dx:0
+		};
+	}
 }
 
 function setup() {
-	PIECES_POS={x:windowWidth/4,dx:windowWidth/4,y:windowHeight-(windowHeight-windowWidth)*3/DIM.h+0.03*windowWidth};
-        GRID_POS={x:0.01*windowWidth,y:(DIM.h-3)/DIM.h*(windowHeight-windowWidth)+0.02*windowWidth,dx:0.98*windowWidth,dy:0.98*windowWidth};
-        PREVIEW_POS={x:(windowWidth-((DIM.h-3)/(windowHeight-DIM.h*windowWidth)))/2,y:0.01*windowWidth,dx:(DIM.h-3)/DIM.h*(windowHeight-windowWidth),dy:(DIM.h-3)/DIM.h*(windowHeight-windowWidth)};
+	solution_from_image(randomInt(IMAGES.length));
 	createCanvas(windowWidth, windowHeight).center('horizontal');
-	//createCanvas(800, 1220).center('horizontal');
-        solution_from_image(randomInt(IMAGES.length));
+	layout();
 	initialize_grid(); 
 	PIECES = new_pieces();
+	frameRate(20);
 }
 
 function draw() {
