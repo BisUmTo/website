@@ -348,9 +348,9 @@ function touchEnded(){
 }
 
 function setup() {
-	PIECES_POS={x:windowWidth/4,dx:windowWidth/4,y:windowHeight-0.08*windowWidth};
+	PIECES_POS={x:windowWidth/4,dx:windowWidth/4,y:windowHeight-windowWidth*3/DIM.h};
         GRID_POS={x:0.01*windowWidth,y:windowHeight-1.13*windowWidth,dx:0.98*windowWidth,dy:0.98*windowWidth};
-        PREVIEW_POS={x:0.01*windowWidth,y:0.01*windowWidth,dx:windowHeight-1.18*windowWidth,dy:windowHeight-1.18*windowWidth};
+        PREVIEW_POS={x:(windowWidth-(windowHeight-(DIM.h-3)/DIM.h*windowWidth))/2,y:0.01*windowWidth,dx:windowHeight-(DIM.h-3)/DIM.h*windowWidth,dy:windowHeight-(DIM.h-3)/DIM.h*windowWidth};
 	createCanvas(windowWidth, windowHeight).center('horizontal');
 	//createCanvas(800, 1220).center('horizontal');
         solution_from_image(randomInt(IMAGES.length));
