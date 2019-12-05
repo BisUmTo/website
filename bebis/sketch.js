@@ -348,7 +348,7 @@ function touchEnded(){
 }
 
 function setup() {
-	createCanvas(800, 1220).center('horizontal');
+	createCanvas(windowWidth, windowHeight).center('horizontal');
 	solution_from_image(randomInt(IMAGES.length));
 	initialize_grid(); 
 	PIECES = new_pieces();
