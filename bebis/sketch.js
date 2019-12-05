@@ -49,6 +49,12 @@ function preload() {
 	IMAGES.push(loadImage('lvl/albero.bmp'));
 	IMAGES.push(loadImage('lvl/cuore.bmp'));
 	IMAGES.push(loadImage('lvl/paperella.bmp'));
+        IMAGES.push(loadImage('lvl/mela.png'));
+        IMAGES.push(loadImage('lvl/barca.png'));
+        IMAGES.push(loadImage('lvl/gelato.png'));
+        IMAGES.push(loadImage('lvl/ananas.png'));
+        IMAGES.push(loadImage('lvl/ciliegia.png'));
+        IMAGES.push(loadImage('lvl/moneta.png'));
 }
 
 function solution_from_image(number){
