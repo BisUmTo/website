@@ -348,8 +348,8 @@ function touchEnded(){
 }
 
 function setup() {
-	PIECES_POS={x:windowWidth/4,dx:windowWidth/4,y:1.8*windowWidth};
-        GRID_POS={x:0.01*windowWidth,y:windowHeight-1.13*windowWidth,dx:0.9*windowWidth,dy:0.9*windowWidth};
+	PIECES_POS={x:windowWidth/4,dx:windowWidth/4,y:windowHeight-0.18*windowWidth};
+        GRID_POS={x:0.01*windowWidth,y:windowHeight-1.13*windowWidth,dx:0.98*windowWidth,dy:0.98*windowWidth};
         PREVIEW_POS={x:0.01*windowWidth,y:0.01*windowWidth,dx:windowHeight-1.18*windowWidth,dy:windowHeight-1.18*windowWidth};
 	createCanvas(windowWidth, windowHeight).center('horizontal');
 	//createCanvas(800, 1220).center('horizontal');
