@@ -12,7 +12,7 @@ function calculate() {
     const ticks = document.getElementById('ticks').value;
 
     const outMotionX = (1 - damping) / (1 - Math.pow(damping, ticks)) * (destinationX - originX);
-    const outMotionY = (1 - damping) / (1 - Math.pow(damping, ticks)) * ((destinationY - originY) + (ticks - (1 - Math.pow(damping, ticks)) / (1 - damping)) / (1 - damping) * gravity);
+    const outMotionY = (1 - damping) / (1 - Math.pow(damping, ticks)) * ((destinationY - originY) + (ticks - (1 - Math.pow(damping, ticks)) / (1 - damping)) * damping / (1 - damping) * gravity);
     const outMotionZ = (1 - damping) / (1 - Math.pow(damping, ticks)) * (destinationZ - originZ);
 
     document.getElementById('outMotionX').innerHTML = '' + outMotionX;
