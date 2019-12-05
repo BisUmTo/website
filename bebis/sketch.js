@@ -34,6 +34,7 @@ let PREVIEW_POS = {};
 
 let TOUCH_N = 0;
 let SHOW_PREVIEW = false;
+let SCREEN_NEEDS_UPDATE = true;
 
 let IMAGES=[];
 function preload() {
@@ -239,6 +240,7 @@ function mousePressed() {
 	}
 	if (mouseX > PREVIEW_POS.x && mouseX < PREVIEW_POS.x+PREVIEW_POS.dx && mouseY > PREVIEW_POS.y && mouseY < PREVIEW_POS.y+PREVIEW_POS.dy) {
 		SHOW_PREVIEW = true;
+		SCREEN_NEEDS_UPDATE = true;
 	}
 }
 
@@ -337,6 +339,7 @@ function mouseReleased() {
 			}
 		}
 	}
+	SCREEN_NEEDS_UPDATE = true;
 }
 
 function reset_piece(index){
@@ -420,6 +423,7 @@ function layout(){
 function windowResized(){
 	layout();
 	for(let i;i<PIECES.length;i++) reset_piece(i);
+	SCREEN_NEEDS_UPDATE = true;
 }
 
 function setup() {
@@ -431,37 +435,42 @@ function setup() {
 }
 
 function draw() {
-	clear();
-	background('#484848');
-    grid(
-        PREVIEW_POS,
-		DIM,
-		SOLUTION
-    );
-	if(!SHOW_PREVIEW)
-		grid(
-			GRID_POS,
-			DIM,
-			GRID
-		);
-	else
-		grid(
-			GRID_POS,
-			DIM,
-			GRID,
-			true,
-			SOLUTION
-		);
 	for (let i=0;i<PIECES.length;i++){
 		if (PIECES[i].drag.dragging==true) {
 			update_hitbox(i);
+			SCREEN_NEEDS_UPDATE = true;
 		}
-
-		draw_shape(
-			{x:PIECES[i].hitbox.x,y:PIECES[i].hitbox.y},
-			PIECES[i].cell,
-			PIECES[i].s,
-			PIECES[i].c
+	}
+	if(SCREEN_NEEDS_UPDATE){
+		clear();
+		background('#484848');
+		grid(
+			PREVIEW_POS,
+			DIM,
+			SOLUTION
 		);
+		if(!SHOW_PREVIEW)
+			grid(
+				GRID_POS,
+				DIM,
+				GRID
+			);
+		else
+			grid(
+				GRID_POS,
+				DIM,
+				GRID,
+				true,
+				SOLUTION
+			);
+		for (let i=0;i<PIECES.length;i++){
+			draw_shape(
+				{x:PIECES[i].hitbox.x,y:PIECES[i].hitbox.y},
+				PIECES[i].cell,
+				PIECES[i].s,
+				PIECES[i].c
+			);
+		}
+		SCREEN_NEEDS_UPDATE=false;
 	}
 }
