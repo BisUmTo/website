@@ -33,6 +33,7 @@ let GRID_POS = {};
 let PREVIEW_POS = {};
 
 let TOUCH_N = 0;
+let SHOW_PREVIEW = false;
 
 let IMAGES=[];
 function preload() {
@@ -66,7 +67,7 @@ function solution_from_image(number){
 	}
 }
 
-function grid(position, dimension, color_grid){
+function grid(position, dimension, color_grid, preview=false, preview_grid=undefined){
     let cell = {
         l:position.dx/dimension.l,
         h:position.dy/dimension.h
@@ -76,6 +77,17 @@ function grid(position, dimension, color_grid){
 			fill(COL[color_grid[i][j]]);
 			rect(position.x+cell.l*j, position.y+cell.h*i, cell.l, cell.h);
 		}
+	if(preview)
+		for(let i=0;i<dimension.h;i++)
+			for(let j=0;j<dimension.l;j++){
+				noStroke();
+				let c=COL[preview_grid[i][j]];
+				c.setAlpha(128);
+				fill(c);
+				rect(position.x+cell.l*j+2, position.y+cell.h*i+2, cell.l-2, cell.h-2, cell.l/3, cell.h/3);
+				c.setAlpha(255);
+				stroke('#000');
+			}
 }
 
 
@@ -223,7 +235,10 @@ function mousePressed() {
 			PIECES[i].drag.dragging=true;
 			PIECES[i].drag.offx = PIECES[i].hitbox.x-mouseX;
 			PIECES[i].drag.offy = PIECES[i].hitbox.y-mouseY;
-		  }
+		}
+	}
+	if (mouseX > PREVIEW_POS.x && mouseX < PREVIEW_POS.x+PREVIEW_POS.dx && mouseY > PREVIEW_POS.y && mouseY < PREVIEW_POS.y+PREVIEW_POS.dy) {
+		SHOW_PREVIEW = true;
 	}
 }
 
@@ -271,6 +286,7 @@ function place_piece(index){
 	}
 	return ret;
 }
+
 function schedule_updates(){
 	if(JSON.stringify(SOLUTION)===JSON.stringify(GRID)){
 		alert('WIN');
@@ -302,6 +318,7 @@ function update_hitbox(index){
 }
 
 function mouseReleased() {
+	SHOW_PREVIEW=false;
     for (let i=0;i<PIECES.length;i++){
 		if(PIECES[i].drag.dragging==true){
 			PIECES[i].drag.dragging=false;
@@ -421,11 +438,20 @@ function draw() {
 		DIM,
 		SOLUTION
     );
-    grid(
-        GRID_POS,
-		DIM,
-		GRID
-	);
+	if(!SHOW_PREVIEW)
+		grid(
+			GRID_POS,
+			DIM,
+			GRID
+		);
+	else
+		grid(
+			GRID_POS,
+			DIM,
+			GRID,
+			true,
+			SOLUTION
+		);
 	for (let i=0;i<PIECES.length;i++){
 		if (PIECES[i].drag.dragging==true) {
 			update_hitbox(i);
