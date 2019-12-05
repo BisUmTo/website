@@ -231,17 +231,24 @@ function new_pieces(){
 }
 
 function mousePressed() {
+	let ret = true;
 	for (let i=0;i<PIECES.length;i++){
 		if (mouseX > PIECES[i].hitbox.x && mouseX < PIECES[i].hitbox.fx && mouseY > PIECES[i].hitbox.y && mouseY < PIECES[i].hitbox.fy) {
 			PIECES[i].drag.dragging=true;
 			PIECES[i].drag.offx = PIECES[i].hitbox.x-mouseX;
 			PIECES[i].drag.offy = PIECES[i].hitbox.y-mouseY;
+			ret = false;
 		}
 	}
 	if (mouseX > PREVIEW_POS.x && mouseX < PREVIEW_POS.x+PREVIEW_POS.dx && mouseY > PREVIEW_POS.y && mouseY < PREVIEW_POS.y+PREVIEW_POS.dy) {
+		ret = false;
 		SHOW_PREVIEW = true;
 		SCREEN_NEEDS_UPDATE = true;
 	}
+	if (mouseX > GRID_POS.x && mouseX < GRID_POS.x+GRID_POS.dx && mouseY > GRID_POS.y && mouseY < GRID_POS.y+GRID_POS.dy) {
+		//ret = false;
+	}
+	return ret;
 }
 
 function initialize_grid(){
@@ -352,11 +359,13 @@ function reset_piece(index){
 }
 
 function touchStarted(){
+	let ret=true;
 	if(TOUCH_N==0){
-		mousePressed();
+		ret = mousePressed();
 	}
 	TOUCH_N++;
-	return false;
+	return ret;
+	
 }
 
 function touchEnded(){
@@ -364,7 +373,7 @@ function touchEnded(){
 		mouseReleased();
 	}
 	TOUCH_N--;
- 	return false;
+	return true;
 }
 
 function layout(){
@@ -422,7 +431,7 @@ function layout(){
 
 function windowResized(){
 	layout();
-	for(let i;i<PIECES.length;i++) reset_piece(i);
+	for(let i=0;i<PIECES.length;i++) reset_piece(i);
 	SCREEN_NEEDS_UPDATE = true;
 }
 
