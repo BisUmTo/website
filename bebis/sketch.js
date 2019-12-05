@@ -40,9 +40,9 @@ let SHP = [
 	}
 ];
 
-let PIECES_POS={x:30,dx:45,y:280};
-let GRID_POS={x:5,y:115,dx:140,dy:140};
-let PREVIEW_POS={x:25,y:10,dx:100,dy:100};
+let PIECES_POS={x:120,dx:180,y:1120};
+let GRID_POS={x:20,y:460,dx:560,dy:560};
+let PREVIEW_POS={x:100,y:40,dx:400,dy:400};
 
 let IMAGES=[];
 function preload() {
@@ -332,7 +332,7 @@ function mouseReleased() {
 }
 
 function setup() {
-	createCanvas(200, 305);
+	createCanvas(800, 1220);
 	solution_from_image(randomInt(IMAGES.length));
 	initialize_grid(); 
 	PIECES = new_pieces();
