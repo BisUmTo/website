@@ -36,6 +36,10 @@ let TOUCH_N = 0;
 let SHOW_PREVIEW = false;
 let SCREEN_NEEDS_UPDATE = true;
 
+let START_TIME;
+let BLOCK_PLACED;
+let ROW_DESTROYED;
+
 let IMAGES=[];
 function preload() {
 	IMAGES.push(loadImage('lvl/albero.bmp'));
@@ -292,13 +296,21 @@ function place_piece(index){
 				}
 			}
 		}
+		BLOCK_PLACED++;
 	}
 	return ret;
 }
 
+function win(){
+	let TIME = new Date() - START_TIME;
+	alert('WIN! Time: '+
+		new Date(TIME).toISOString().slice(11, -1).replace(/(.*):(.*):(.*)\..*/, '$1h $2m $3s')+
+		', Pieces placed: '+BLOCK_PLACED+', Rows cleared: '+ROW_DESTROYED);
+}
+
 function schedule_updates(){
 	if(JSON.stringify(SOLUTION)===JSON.stringify(GRID)){
-		alert('WIN');
+		win();
 	}
 	for(let i=0;i<DIM.h;i++){
 		let equals = GRID[i][0] != BACKGROUND_COLOR;
@@ -315,6 +327,7 @@ function schedule_updates(){
 				empty.push(BACKGROUND_COLOR);
 			}
 			GRID.unshift(empty);
+			ROW_DESTROYED++;
 		}
 	}
 }
@@ -441,6 +454,10 @@ function setup() {
 	initialize_grid(); 
 	PIECES = new_pieces();
 	frameRate(20);
+
+	START_TIME = new Date();
+	BLOCK_PLACED = 0;
+	ROW_DESTROYED = 0;
 }
 
 function draw() {
