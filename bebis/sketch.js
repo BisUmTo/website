@@ -40,9 +40,9 @@ let SHP = [
 	}
 ];
 
-let PIECES_POS={x:120,dx:180,y:1120};
-let GRID_POS={x:20,y:460,dx:560,dy:560};
-let PREVIEW_POS={x:100,y:40,dx:400,dy:400};
+let PIECES_POS={x:windowWidth/6,dx:windowWidth/3,y:2*windowWidth+20};
+let GRID_POS={x:5,y:windowWidth+10,dx:windowWidth-10,dy:windowWidth-10};
+let PREVIEW_POS={x:5,y:5,dx:windowWidth-10,dy:windowWidth-10};
 
 let IMAGES=[];
 function preload() {
