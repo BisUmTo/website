@@ -237,8 +237,8 @@ function new_pieces(){
 function mousePressed() {
 	let ret = true;
 	for (let i=0;i<PIECES.length;i++){
-                let dx = (PIRCES_POS.hb-PIECES[i].cell.x)/2;
-                let dy = (PIRCES_POS.hb-PIECES[i].cell.y)/2;
+                let dx = (PIECES_POS.hb-PIECES[i].cell.x)/2;
+                let dy = (PIECES_POS.hb-PIECES[i].cell.y)/2;
 		if (mouseX > PIECES[i].hitbox.x-dx && mouseX < PIECES[i].hitbox.fx+dx && mouseY > PIECES[i].hitbox.y-dy && mouseY < PIECES[i].hitbox.fy+dy) {
 			PIECES[i].drag.dragging=true;
 			PIECES[i].drag.offx = PIECES[i].hitbox.x-mouseX;
