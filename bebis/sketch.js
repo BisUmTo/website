@@ -42,9 +42,9 @@ let ROW_DESTROYED;
 
 let IMAGES=[];
 function preload() {
-	IMAGES.push(loadImage('lvl/albero.bmp'));
-	IMAGES.push(loadImage('lvl/cuore.bmp'));
-	//IMAGES.push(loadImage('lvl/paperella.bmp'));
+    IMAGES.push(loadImage('lvl/albero.bmp'));
+    IMAGES.push(loadImage('lvl/cuore.bmp'));
+    //IMAGES.push(loadImage('lvl/paperella.bmp'));
     IMAGES.push(loadImage('lvl/mela.png'));
     IMAGES.push(loadImage('lvl/barca.png'));
     IMAGES.push(loadImage('lvl/gelato.png'));
@@ -237,7 +237,9 @@ function new_pieces(){
 function mousePressed() {
 	let ret = true;
 	for (let i=0;i<PIECES.length;i++){
-		if (mouseX > PIECES[i].hitbox.x && mouseX < PIECES[i].hitbox.fx && mouseY > PIECES[i].hitbox.y && mouseY < PIECES[i].hitbox.fy) {
+                let dx = (PIRCES_POS.hb-PIECES[i].cell.x)/2;
+                let dy = (PIRCES_POS.hb-PIECES[i].cell.y)/2;
+		if (mouseX > PIECES[i].hitbox.x-dx && mouseX < PIECES[i].hitbox.fx+dx && mouseY > PIECES[i].hitbox.y-dy && mouseY < PIECES[i].hitbox.fy+dy) {
 			PIECES[i].drag.dragging=true;
 			PIECES[i].drag.offx = PIECES[i].hitbox.x-mouseX;
 			PIECES[i].drag.offy = PIECES[i].hitbox.y-mouseY;
@@ -246,7 +248,7 @@ function mousePressed() {
 	}
 	if (mouseX > PREVIEW_POS.x && mouseX < PREVIEW_POS.x+PREVIEW_POS.dx && mouseY > PREVIEW_POS.y && mouseY < PREVIEW_POS.y+PREVIEW_POS.dy) {
 		ret = false;
-		SHOW_PREVIEW = true;
+		SHOW_PREVIEW = !SHOW_PREVIEW;
 		SCREEN_NEEDS_UPDATE = true;
 	}
 	if (mouseX > GRID_POS.x && mouseX < GRID_POS.x+GRID_POS.dx && mouseY > GRID_POS.y && mouseY < GRID_POS.y+GRID_POS.dy) {
@@ -340,7 +342,6 @@ function update_hitbox(index){
 }
 
 function mouseReleased() {
-	SHOW_PREVIEW=false;
     for (let i=0;i<PIECES.length;i++){
 		if(PIECES[i].drag.dragging==true){
 			PIECES[i].drag.dragging=false;
@@ -413,7 +414,8 @@ function layout(){
 			x:(windowWidth-(ww-2*mr))/2+(ww-2*mr)/6,
 			y:wh-1.5/DIM.h*(ww-2*mr)-mr,
 			dx:(ww-2*mr)/3,
-			dy:0
+			dy:0,
+                        hb:1.5/DIM.h*(ww-2*mr)-mr
 		};
 	} else {
 		let mr = 0.01*windowHeight;
@@ -437,7 +439,8 @@ function layout(){
 			y:(windowHeight-(ww-2*mr))/2+(ww-2*mr)/6,
 			x:wh-1.5/DIM.h*(ww-2*mr)-mr,
 			dy:(ww-2*mr)/3,
-			dx:0
+			dx:0,
+                        hb:1.5/DIM.h*(ww-2*mr)-mr
 		};
 	}
 }
