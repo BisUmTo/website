@@ -237,8 +237,8 @@ function new_pieces(){
 function mousePressed() {
 	let ret = true;
 	for (let i=0;i<PIECES.length;i++){
-                let dx = (PIECES_POS.x)/4;
-                let dy = (PIECES_POS.x)/4;
+                let dx = (PIECES_POS.sp)/4;
+                let dy = (PIECES_POS.sp)/4;
 		if (mouseX > PIECES[i].hitbox.x-dx && mouseX < PIECES[i].hitbox.fx+dx && mouseY > PIECES[i].hitbox.y-dy && mouseY < PIECES[i].hitbox.fy+dy) {
 			PIECES[i].drag.dragging=true;
 			PIECES[i].drag.offx = PIECES[i].hitbox.x-mouseX;
@@ -414,7 +414,8 @@ function layout(){
 			x:(windowWidth-(ww-2*mr))/2+(ww-2*mr)/6,
 			y:wh-1.5/DIM.h*(ww-2*mr)-mr,
 			dx:(ww-2*mr)/3,
-			dy:0
+			dy:0,
+                        sp:(windowWidth-(ww-2*mr))/2+(ww-2*mr)/6
 		};
 	} else {
 		let mr = 0.01*windowHeight;
@@ -438,7 +439,8 @@ function layout(){
 			y:(windowHeight-(ww-2*mr))/2+(ww-2*mr)/6,
 			x:wh-1.5/DIM.h*(ww-2*mr)-mr,
 			dy:(ww-2*mr)/3,
-			dx:0
+			dx:0,
+                        sp:(windowHeight-(ww-2*mr))/2+(ww-2*mr)/6
 		};
 	}
 }
