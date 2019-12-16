@@ -339,10 +339,6 @@ function update_hitbox(index){
 	PIECES[index].hitbox.y = mouseY + PIECES[index].drag.offy;
 	PIECES[index].hitbox.fx = mouseX + PIECES[index].drag.offx + PIECES[index].cell.x*PIECES[index].s.l;
 	PIECES[index].hitbox.fy = mouseY + PIECES[index].drag.offy + PIECES[index].cell.y*PIECES[index].s.h;
-	PIECES[index].cell={
-		x:GRID_POS.dx/DIM.l,
-		y:GRID_POS.dy/DIM.h
-	};
 }
 
 function mouseReleased() {
@@ -373,6 +369,10 @@ function reset_piece(index){
 		y:(PIECES_POS.y+PIECES_POS.dy*index-(PIECES[index].cell.y*PIECES[index].s.h/2)),
 		fx:(PIECES_POS.x+PIECES_POS.dx*index-(PIECES[index].cell.x*PIECES[index].s.l/2))+PIECES[index].cell.x*PIECES[index].s.l,
 		fy:(PIECES_POS.y+PIECES_POS.dy*index-(PIECES[index].cell.y*PIECES[index].s.h/2))+PIECES[index].cell.y*PIECES[index].s.h
+	};
+	PIECES[index].cell={
+		x:GRID_POS.dx/DIM.l,
+		y:GRID_POS.dy/DIM.h
 	};
 }
 
