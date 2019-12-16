@@ -51,6 +51,10 @@ function preload() {
     IMAGES.push(loadImage('lvl/ananas.png'));
     IMAGES.push(loadImage('lvl/ciliegia.png'));
     IMAGES.push(loadImage('lvl/moneta.png'));
+    IMAGES.push(loadImage('lvl/albicocca.png'));
+    IMAGES.push(loadImage('lvl/corona.png'));
+    IMAGES.push(loadImage('lvl/kiwi.png'));
+    IMAGES.push(loadImage('lvl/lemon.png'));
 }
 
 function solution_from_image(number){
