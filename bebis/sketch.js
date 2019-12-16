@@ -54,7 +54,7 @@ function preload() {
     IMAGES.push(loadImage('lvl/albicocca.png'));
     IMAGES.push(loadImage('lvl/corona.png'));
     IMAGES.push(loadImage('lvl/kiwi.png'));
-    IMAGES.push(loadImage('lvl/lemon.png'));
+    IMAGES.push(loadImage('lvl/limone.png'));
 }
 
 function solution_from_image(number){
