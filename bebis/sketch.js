@@ -221,7 +221,7 @@ function new_pieces(){
 	for(let i=0;i<ret.length;i++){
 		ret[i].cell={
 			x:GRID_POS.dx/DIM.l,
-        	y:GRID_POS.dy/DIM.h
+			y:GRID_POS.dy/DIM.h
 		};
 		ret[i].hitbox={
 			x:(PIECES_POS.x+PIECES_POS.dx*i-(ret[i].cell.x*ret[i].s.l/2)),
@@ -339,6 +339,10 @@ function update_hitbox(index){
 	PIECES[index].hitbox.y = mouseY + PIECES[index].drag.offy;
 	PIECES[index].hitbox.fx = mouseX + PIECES[index].drag.offx + PIECES[index].cell.x*PIECES[index].s.l;
 	PIECES[index].hitbox.fy = mouseY + PIECES[index].drag.offy + PIECES[index].cell.y*PIECES[index].s.h;
+	PIECES[index].cell={
+		x:GRID_POS.dx/DIM.l,
+		y:GRID_POS.dy/DIM.h
+	};
 }
 
 function mouseReleased() {
