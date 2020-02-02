@@ -1,0 +1,43 @@
+#header {
+    text-align: center;
+    font-variant: small-caps;
+}
+#header h1 {
+    line-height: 1;
+}
+#title {
+    text-align: center;
+    font-variant: small-caps;
+}
+#content {
+    text-align: center;
+}
+#back {
+    display: inline-block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    width: 150px;
+    padding: 10px 20px;
+    border: 1px solid var(--redcraft-red);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: normal 16px/normal "lato", Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: var(--youtube-red);
+}
+#back:hover{ 
+    text-decoration: none; 
+    background: var(--redcraft-red);
+}
+#errorContainer h1{
+    margin-top: -5%;
+    font-size: 20vw;
+    line-height: normal;
+}
+#errorContainer h2{
+    margin-top: -15%;
+}

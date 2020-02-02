@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--Header:-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Il sito ufficiale di BisUmTo">
+    <meta name="keywords" content="multicore network, multicore, bisumto">
+    <meta name="author" content="LoreSchaeffer, BisUmTo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#282828">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/multicore.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pages/404.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+    <!--:Header-->
+
+    <title>BisUmTo - Official Site</title>
+    <script src="js/pages/home.js" defer></script>
+    <link rel="stylesheet" href="css/pages/home.css">
+    <!-- Google Webmasters -->
+    <meta name="google-site-verification" content="OcqCsU80R_rN97kWWxlKogdyA9Sj750UrxRZoE6KIlg" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146517603-1" defer></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146517603-1');
+    </script>
+</head>
+<body>
+    <nav id="mainNavbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/"><img class="img-responsive" src="images/navbar-brand.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bisMenu" aria-controls="bisMenu" aria-expanded="false" aria-label="Apri/Chiudi menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="bisMenu">
+            <ul class="navbar-nav mr-auto">
+                <li id="nav-link-home" class="nav-item"><a class="nav-link" href="/"><i class="fas fa-home"></i> Home</a></li>
+                <li id="nav-link-biloma" class="nav-item"><a class="nav-link" href="biloma"><i class="fas fa-share"></i> Biloma</a></li>
+                <li id="nav-link-redcraft2" class="nav-item"><a class="nav-link" href="redcraft2"><i class="fas fa-signal"></i> RedCraft 2</a></li>
+                <li id="nav-link-postazione" class="nav-item"><a class="nav-link" href="https://amazon.it/shop/bisumto" target="_blank"><i class="fas fa-desktop"></i> Postazione</a></li>
+                <li id="nav-link-downloads" class="nav-item"><a class="nav-link" href="downloads"><i class="fas fa-download"></i> Downloads</a></li>
+                <li id="nav-link-contatti" class="nav-item"><a class="nav-link" href="contatti"><i class="fas fa-envelope"></i> Contatti</a></li>
+                <li id="nav-link-multicore" class="nav-item"><a class="nav-link" href="https://multicore.network" target="_blank"><i class="fas fa-globe"></i> MultiCore</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="height: 76px;"></div>
+    <section id="header" class="bg-red">
+        <div class="container-fluid block">
+            <h1>BisUmTo</h1>
+        </div>
+    </section>
+    <section id="content">
+        <div class="content">
+            <div class="container-fluid bg-white block">
+                <section id="errorContainer">
+                    <h1><i class="far fa-grin-beam-sweat"></i></h1>
+                    <h2>Pagina non trovata!</h2>
+                    <h3>La pagina che stai cercando non si trova a questo indirizzo o non è più disponibile.</h3>
+                    <a id="back" href="/">Torna alla Home</a>
+                </section>
+            </div>
+        </div>
+    </section>
+    <div include-html="components/footer.html"></div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    elmnt.removeAttribute("include-html");
+                    includeHTML();
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if(document.getElementById('footerPush') != null && document.body.clientHeight - document.getElementById('mainNavbar').clientHeight - document.getElementById('mainFooter').clientHeight < $(window).height()) {
+                document.getElementById('footerPush').style.height = ($(window).height() - document.body.clientHeight) + 'px';
+            }
+        };
+        includeHTML();
+    </script>
+</body>
+</html>
