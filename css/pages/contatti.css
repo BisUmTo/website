@@ -9,15 +9,20 @@ section h1{
 .block p{
     font-size:110%
 }
-/*.bg-white h1{
-    color:var(--redcraft-red)
-}*/
 .row{
     margin-top:2em
 }
 .card{
     text-align:center;
-    margin-bottom:1em
+    margin-bottom:1em;
+    -webkit-transition: background-color 250ms linear;
+    -ms-transition: background-color 250ms linear;
+    transition: background-color 250ms linear;
+}
+.card:hover {
+    -webkit-transition: background-color 250ms linear;
+    -ms-transition: background-color 250ms linear;
+    transition: background-color 250ms linear;
 }
 .card h5.card-title{
     font-size:800%;
@@ -39,13 +44,23 @@ section h1{
 .extra {
     font-size: 10px
 }
+a:hover{text-decoration:none;}
 
-.bg-card-youtube:hover { transition: 0.5s;background-color:#ff0000 }
-.bg-card-teamspeak:hover { transition: 0.5s;background-color:#2980c3 }
-.bg-card-telegram:hover { transition: 0.5s;background-color:#0088cc }
-.bg-card-instagram:hover { transition: 0.5s;background-color:#c32aa3 }
-.bg-card-twitter:hover { transition: 0.5s;background-color:#1da1f2 }
-.bg-card-discord:hover { transition: 0.5s;background-color:#7289da }
-.bg-card-github:hover { transition: 0.5s;background-color:#24292e }
-.bg-card-twitch:hover { transition: 0.5s;background-color:#6441a4 }
-.bg-card-email:hover { transition: 0.5s;background-color:#565656 }
+.bg-card-youtube:hover { background-color:#ff0000 }
+.bg-card-teamspeak:hover { background-color:#2980c3 }
+.bg-card-telegram:hover { background-color:#0088cc }
+.bg-card-instagram { z-index: 1; background-color:var(--redcraft-red);}
+.bg-card-instagram:hover::before { opacity: 1; }
+.bg-card-instagram::before {
+    position: absolute;
+    content: ""; top: 0; right: 0; bottom: 0; left: 0; z-index: -1;
+    transition: opacity 0.25s linear; opacity: 0;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+}
+.bg-card-twitter:hover { background-color:#1da1f2 }
+.bg-card-discord:hover { background-color:#7289da }
+.bg-card-github:hover { background-color:#24292e }
+.bg-card-twitch:hover { background-color:#a970ff }
+.bg-card-email:hover { background-color:#565656 }
