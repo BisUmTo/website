@@ -13,3 +13,7 @@ function getCommits() {
         })
     });
 }
+
+$(document).ready(function () {
+    $(".video-responsive").parent().fitVids();
+});
