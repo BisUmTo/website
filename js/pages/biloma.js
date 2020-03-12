@@ -15,9 +15,9 @@ function calculate() {
     const outMotionY = (1 - damping) / (1 - Math.pow(damping, ticks)) * ((destinationY - originY) + (ticks - (1 - Math.pow(damping, ticks)) / (1 - damping)) * damping / (1 - damping) * gravity);
     const outMotionZ = (1 - damping) / (1 - Math.pow(damping, ticks)) * (destinationZ - originZ);
 
-    document.getElementById('outMotionX').innerHTML = '' + outMotionX;
-    document.getElementById('outMotionY').innerHTML = '' + outMotionY;
-    document.getElementById('outMotionZ').innerHTML = '' + outMotionZ;
+    document.getElementById('outMotionX').innerHTML = '' + (outMotionX==0?'0.0':outMotionX);
+    document.getElementById('outMotionY').innerHTML = '' + (outMotionY==0?'0.0':outMotionY);
+    document.getElementById('outMotionZ').innerHTML = '' + (outMotionZ==0?'0.0':outMotionZ);
 
     if(document.getElementById('relative').checked) {
         document.getElementById('outOriginX').innerHTML = '~';
