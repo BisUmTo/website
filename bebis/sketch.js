@@ -55,6 +55,7 @@ function preload() {
     IMAGES.push(loadImage('lvl/corona.png'));
     IMAGES.push(loadImage('lvl/kiwi.png'));
     IMAGES.push(loadImage('lvl/limone.png'));
+    IMAGES.push(loadImage('lvl/uovo_di_pasqua.png'));
 }
 
 function solution_from_image(number){
