@@ -1,0 +1,25 @@
+{
+    "image_url":"https://img.youtube.com/vi/${video_id}/maxresdefault.jpg",
+    "video_url":"https://www.youtube.com/embed/${video_id}",
+
+    "files":[
+        {
+            "name":"Custom Skulls",
+            "version":"1.0.0",
+            "mc_version":{"min":"1.15.0","max":"1.15.2"},
+            "url":"files/RedPack_-_Custom_Skulls.zip",
+            "video_id":"jNULan99464",
+            "redpack_id":128319,
+            "group":""
+        },
+        {
+            "name":"Easy Redstone Crafting",
+            "version":"1.0.0",
+            "mc_version":{"min":"1.15.0"},
+            "url":"files/RedPack_-_Easy_Redstone_Crafting.zip",
+            "video_id":"jNULan99464",
+            "redpack_id":128315,
+            "group":"crafting"
+        }
+    ]
+}

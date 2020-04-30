@@ -52,7 +52,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-var $form = $("#download_form").on("submit", function () {
+$("#download_form").on("submit", function () {
     resetMessage();
     var zip = new JSZip();
 
@@ -116,8 +116,8 @@ var $form = $("#download_form").on("submit", function () {
     });
 
     Promise.all(promises).then(() => {
-        zip.file('data/minecraft/tags/functions/tick.json', '{"values":' + JSON.stringify(ticks) + '}');
-        zip.file('data/minecraft/tags/functions/load.json', '{"values":' + JSON.stringify(loads) + '}');
+        if(ticks.length>0) zip.file('data/minecraft/tags/functions/tick.json', '{"values":' + JSON.stringify(ticks) + '}');
+        if(loads.length>0) zip.file('data/minecraft/tags/functions/load.json', '{"values":' + JSON.stringify(loads) + '}');
     }).then(
         function () {
             zip.generateAsync({
@@ -138,3 +138,12 @@ var $form = $("#download_form").on("submit", function () {
 
     return false;
 });
+
+$(document).ready(()=>{
+    $.getJSON("config.json", function(config) {
+        config.files.forEach((file)=>{
+            $('<li><label><input type="checkbox" data-url="'+file.url+'" checked /> '+file.name+' - v.'+file.version+'</label></li>').appendTo($('#download_form ul'))
+        })
+    });    
+});
+
