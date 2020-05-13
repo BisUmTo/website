@@ -55,8 +55,11 @@ function preload() {
     IMAGES.push(loadImage('lvl/corona.png'));
     IMAGES.push(loadImage('lvl/kiwi.png'));
     IMAGES.push(loadImage('lvl/limone.png'));
-    IMAGES.push(loadImage('lvl/uovo_di_pasqua.png'));
-    IMAGES.push(loadImage('lvl/smeraldo.png'));
+    IMAGES.push(loadImage('lvl/uovo_di_pasqua.png')); // by OrnigoTango
+    IMAGES.push(loadImage('lvl/smeraldo.png')); // by OrnigoTango
+    IMAGES.push(loadImage('lvl/castello.png')); // by OrnigoTango
+    IMAGES.push(loadImage('lvl/funghetto.png')); // by OrnigoTango
+    IMAGES.push(loadImage('lvl/skyblock.png')); // by OrnigoTango
 }
 
 function solution_from_image(number){
@@ -95,7 +98,7 @@ function grid(position, dimension, color_grid, preview=false, preview_grid=undef
 				let c=COL[preview_grid[i][j]];
 				c.setAlpha(128);
 				fill(c);
-				rect(position.x+cell.l*j+2, position.y+cell.h*i+2, cell.l-2, cell.h-2, cell.l/3, cell.h/3);
+				rect(position.x+cell.l*j+cell.l/6, position.y+cell.h*i+cell.l/6, cell.l-cell.l/3, cell.h-cell.l/3, cell.l/5, cell.h/5);
 				c.setAlpha(255);
 				stroke('#000');
 			}
