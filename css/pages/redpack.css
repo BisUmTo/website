@@ -33,3 +33,20 @@ h2 {
 .versione {
     font-size: 10px;
 }
+
+#download_form {
+    width: 100%;
+}
+
+#download_form .btn-secondary.active .aggiungi{display: none;}
+#download_form .btn-secondary:not(.active) .aggiungi{display: inline;}
+#download_form .btn-secondary.active .aggiunto{display: inline;}
+#download_form .btn-secondary:not(.active) .aggiunto{display: none;}
+
+.progress.hide {display: none;}
+.progress:not(.hide) {display: block;}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle {
+    background-color:#08eb2e;
+    border-color: #0ca70c;
+}

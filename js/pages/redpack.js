@@ -139,11 +139,48 @@ $("#download_form").on("submit", function () {
     return false;
 });
 
+function cambia_testo(checkbox) {
+    checkbox.innerHTML = checkbox.checked?'Aggiunto':'Aggiungi';
+}
+
 $(document).ready(()=>{
-    $.getJSON("config.json", function(config) {
+    $.getJSON('config.json', function(config) {
         config.files.forEach((file)=>{
-            $('<li><label><input type="checkbox" data-url="'+file.url+'" checked /> '+file.name+' - v.'+file.version+'</label></li>').appendTo($('#download_form ul'))
+            var url = 'files/'+file;
+            new Promise((res, rej) => {
+                JSZipUtils.getBinaryContent(url, (err, data) => {
+                    if (err) {
+                        rej(err);
+                    } else {
+                        res(data);
+                    }
+                })
+            }).then(JSZip.loadAsync).then((zipFile)=>{
+                zipFile.file('pack.mcmeta').async("string").then((value) => {
+                    var pack_mcmeta = JSON.parse(value);
+                    var name = pack_mcmeta.pack.description.replace('RedPack by BisUmTo & Gnottero - ','').replace(/v\d+.\d+.\d+/g,'');
+                    var version = pack_mcmeta.pack.description.match(/v\d+.\d+.\d+/g,'')[0];
+                    //$('<li><label><input type="checkbox" data-url=files/"'+url+'" checked /> '+name+' - '+version+'</label></li>').appendTo($('#download_form ul'));
+
+
+                    $( `<div class="card" style="width: 18rem; display: inline-block; margin:10px;">
+                            <img src="${pack_mcmeta.redpack.image}" class="card-img-top" alt="Immagine non disponibile" />
+                            <div class="card-body">
+                                <h5 class="card-title">${name}</h5>
+                                <p class="card-text">${pack_mcmeta.pack.description}</p>
+                                <div class="btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                        <input type="checkbox" data-url="${url}" checked autocomplete="off"> 
+                                        <span class="aggiungi">Aggiungi</span>
+                                        <span class="aggiunto">Aggiunto</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>`
+                    ).appendTo($('#download_form ul'));
+                });
+            });
         })
-    });    
+    });
 });
 
