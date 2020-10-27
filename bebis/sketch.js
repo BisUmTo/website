@@ -60,6 +60,7 @@ function preload() {
     IMAGES.push(loadImage('lvl/castello.png')); // by OrnigoTango
     IMAGES.push(loadImage('lvl/funghetto.png')); // by OrnigoTango
     IMAGES.push(loadImage('lvl/skyblock.png')); // by OrnigoTango
+    IMAGES.push(loadImage('lvl/gattino.png')); // by OrnigoTango
 }
 
 function solution_from_image(number){
