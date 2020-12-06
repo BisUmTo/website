@@ -1,0 +1,13 @@
+#header {
+    text-align: center;
+    font-variant: small-caps;
+}
+#header h1 {
+    line-height: 1;
+}
+.bg-white .card .bg-primary {
+    background-color: var(--redcraft-red)!important;
+}
+h2 {
+    font-variant: small-caps;
+}

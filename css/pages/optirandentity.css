@@ -1,0 +1,52 @@
+#header {
+    text-align: center;
+    font-variant: small-caps;
+}
+#header h1 {
+    line-height: 1;
+}
+#downloadButton {
+    float: right;
+    margin-right: 5%;
+}
+h2 {
+    font-variant: small-caps;
+}
+/*.resourceButton {
+    float: right;
+    margin-right: 5%;
+}
+.bg-white .card .bg-primary {
+    background-color: var(--redcraft-red)!important;
+}
+
+.btn {
+    background-color: var(--youtube-red);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.btn:hover {
+    background-color: var(--redcraft-red);
+}
+.versione {
+    font-size: 10px;
+}*/
+
+#version, #texture {
+    min-width: 320px;
+}
+
+.file-preview-image{
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    width: 100% !important;
+    object-fit: contain;
+}
+
+.kv-file-upload, .file-upload-indicator{
+    display: none;
+}

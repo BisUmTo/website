@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <!--Header:-->
@@ -13,12 +13,13 @@
     <script src="https://kit.fontawesome.com/86dcb577e8.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="../css/multicore.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.js" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" defer></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" defer></script>
     <script src="https://apis.google.com/js/platform.js" defer></script>
     <script src="../js/scripts.js" defer></script>
+    <script src="../js/libs/fitvids.min.js" defer></script>
     <!--:Header-->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -31,39 +32,38 @@
       gtag('config', 'UA-146517603-1');
     </script>   
 
-    <title>BisUmTo - Dowloads</title>
-    <script src="../js/pages/downloads.js" defer></script>
-    <link rel="stylesheet" href="../css/pages/downloads.css">
+    <title>BisUmTo - RedCraft 2</title>
+    <script src="../js/pages/modpack.js" defer></script>
+    <link rel="stylesheet" href="../css/pages/modpack.css">
 </head>
 <body>
     <div include-html="../components/navbar.html"></div> 
     <section id="header" class="bg-red">
         <div class="container-fluid block">
-            <h1>Downloads</h1>
+            <h1>ModPack<br><small>RedCraft Client Mods</small></h1>
         </div>
     </section>
-    <section id="content">
-        <div class="container-fluid bg-gray block">
-            <h2 id="title">Dove trovo i CODICI?</h2>
-            <p id="subtitle">I codici vengono consegnati agli <a href="https://youtube.com/bisumto/join" target="_blank">ABBONATI</a> nella sezione <a href="https://youtube.com/bisumto/community" target="_blank">Community</a> di YouTube.</p>
+    <section id="contant">
+        <div class="container-fluid bg-white block">
+            Hai sempre sognato di avere lo stesso ModPack dei membri della RedCraft2? Questa istanza di MultiMC fa per te!<br/><br/>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link" id="nav-13-tab" data-toggle="tab" href="#nav-13" role="tab" aria-controls="nav-13" aria-selected="false">1.13.2</a>
+                    <a class="nav-item nav-link" id="nav-14-tab" data-toggle="tab" href="#nav-14" role="tab" aria-controls="nav-14" aria-selected="false">1.14.4</a>
+                    <a class="nav-item nav-link" id="nav-15-tab" data-toggle="tab" href="#nav-15" role="tab" aria-controls="nav-15" aria-selected="false">1.15.2</a>
+                    <a class="nav-item nav-link active" id="nav-16-4-tab" data-toggle="tab" href="#nav-16-2" role="tab" aria-controls="nav-16-4" aria-selected="true">1.16.4</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade" id="nav-13" role="tabpanel" aria-labelledby="nav-13-tab" include-html="components/modpacks/rift/1_13_2.html"></div>
+                <div class="tab-pane fade" id="nav-14" role="tabpanel" aria-labelledby="nav-14-tab" include-html="components/modpacks/fabric/1_14_4.html"></div>
+                <div class="tab-pane fade show" id="nav-15" role="tabpanel" aria-labelledby="nav-15-tab" include-html="components/modpacks/fabric/1_15_2.html"></div>
+                <div class="tab-pane fade show active" id="nav-16-4" role="tabpanel" aria-labelledby="nav-16-4-tab" include-html="components/modpacks/fabric/1_16_4.html"></div>
+            </div>
+            <div class="clearfix"></div>
         </div>
-        <div class="container-fluid block">
-            <form>
-                <script>
-                    function update(){
-                        document.getElementById('download').href = 'http://www.mediafire.com/file/' + 
-                        document.getElementById('password').value;
-                    }
-                </script>
-                <input type="text" class="form-control" id="password" placeholder="CODICE" onchange="update()"> 
-                <br />
-                <a href="/" id="download" target="_blank">DOWNLOAD</a>
-            </form>
-        </div>
-        <br /><br /><br /><br />
     </section>
-
-    <div include-html="../components/footer.html"></div> 
+    <div include-html="../components/footer.html"></div>
     <script>
         function includeHTML() {
             var z, i, elmnt, file, xhttp;
@@ -77,8 +77,8 @@
                     if (this.readyState == 4) {
                     if (this.status == 200) {elmnt.innerHTML = this.responseText;}
                     if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                    elmnt.removeAttribute("include-html");
-                    includeHTML();
+                        elmnt.removeAttribute("include-html");
+                        includeHTML();
                     }
                 }      
                 xhttp.open("GET", file, true);
@@ -86,7 +86,7 @@
                 return;
                 }
             }
-            // document.getElementById("nav-link-downloads").classList.add("active");
+            document.getElementById("nav-link-modpack").classList.add("active");
             if(document.getElementById('footerPush') != null && document.body.clientHeight - document.getElementById('mainNavbar').clientHeight - document.getElementById('mainFooter').clientHeight < $(window).height()) {
                 document.getElementById('footerPush').style.height = ($(window).height() - document.body.clientHeight) + 'px';
             }
