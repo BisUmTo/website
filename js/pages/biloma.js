@@ -1,8 +1,15 @@
 const gravity=0.04;
 const damping=0.98;
 
+function resolveNamespace(string) {
+    return (string.includes(':') ? '' : 'minecraft:') + string;
+}
+
 function calculate() {
-    if(document.getElementById('block').value !== '') document.getElementById('outBlock').innerHTML = document.getElementById('block').value;
+    if (document.getElementById('block').value !== '') {
+        document.getElementById('outBlock').innerHTML = resolveNamespace(document.getElementById('block').value);
+    }
+
     const originX = document.getElementById('originX').value;
     const originY = document.getElementById('originY').value;
     const originZ = document.getElementById('originZ').value;
@@ -19,7 +26,7 @@ function calculate() {
     document.getElementById('outMotionY').innerHTML = '' + (outMotionY==0?'0.0':outMotionY);
     document.getElementById('outMotionZ').innerHTML = '' + (outMotionZ==0?'0.0':outMotionZ);
 
-    if(document.getElementById('relative').checked) {
+    if (document.getElementById('relative').checked) {
         document.getElementById('outOriginX').innerHTML = '~';
         document.getElementById('outOriginY').innerHTML = '~';
         document.getElementById('outOriginZ').innerHTML = '~';
@@ -30,13 +37,12 @@ function calculate() {
     }
 }
 function update(){
-    if(document.getElementById('ticks').value != '' && document.getElementById('ticks').value < 1) {
+    if (document.getElementById('ticks').value != '' && document.getElementById('ticks').value < 1) {
         document.getElementById('ticks').classList.add('is-invalid');
     } else {
         document.getElementById('ticks').classList.remove('is-invalid');
     }
-    if(
-        document.getElementById('originX').value != '' &&
+    if (document.getElementById('originX').value != '' &&
         document.getElementById('originY').value != '' &&
         document.getElementById('originZ').value != '' &&
         document.getElementById('destinationX').value != '' &&
