@@ -36,7 +36,7 @@ let TOUCH_N = 0;
 let SHOW_PREVIEW = false;
 let SCREEN_NEEDS_UPDATE = true;
 
-let START_TIME;
+let START_TIME = undefined;
 let BLOCK_PLACED;
 let ROW_DESTROYED;
 
@@ -321,9 +321,6 @@ function win(){
 }
 
 function schedule_updates(){
-	if(JSON.stringify(SOLUTION)===JSON.stringify(GRID)){
-		win();
-	}
 	for(let i=0;i<DIM.h;i++){
 		let equals = GRID[i][0] != BACKGROUND_COLOR;
 		for(let j=1;j<DIM.l;j++){
@@ -341,6 +338,9 @@ function schedule_updates(){
 			GRID.unshift(empty);
 			ROW_DESTROYED++;
 		}
+	}
+	if(JSON.stringify(SOLUTION)===JSON.stringify(GRID)){
+		win();
 	}
 }
 
@@ -363,6 +363,7 @@ function mouseReleased() {
 					PIECES = new_pieces(i);
 					draw();
 					schedule_updates();
+					if(START_TIME == undefined) START_TIME = new Date();
 				}
 			}
 			if(!valid_move) {
@@ -393,7 +394,6 @@ function touchStarted(){
 	}
 	TOUCH_N++;
 	return ret;
-	
 }
 
 function touchEnded(){
@@ -472,7 +472,6 @@ function setup() {
 	PIECES = new_pieces();
 	frameRate(20);
 
-	START_TIME = new Date();
 	BLOCK_PLACED = 0;
 	ROW_DESTROYED = 0;
 }
