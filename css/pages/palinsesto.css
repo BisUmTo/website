@@ -1,0 +1,20 @@
+#header {
+    text-align: center;
+    font-variant: small-caps;
+}
+#header h1 {
+    line-height: 1;
+}
+#title {
+    text-align: center;
+    font-variant: small-caps;
+}
+#subtitle {
+    text-align: center;
+}
+.circle {
+    border-radius: 100%;
+}
+.card-header-tabs{
+    margin-bottom: 0;
+}
