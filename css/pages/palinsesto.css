@@ -15,6 +15,9 @@
 .circle {
     border-radius: 100%;
 }
-.card-header-tabs{
+.card-header-tabs {
     margin-bottom: 0;
+}
+.youtube-embed .twitch-embed {
+    border-radius: 15px;
 }
