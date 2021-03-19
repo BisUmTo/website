@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!--Header:-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Il sito ufficiale di BisUmTo">
+    <meta name="keywords" content="multicore network, multicore, bisumto">
+    <meta name="author" content="LoreSchaeffer, BisUmTo">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#282828">
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/86dcb577e8.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="../css/multicore.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+    <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+    <script src="../js/scripts.js" defer></script>
+    <!--:Header-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146517603-1" defer></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146517603-1');
+    </script>   
+
+    <title>RedCraft 3 - Palinsesto</title>
+    <script src="../js/pages/palinsesto.js" defer></script>
+    <link rel="stylesheet" href="../css/pages/palinsesto.css">
+</head>
+<body>
+    <div include-html="../components/navbar.html"></div> 
+    <section id="header" class="bg-red">
+        <div class="container-fluid block">
+            <h1>RedCraft 3<br><small>Palinsesto</small></h1>
+        </div>
+    </section>
+    <section id="content">
+        <div class="container-fluid bg-white block" style="text-align: center;">
+            <div class="nav nav-tabs card-header-tabs justify-content-center" role="tablist">
+                <a class="nav-item nav-link" id="nav-mniuzo-tab" data-toggle="tab" href="#nav-mniuzo" role="tab" aria-controls="nav-mniuzo" aria-selected="true">LUNEDÌ<br /><img class="circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/fac9bb61-4a36-428a-9f22-8e951c922ecc-profile_image-70x70.png"/></a>
+                <a class="nav-item nav-link" id="nav-mino-tab" data-toggle="tab" href="#nav-mino" role="tab" aria-controls="nav-mino" aria-selected="false">MARTEDÌ<br /><img class="circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/d475d51a-5cc9-4288-88cb-152e2a4a79c2-profile_image-70x70.png"/></a>
+                <a class="nav-item nav-link" id="nav-nappus-tab" data-toggle="tab" href="#nav-nappus" role="tab" aria-controls="nav-nappus" aria-selected="false">MERCOLEDÌ<br /><img class="circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/199dbc29-c048-4c61-a13b-cb508f6193bc-profile_image-70x70.png"/></a>
+                <a class="nav-item nav-link" id="nav-gioco-tab" data-toggle="tab" href="#nav-gioco" role="tab" aria-controls="nav-gioco" aria-selected="false">GIOVEDÌ<br /><img class="circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/6eafc1b1-a665-410b-aba2-86fab3937439-profile_image-70x70.png"/></a>
+                <a class="nav-item nav-link" id="nav-panix-tab" data-toggle="tab" href="#nav-panix" role="tab" aria-controls="nav-panix" aria-selected="false">VENERDÌ<br /><img class="circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/01f7ba70-51b0-4e0b-a4e8-2b02a55b186a-profile_image-70x70.png"/></a>
+                <a class="nav-item nav-link" id="nav-kani-tab" data-toggle="tab" href="#nav-kani" role="tab" aria-controls="nav-kani" aria-selected="false">SABATO<br /><img class="circle" src="https://static-cdn.jtvnw.net/jtv_user_pictures/03132e96-b447-4430-a7f7-9d66b11dd291-profile_image-70x70.png"/></a>
+            </div>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="card-body tab-pane fade" id="nav-mniuzo" role="tabpanel" aria-labelledby="nav-mniuzo-tab" >
+                    <h4 class="card-title">mniuzo</h4>
+                    <iframe class="youtube-embed" id="UCwHcpylXKoykx1ofG3JBI4g" allowfullscreen frameborder="0" width="560" height="315"></iframe>
+                    <div id="mniuzo" class="twitch-embed"></div>
+                </div>
+                <div class="card-body tab-pane fade" id="nav-mino" role="tabpanel" aria-labelledby="nav-mino-tab" >
+                    <h4 class="card-title">MinoDeh</h4>
+                    <iframe class="youtube-embed" id="UCbO8XPuOW93PsUN0202PCxQ" allowfullscreen frameborder="0" width="560" height="315"></iframe>
+                    <div id="minodeh" class="twitch-embed"></div>
+                </div>
+                <div class="card-body tab-pane fade" id="nav-nappus" role="tabpanel" aria-labelledby="nav-nappus-tab" >
+                    <h4 class="card-title">Nappus</h4>
+                    <iframe class="youtube-embed" id="UCn9sutbUig2p9HbGBdxv_tw" allowfullscreen frameborder="0" width="560" height="315"></iframe>
+                    <div id="thenappus" class="twitch-embed"></div>
+                </div>
+                <div class="card-body tab-pane fade" id="nav-gioco" role="tabpanel" aria-labelledby="nav-gioco-tab" >
+                    <h4 class="card-title">Giocosporco</h4>
+                    <iframe class="youtube-embed" id="UCdKUJF1mKEtbs0mlGZ1Xj9g" allowfullscreen frameborder="0" width="560" height="315"></iframe>
+                    <div id="giocosporco" class="twitch-embed"></div>
+                </div>
+                <div class="card-body tab-pane fade" id="nav-panix" role="tabpanel" aria-labelledby="nav-panix-tab" >
+                    <h4 class="card-title">Panix</h4>
+                    <iframe class="youtube-embed" id="UCsGxAk4dG4oNfDqbbANssKw" allowfullscreen frameborder="0" width="560" height="315"></iframe>
+                    <div id="panix90" class="twitch-embed"></div>
+                </div>
+                <div class="card-body tab-pane fade" id="nav-kani" role="tabpanel" aria-labelledby="nav-kani-tab" >
+                    <h4 class="card-title">KaniMutra</h4>
+                    <iframe class="youtube-embed" id="UCnzSH_sn04fBhmA-vOGw6Tg" allowfullscreen frameborder="0" width="560" height="315"></iframe>
+                    <div id="kanimutra" class="twitch-embed"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div include-html="../components/footer.html"></div> 
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    elmnt.removeAttribute("include-html");
+                    includeHTML();
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            // document.getElementById("nav-link-biloma").classList.add("active");
+            if(document.getElementById('footerPush') != null && document.body.clientHeight - document.getElementById('mainNavbar').clientHeight - document.getElementById('mainFooter').clientHeight < $(window).height()) {
+                document.getElementById('footerPush').style.height = ($(window).height() - document.body.clientHeight) + 'px';
+            }
+        };
+        includeHTML();
+    </script>
+</body>
+</html>
