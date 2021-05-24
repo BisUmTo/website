@@ -60,7 +60,7 @@ a:hover{text-decoration:none;}
     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
 }
 .bg-card-twitter:hover { background-color:#1da1f2 }
-.bg-card-discord:hover { background-color:#7289da }
+.bg-card-discord:hover { background-color:#5865F2 }
 .bg-card-github:hover { background-color:#24292e }
 .bg-card-twitch:hover { background-color:#a970ff }
 .bg-card-email:hover { background-color:#565656 }
