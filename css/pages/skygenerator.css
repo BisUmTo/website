@@ -19,3 +19,10 @@
     border-radius: 50%;
     filter: url(#filter);
 }
+.addcolor, .color {
+    height: 30px;
+    width: 35px;
+    border: 6px;
+    padding: 0px;
+    display: inline-block;
+}

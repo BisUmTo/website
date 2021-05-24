@@ -2,8 +2,8 @@ function rn(from, to) {
     return ~~(Math.random() * (to - from + 1)) + from;
 }
 
-function rs() {
-    return arguments[rn(1, arguments.length) - 1];
+function rs(list) {
+    return list[rn(1, list.length) - 1];
 }
 
 function boxShadows(max) {
@@ -11,7 +11,7 @@ function boxShadows(max) {
     for (let i = 0; i < max; ++i) {
         ret.push(`
         ${ rn(1, 100) }vw ${ rn(1, 100) }vh ${ rn(20, 40) }vmin ${ rn(1, 20) }vmin
-        ${ rs('#11cbd7', '#c6f1e7', '#f0fff3', '#fa4659') }
+        ${ rs($(".color").map((i,e) => $(e).val())) }
       `)
     }
     return ret.join(',');
@@ -24,4 +24,7 @@ function update() {
 }
 
 window.addEventListener('load', update);
-document.addEventListener('click', update);
+
+function add_color(element) {
+    $('<span> </span><input type="color" class="color btn btn-light" onchange="update()" value="#11cbd7">').insertAfter($(element))
+}

@@ -47,6 +47,16 @@
             <h2 id="title">Di cosa si tratta?</h2>
             <p id="subtitle">Questo piccolo sito permette di creare gli <i>sfondi</i> delle copertine.</p>
         </div>
+        <div class="row">
+            <div class="col"> 
+                <form>
+                    <button type="button" class="addcolor btn btn-light" onclick="update()"><i class="fas fa-redo-alt"></i></button>
+                    <span> </span><button type="button" class="addcolor btn btn-light" onclick="add_color(this)"><i class="fas fa-plus"></i></button>
+                    <span> </span><input type="color" class="color btn btn-light" onchange="update()" value="#11cbd7">
+                    <span> </span><input type="color" class="color btn btn-light" onchange="update()" value="#11cbd7">
+                </form>
+            </div>
+        </div>
         <div class="container-fluid bg-white block">
             <div id="cloud"></div>
 
