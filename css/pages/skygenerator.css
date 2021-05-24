@@ -19,10 +19,28 @@
     border-radius: 50%;
     filter: url(#filter);
 }
-.addcolor, .color {
+.addcolor, .color, .fullscreen {
     height: 30px;
     width: 35px;
     border: 6px;
     padding: 0px;
     display: inline-block;
+    position: relative;
+    z-index: 3;
 }
+.overclouds {
+    position: relative;
+    z-index: 1;
+}
+.btn-primary {
+    background-color: var(--almost-black);
+}
+.btn-primary:hover {
+    background-color: var(--redcraft-red);
+}
+form.hide {
+    opacity: 0.0;
+    transition: 1s;
+}
+  
+form.hide:hover {opacity: 1}

@@ -26,5 +26,34 @@ function update() {
 window.addEventListener('load', update);
 
 function add_color(element) {
-    $('<span> </span><input type="color" class="color btn btn-light" onchange="update()" value="#11cbd7">').insertAfter($(element))
+    $('<span> </span><input type="color" class="color btn btn-primary" onchange="update()" value="#11cbd7">').insertAfter($(element))
+}
+
+function fullscreen() {
+    $('.fullscreen').each((i,e)=>$(e).toggle());
+    $('.navdiv').each((i,e)=>$(e).fadeToggle());
+    $('.overclouds:not(form)').each((i,e)=>$(e).slideToggle('2000', "swing"));
+    $('form').each((i,e)=>$(e).toggleClass('hide'));
+}
+
+function fullscreen_on() {
+    fullscreen();
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+        elem.msRequestFullscreen();
+    }
+}
+function fullscreen_off() {
+    fullscreen();
+    if (document.exitFullscreen) {
+        document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) { /* Safari */
+        document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) { /* IE11 */
+        document.msExitFullscreen();
+    }
 }

@@ -36,28 +36,28 @@
     <link rel="stylesheet" href="../css/pages/skygenerator.css">
 </head>
 <body>
-    <div include-html="../components/navbar.html"></div> 
-    <section id="header" class="bg-red">
+    <div class="navdiv" include-html="../components/navbar.html"></div> 
+    <section id="header" class="bg-red overclouds">
         <div class="container-fluid block">
             <h1>Sky Generator<br><small>Thumbnail Background</small></h1>
         </div>
     </section>
     <section id="content">
-        <div class="container-fluid bg-gray block">
+        <div class="container-fluid bg-gray block overclouds">
             <h2 id="title">Di cosa si tratta?</h2>
             <p id="subtitle">Questo piccolo sito permette di creare gli <i>sfondi</i> delle copertine.</p>
         </div>
-        <div class="row">
-            <div class="col"> 
-                <form>
-                    <button type="button" class="addcolor btn btn-light" onclick="update()"><i class="fas fa-redo-alt"></i></button>
-                    <span> </span><button type="button" class="addcolor btn btn-light" onclick="add_color(this)"><i class="fas fa-plus"></i></button>
-                    <span> </span><input type="color" class="color btn btn-light" onchange="update()" value="#11cbd7">
-                    <span> </span><input type="color" class="color btn btn-light" onchange="update()" value="#11cbd7">
-                </form>
-            </div>
-        </div>
         <div class="container-fluid bg-white block">
+            <form class="overclouds">
+                <button type="button" class="fullscreen btn btn-primary" onclick="fullscreen_on()"><i class="fas fa-expand"></i></i></button>
+                <button type="button" class="fullscreen btn btn-primary" onclick="fullscreen_off()" style="display: none;"><i class="fas fa-compress"></i></i></button>
+                
+                <span> </span><button type="button" class="addcolor btn btn-primary" onclick="update()"><i class="fas fa-redo-alt"></i></button>
+                <span> </span><button type="button" class="addcolor btn btn-primary" onclick="add_color(this)"><i class="fas fa-plus"></i></button>
+                <span> </span><input type="color" class="color btn btn-primary" onchange="update()" value="#11cbd7">
+                <span> </span><input type="color" class="color btn btn-primary" onchange="update()" value="#11cbd7">
+            </form>
+        
             <div id="cloud"></div>
 
             <svg width="0">
@@ -70,7 +70,7 @@
             </svg>
         </div>
     </section>
-    <div include-html="../components/footer.html"></div> 
+    <div class="overclouds" include-html="../components/footer.html"></div> 
     <script>
         function includeHTML() {
             var z, i, elmnt, file, xhttp;
@@ -82,10 +82,10 @@
                 xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     if (this.readyState == 4) {
-                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                    elmnt.removeAttribute("include-html");
-                    includeHTML();
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML();
                     }
                 }      
                 xhttp.open("GET", file, true);
@@ -98,7 +98,7 @@
                 document.getElementById('footerPush').style.height = ($(window).height() - document.body.clientHeight) + 'px';
             }
         };
-        includeHTML();
+        window.addEventListener('load', includeHTML);
     </script>
 </body>
 </html>

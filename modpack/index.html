@@ -93,7 +93,7 @@
                 document.getElementById('footerPush').style.height = ($(window).height() - document.body.clientHeight) + 'px';
             }
         };
-        includeHTML();
+        window.addEventListener('load', includeHTML);
     </script>
 </body>
 </html>
