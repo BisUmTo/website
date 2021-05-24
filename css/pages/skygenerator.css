@@ -1,0 +1,21 @@
+#header {
+    text-align: center;
+    font-variant: small-caps;
+}
+#header h1 {
+    line-height: 1;
+}
+#title {
+    text-align: center;
+    font-variant: small-caps;
+}
+#subtitle {
+    text-align: center;
+}
+#cloud {
+    overflow: hidden;
+    width: 1px; height: 1px;
+    transform: translate(-100%, -100%);
+    border-radius: 50%;
+    filter: url(#filter);
+}
