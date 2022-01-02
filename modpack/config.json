@@ -24,7 +24,8 @@
                 },
                 {
                     "id": "malilib",
-                    "title": "MaliLib",
+                    "title": "MaLiLib",
+                    "description": "Masa Litemod Library, libreria necessaria per Litematica, Tweakeroo, ItemScroller e MiniHUD",
                     "download_url": "3544/210/malilib-fabric-1.18.0-0.10.0-dev.26.jar",
                     "image_url": "171/135/636727036520163113.png",
                     "mod_url": "malilib"
@@ -32,6 +33,7 @@
                 {
                     "id": "litematica",
                     "title": "Litematica",
+                    "description": "Crea ologrammi per la ricostruzione di strutture da te salvate come ologramma",
                     "download_url": "3545/947/litematica-fabric-1.18.0-0.0.0-dev.20211203.013300.jar",
                     "image_url": "181/712/636802492918868562.jpeg",
                     "mod_url": "litematica",
@@ -40,6 +42,7 @@
                 {
                     "id": "tweakeroo",
                     "title": "Tweakeroo",
+                    "description": "Aggiunge degli aggiustamenti a Minecraft",
                     "download_url": "3579/871/tweakeroo-fabric-1.18.0-0.11.0.jar",
                     "image_url": "thumbnails/159/939/64/64/636662314665459977.jpeg",
                     "mod_url": "tweakeroo",
@@ -48,6 +51,7 @@
                 {
                     "id": "item-scroller",
                     "title": "ItemScroller",
+                    "description": "Semplifica lo spostamento di oggetti",
                     "download_url": "3544/231/itemscroller-fabric-1.18.0-0.15.0.jar",
                     "image_url": "34/849/635915728962120488.jpeg",
                     "mod_url": "item-scroller",
@@ -56,6 +60,7 @@
                 {
                     "id": "minihud",
                     "title": "MiniHUD",
+                    "description": "Agevola la visualizzazione di alcune info",
                     "download_url": "",
                     "image_url": "213/409/636992403483369946.png",
                     "mod_url": "minihud",
@@ -73,6 +78,7 @@
                 {
                     "id": "worldedit",
                     "title": "WorldEdit",
+                    "description": "Permette la modifica a 360° del mondo di minecraft",
                     "download_url": "3559/499/worldedit-mod-7.2.8.jar",
                     "image_url": "308/38/637390518698344085.png",
                     "mod_url": "worldedit"
@@ -80,6 +86,7 @@
                 {
                     "id": "fabric-api",
                     "title": "Fabric API",
+                    "description":"Libreria necessaria per ReplayMod, Camera Utils, Effective, Logical Zoom, LambdaBetterGrass, Continuity, OF Capes",
                     "download_url" : "3577/46/fabric-api-0.45.0%2B1.18.jar",
                     "image_url": "thumbnails/185/822/64/64/636829723898798601.png",
                     "mod_url": "fabric-api"
@@ -87,6 +94,7 @@
                 {
                     "id": "replay-mod",
                     "title": "ReplayMod",
+                    "description": "Permette di vedere i replay delle giocate",
                     "download_absolute_url" : "https://minio.replaymod.com/replaymod/replaymod-1.18.1-2.6.3.jar",
                     "image_absolute_url": "https://www.replaymod.com/img/logo_nocom.png",
                     "mod_absolute_url": "https://www.replaymod.com/download/",
@@ -95,6 +103,7 @@
                 {
                     "id": "sodium",
                     "title": "Sodium",
+                    "description": "Migliora le performance",
                     "download_url": "3542/74/sodium-fabric-mc1.18-0.4.0-alpha5%2Bbuild.9.jar",
                     "image_url": "284/773/637298471098686391.png",
                     "mod_url": "sodium"
@@ -102,6 +111,7 @@
                 {
                     "id": "irisshaders",
                     "title": "Iris Shaders",
+                    "description": "Permette di utilizzare le shaders con Sodium",
                     "download_url": "3558/900/iris-mc1.18.1-1.1.3.jar",
                     "image_url" : "393/276/637588493674460514.png",
                     "mod_url": "irisshaders",
@@ -110,6 +120,7 @@
                 {
                     "id": "camera-utils",
                     "title": "Camera Utils",
+                    "description": "Aggiunge funzioni all'anogolo visivo del giocatore",
                     "download_url": "3557/166/camerautils-1.18.1-1.0.0.jar",
                     "image_url": "413/340/637634129657463378.png",
                     "mod_url": "camera-utils",
@@ -118,6 +129,7 @@
                 {
                     "id": "effective",
                     "title": "Effective 💦",
+                    "description": "Aggiunge effetti ambientali",
                     "download_url": "3580/78/effective-1.1.jar",
                     "image_url": "467/123/637748529243644133.png",
                     "mod_url": "effective",
@@ -126,6 +138,7 @@
                 {
                     "id": "sodium-shadowy-path-blocks",
                     "title": "Sodium Shadowy Path Blocks",
+                    "description": "Rimette i blocchi sentiero ombrosi con Sodium",
                     "download_url": "3577/236/sodium-shadowy-path-blocks-0.2.0.jar",
                     "image_url" : "467/156/637748563641228976.png",
                     "mod_url": "sodium-shadowy-path-blocks",
@@ -134,6 +147,7 @@
                 {
                     "id": "xaeros-world-map",
                     "title": "Xaero's World Map",
+                    "description": "Aggiunge una mappa a schermo intero",
                     "download_url": "3582/993/XaerosWorldMap_1.19.0_Forge_1.18.jar",
                     "image_url": "196/654/636886857118683130.png",
                     "mod_url": "xaeros-world-map"
@@ -141,6 +155,7 @@
                 {
                     "id": "xaeros-minimap",
                     "title": "Xaero's Minimap",
+                    "description": "Aggiunge la minimappa della Xaero's World Map",
                     "download_url": "3582/980/Xaeros_Minimap_21.23.0_Forge_1.18.jar",
                     "image_url": "92/854/636258666554688823.png",
                     "mod_url": "xaeros-minimap",
@@ -149,6 +164,7 @@
                 {
                     "id": "voxelmap",
                     "title": "VoxelMap",
+                    "description": "Aggiunge una minimappa",
                     "download_url": "",
                     "image_url": "11/698/635499892408422072.jpeg",
                     "mod_url": "voxelmap",
@@ -158,6 +174,7 @@
                 {
                     "id": "optifine",
                     "title": "OptiFine",
+                    "description": "Migliora le performance",
                     "download_absolute_url": "https://optifine.net/downloadx?f=OptiFine_1.18.1_HD_U_H4.jar&x=5476e7ed20bdb65fa947d38b0f8c922e",
                     "image_absolute_url": "https://optifine.net/images/of16r.png",
                     "mod_absolute_url": "https://optifine.net/home",
@@ -166,6 +183,7 @@
                 {
                     "id": "optifabric",
                     "title": "OptiFabric",
+                    "description": "Rende compatibili Optifine e Fabric",
                     "download_url": "3568/115/optifabric-1.12.10.jar",
                     "image_url": "https://media.forgecdn.net/avatars/204/621/636941511294490034.png",
                     "mod_url": "optifabric",
@@ -174,6 +192,7 @@
                 {
                     "id": "logical-zoom",
                     "title": "Logical Zoom",
+                    "description": "Aggiunge lo zoom",
                     "download_url": "3557/320/logical_zoom-0.0.13.jar",
                     "image_url" : "242/159/637132666671562903.png",
                     "mod_url": "logical-zoom",
@@ -183,6 +202,7 @@
                 {
                     "id": "lambdynamiclights",
                     "title": "LambDynamicLights",
+                    "description": "Aggiunge la luce dinamica",
                     "download_url": "3541/670/lambdynamiclights-2.1.0%2B1.17.jar",
                     "image_url" : "283/615/637293943794404701.png",
                     "mod_url": "lambdynamiclights",
@@ -192,6 +212,7 @@
                 {
                     "id": "custom-entity-models-cem",
                     "title": "Custom Entity Models (CEM)",
+                    "description": "Permette di aggiungere modelli delle entità personalizzati",
                     "download_url": "3561/474/cem-0.7.0.jar",
                     "image_url": "376/508/637553120425124546.png", 
                     "mod_url": "custom-entity-models-cem",
@@ -200,6 +221,7 @@
                 {
                     "id": "lambdabettergrass",
                     "title": "LambdaBetterGrass",
+                    "description": "Migliora la grafica del blocco d'erba",
                     "download_url": "3584/355/lambdabettergrass-1.2.2%2B1.17.jar",
                     "image_url": "291/462/637322198772917679.png",
                     "mod_url": "lambdabettergrass",
@@ -209,6 +231,7 @@
                 {
                     "id": "continuity",
                     "title": "Continuity",
+                    "description": "Aggiunge la possibilità di connettere le texture",
                     "download_url": "3549/420/continuity-1.0.3%2B1.18.jar",
                     "image_url": "437/816/637682110255957193.png",
                     "mod_url": "continuity",
@@ -218,6 +241,7 @@
                 {
                     "id": "cit-resewn",
                     "title": "CIT Resewn",
+                    "description": "Permette di aggiungere texture di oggetti personallizzate",
                     "download_url": "3586/968/CITResewn-0.8.2%2B1.18.1.jar",
                     "image_url": "426/701/637657532550330185.png",
                     "mod_url": "cit-resewn",
@@ -226,6 +250,7 @@
                 {
                     "id": "of-capes",
                     "title": "OF Capes",
+                    "description": "Aggiunge i mantelli della Optifine",
                     "download_url": "",
                     "image_url": "300/29/637355906425147066.png",
                     "mod_url": "of-capes",
