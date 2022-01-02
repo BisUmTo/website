@@ -29,7 +29,7 @@ var dependent_default = {};
 
 $(document).ready(()=>{
     $.getJSON('config.json', function(config) {
-        config.versions.forEach((version)=>{
+        if(config.versions) config.versions.forEach((version)=>{
             if(!version.hidden) {
                 // TAB HEADER
                 $(`<a class="nav-item nav-link dynamic" id="nav-${version.id}-tab" data-toggle="tab" 
@@ -39,8 +39,9 @@ $(document).ready(()=>{
                 var div = $(`<div class="tab-pane fade dynamic" id="nav-${version.id}" role="tabpanel"
                 aria-labelledby="nav-${version.id}-tab"></div>`).appendTo($('#nav-tabContent'));
                 
-                version.files.forEach((file)=>{
+                if(version.files) version.files.forEach((file)=>{
                     if(!file.hidden) {
+                        // CARD
                         var card = $(`<div class="card" id="card-${file.id}" style="width: 18rem; display: inline-block; margin:10px;">
                             <img src="${config.image_url_base + file.image_url}" class="card-img-top" alt="Mod image" />
                             <div class="card-body">
@@ -61,6 +62,7 @@ $(document).ready(()=>{
                                     </div>
                                 </div>
                         </div>`).appendTo(div);
+                        // DEPENDENCIES
                         if(file.dependencies) {
                             card.find('.card-footer input').on('change',(e)=>{
                                 if($(e.target).prop("checked")){
@@ -100,16 +102,21 @@ $(document).ready(()=>{
                         }
                     }
                 });
+                // LAST UPDATE
                 $(`<div><i>[Link aggiornati il ${version.last_update}]</i></div>`).prependTo($('#result-area'));
             }
+            // CHECK DEPENDENCIES
             $('#download-form .card-footer input').change();
         })
         // DOWNLOAD BUTTON
         $('#nav-tab .nav-link').on('click', (e)=>{
-            if($(e.target).has('dynamic')) $('#result-area').show();
+            if($(e.target).hasClass('dynamic')) $('#result-area').show();
             else $('#result-area').hide();
         });
         if($('#nav-tab .nav-link.active.dynamic').length) $('#result-area').show();
+        // ACTIVE PAGE
+        $('#nav-tab > a').last().addClass('active');
+        $('#nav-tabContent > div').last().addClass('active show');
     });
 });
 
