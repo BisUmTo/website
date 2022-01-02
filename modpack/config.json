@@ -4,8 +4,8 @@
     "image_url_base": "https://media.forgecdn.net/avatars/",
     "versions": [
         {
-            "title": "1.18.1",
             "id": "1_18_1",
+            "title": "1.18.1",
             "last_update": "01/01/22",
             "files":[
                 {
@@ -19,7 +19,7 @@
                     "dependencies": ["carpet"],
                     "download_text": "download",
                     "information_text": "informazioni",
-                    "disabled": false,
+                    "hidden": false,
                     "default": true
                 },
                 {
@@ -29,10 +29,19 @@
                     "download_url": "3542/18/fabric-carpet-1.18-1.4.56%2Bv211130.jar",
                     "image_url": "233/983/637075723026900986.png",
                     "mod_url": "carpet" 
+                },
+                {
+                    "id": "carpetto",
+                    "title": "Carpetto",
+                    "description": "Permette di aggiungere nuove funzionalità al vanilla",
+                    "download_url": "3542/18/fabric-carpet-1.18-1.4.56%2Bv211130.jar",
+                    "image_url": "233/983/637075723026900986.png",
+                    "mod_url": "carpet", 
+                    "disabled": true 
                 }
             ],
 
-            "disabled": true
+            "hidden": false
         }
     ]
     
