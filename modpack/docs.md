@@ -6,7 +6,7 @@
 <b>mod_url_base</b> <code>(string)</code><br/>
 <b>image_url_base</b> <code>(string)</code><br/>
 <details open>
-<summary><b>versions</b> <code>(object list)</code> <small>[]</small></summary>
+<summary><b>versions</b> <code>(object list)</code> <small>[ ]</small></summary>
 <blockquote>
 <h2>Version</h2>
 <b>id</b> <code>(string)</code><br/>
@@ -14,7 +14,7 @@
 <b>last_update</b> <code>(string)</code><br/>
 <b>hidden</b> <code>(boolean)</code> <small>false</small>
 <details open>
-<summary><b>files</b> <code>(object list)</code> <small>[]</small></summary>
+<summary><b>files</b> <code>(object list)</code> <small>[ ]</small></summary>
 <blockquote>
 <h2>File</h2>
 <b>id</b> <code>(string)</code><br/>
@@ -23,7 +23,7 @@
 <b>download_url</b> <code>(string)</code> <small>""</small><br/>
 <b>image_url</b> <code>(string)</code><br/>
 <b>mod_url</b> <code>(string)</code><br/>
-<b>dependencies</b> <code>(string list)</code> <small>[]</small><br/>
+<b>dependencies</b> <code>(string list)</code> <small>[ ]</small><br/>
 <b>download_text</b> <code>(string)</code> <small>"download"</small><br/>
 <b>information_text</b> <code>(string)</code> <small>"informazioni"</small><br/>
 <b>download_absolute_url</b> <code>(boolean)</code> <small>false</small><br/>

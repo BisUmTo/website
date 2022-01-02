@@ -34,15 +34,13 @@ $(document).ready(()=>{
                 // TAB HEADER
                 $(`<a class="nav-item nav-link dynamic" id="nav-${version.id}-tab" data-toggle="tab" 
                 href="#nav-${version.id}" role="tab" aria-controls="nav-${version.id}" 
-                aria-selected="false">${version.title}</a>`).appendTo($('#nav-tab'));
-                // TAB DIV
-                var div = $(`<div class="tab-pane fade dynamic" id="nav-${version.id}" role="tabpanel"
-                aria-labelledby="nav-${version.id}-tab"></div>`).appendTo($('#nav-tabContent'));
-                div.on('change',(e)=>{
-                    console.log(e);
+                aria-selected="false">${version.title}</a>`).appendTo($('#nav-tab')).on('click',(e)=>{
                     if($(e.target).hasClass('active')) 
                         $('.last-update').html(`<i>[Link aggiornati il ${version.last_update}]</i>`);
                 });
+                // TAB DIV
+                var div = $(`<div class="tab-pane fade dynamic" id="nav-${version.id}" role="tabpanel"
+                aria-labelledby="nav-${version.id}-tab"></div>`).appendTo($('#nav-tabContent'));
                 
                 if(version.files) version.files.forEach((file)=>{
                     if(!file.hidden) {
@@ -117,17 +115,18 @@ $(document).ready(()=>{
             // CHECK DEPENDENCIES
             $('#download-form .card-footer input').change();
         })
-        if($('#nav-tab .nav-link.active.dynamic').length) $('#result-area').show();
-        // ACTIVE PAGE
-        $('#nav-tab > a').last().addClass('active');
-        $('#nav-tabContent > div').last().addClass('active show');
         // LAST UPDATE
         $(`<div class="last-update"></div>`).prependTo($('#result-area'));
+        // ACTIVE PAGE
+        $('#nav-tab > a').last().addClass('active').trigger('click');
+        $('#nav-tabContent > div').last().addClass('active show');
         // DOWNLOAD BUTTON
         $('#nav-tab .nav-link').on('click', (e)=>{
             if($(e.target).hasClass('dynamic')) $('#result-area').show();
             else $('#result-area').hide();
         });
+        if($('#nav-tab .nav-link.active.dynamic').length) $('#result-area').show();
+        
     });
 });
 

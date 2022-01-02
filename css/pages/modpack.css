@@ -46,6 +46,7 @@ h2 {
 
 .tab-content > .active.dynamic {
     display: flex;
+    overflow-y: auto;
 }
 
 #result-area{
@@ -60,6 +61,7 @@ h2 {
     display: inline-flex;
     width: 18rem; 
     margin:10px;
+    min-width: 18rem;
 }
 
 #download-form .card-title {
