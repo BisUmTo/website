@@ -39,6 +39,11 @@ h2 {
     width: 100%;
 }
 
+.last-update {
+    text-align: center;
+    width: 100%;
+}
+
 .tab-content > .active.dynamic {
     display: flex;
 }
@@ -49,6 +54,12 @@ h2 {
 
 #download-form .card-footer{
     text-align: center;
+}
+
+#download-form .card{
+    display: inline-flex;
+    width: 18rem; 
+    margin:10px;
 }
 
 #download-form .card-title {

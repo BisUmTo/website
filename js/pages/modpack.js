@@ -38,25 +38,33 @@ $(document).ready(()=>{
                 // TAB DIV
                 var div = $(`<div class="tab-pane fade dynamic" id="nav-${version.id}" role="tabpanel"
                 aria-labelledby="nav-${version.id}-tab"></div>`).appendTo($('#nav-tabContent'));
+                div.on('change',(e)=>{
+                    console.log(e);
+                    if($(e.target).hasClass('active')) 
+                        $('.last-update').html(`<i>[Link aggiornati il ${version.last_update}]</i>`);
+                });
                 
                 if(version.files) version.files.forEach((file)=>{
                     if(!file.hidden) {
                         // CARD
-                        var card = $(`<div class="card" id="card-${version.id}-${file.id}" style="width: 18rem; display: inline-block; margin:10px;">
-                            <img src="${config.image_url_base + file.image_url}" class="card-img-top" alt="Mod image" />
+                        var image_url = (file.image_absolute_url?'':config.image_url_base) + file.image_url;
+                        var download_url = (file.download_absolute_url?'':config.download_url_base) + file.download_url;
+                        var mod_url = (file.mod_absolute_url?'':config.mod_url_base) + file.mod_url;
+                        var card = $(`<div class="card" id="card-${version.id}-${file.id}">
+                            <img src="${image_url}" class="card-img-top" alt="Mod image" />
                             <div class="card-body">
-                                <h5 class="card-title">${file.title}</h5>
-                                <p class="card-text">${file.description}</p>
+                                <h5 class="card-title">${file.title || ''}</h5>
+                                <p class="card-text">${file.description || ''}</p>
                             </div>
                             <div class="card-footer">
                                     <small>
-                                        <a href="${file.download_url?config.download_url_base + file.download_url:"#/"}"
+                                        <a href="${file.download_url?download_url:"#/"}"
                                             ${file.download_url?'target="_blank"':''}>${file.download_text||"download"}</a> |
-                                        <a href="${config.mod_url_base + file.mod_url}" target="_blank">${file.information_text||"informazioni"}</a>
+                                        <a href="${file.mod_url?mod_url:"#/"}" target="_blank">${file.information_text||"informazioni"}</a>
                                     </small>   
                                     <div class="btn-group-toggle ${file.disabled?" disabled":""}" data-toggle="buttons">
                                         <label class="btn btn-secondary${file.default==false||file.disabled?"":" active"}${file.disabled?" disabled":""}">
-                                            <input type="checkbox" data-url="${file.download_url?config.download_url_base + file.download_url:""}"
+                                            <input type="checkbox" data-url="${file.download_url?download_url:""}"
                                                 ${file.default==false||file.disabled?"":"checked"} autocomplete="off"> 
                                             <span class="aggiungi">Aggiungi</span>
                                             <span class="aggiunto">Aggiunto</span>
@@ -105,21 +113,21 @@ $(document).ready(()=>{
                         }
                     }
                 });
-                // LAST UPDATE
-                $(`<div><i>[Link aggiornati il ${version.last_update}]</i></div>`).prependTo($('#result-area'));
             }
             // CHECK DEPENDENCIES
             $('#download-form .card-footer input').change();
         })
+        if($('#nav-tab .nav-link.active.dynamic').length) $('#result-area').show();
+        // ACTIVE PAGE
+        $('#nav-tab > a').last().addClass('active');
+        $('#nav-tabContent > div').last().addClass('active show');
+        // LAST UPDATE
+        $(`<div class="last-update"></div>`).prependTo($('#result-area'));
         // DOWNLOAD BUTTON
         $('#nav-tab .nav-link').on('click', (e)=>{
             if($(e.target).hasClass('dynamic')) $('#result-area').show();
             else $('#result-area').hide();
         });
-        if($('#nav-tab .nav-link.active.dynamic').length) $('#result-area').show();
-        // ACTIVE PAGE
-        $('#nav-tab > a').last().addClass('active');
-        $('#nav-tabContent > div').last().addClass('active show');
     });
 });
 
