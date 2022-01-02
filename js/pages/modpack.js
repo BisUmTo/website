@@ -50,12 +50,14 @@ $(document).ready(()=>{
                             </div>
                             <div class="card-footer">
                                     <small>
-                                        <a href="${file.download_url?config.download_url_base + file.download_url:""}" target="_blank">${file.download_text||"download"}</a> |
+                                        <a href="${file.download_url?config.download_url_base + file.download_url:"#/"}"
+                                            ${file.download_url?'target="_blank"':''}>${file.download_text||"download"}</a> |
                                         <a href="${config.mod_url_base + file.mod_url}" target="_blank">${file.information_text||"informazioni"}</a>
                                     </small>   
                                     <div class="btn-group-toggle ${file.disabled?" disabled":""}" data-toggle="buttons">
                                         <label class="btn btn-secondary${file.default==false||file.disabled?"":" active"}${file.disabled?" disabled":""}">
-                                            <input type="checkbox" data-url="${file.download_url?config.download_url_base + file.download_url:""}" ${file.default==false||file.disabled?"":"checked"} autocomplete="off"> 
+                                            <input type="checkbox" data-url="${file.download_url?config.download_url_base + file.download_url:""}"
+                                                ${file.default==false||file.disabled?"":"checked"} autocomplete="off"> 
                                             <span class="aggiungi">Aggiungi</span>
                                             <span class="aggiunto">Aggiunto</span>
                                         </label>
