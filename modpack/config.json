@@ -23,6 +23,46 @@
                     "default": true
                 },
                 {
+                    "id": "malilib",
+                    "title": "MaliLib",
+                    "download_url": "3544/210/malilib-fabric-1.18.0-0.10.0-dev.26.jar",
+                    "image_url": "171/135/636727036520163113.png",
+                    "mod_url": "malilib"
+                },
+                {
+                    "id": "litematica",
+                    "title": "Litematica",
+                    "download_url": "3545/947/litematica-fabric-1.18.0-0.0.0-dev.20211203.013300.jar",
+                    "image_url": "181/712/636802492918868562.jpeg",
+                    "mod_url": "litematica",
+                    "dependencies": ["malilib"]
+                },
+                {
+                    "id": "tweakeroo",
+                    "title": "Tweakeroo",
+                    "download_url": "3579/871/tweakeroo-fabric-1.18.0-0.11.0.jar",
+                    "image_url": "thumbnails/159/939/64/64/636662314665459977.jpeg",
+                    "mod_url": "tweakeroo",
+                    "dependencies": ["malilib"]
+                },
+                {
+                    "id": "item-scroller",
+                    "title": "ItemScroller",
+                    "download_url": "3544/231/itemscroller-fabric-1.18.0-0.15.0.jar",
+                    "image_url": "34/849/635915728962120488.jpeg",
+                    "mod_url": "item-scroller",
+                    "dependencies": ["malilib"]
+                },
+                {
+                    "id": "minihud",
+                    "title": "MiniHUD",
+                    "download_url": "",
+                    "image_url": "213/409/636992403483369946.png",
+                    "mod_url": "minihud",
+                    "dependencies": ["malilib"],
+                    "disabled" : true
+                },
+                {
                     "id": "carpet",
                     "title": "Carpet",
                     "description": "Permette di aggiungere nuove funzionalità al vanilla",
@@ -31,13 +71,167 @@
                     "mod_url": "carpet" 
                 },
                 {
-                    "id": "carpetto",
-                    "title": "Carpetto",
-                    "description": "Permette di aggiungere nuove funzionalità al vanilla",
-                    "download_url": "3542/18/fabric-carpet-1.18-1.4.56%2Bv211130.jar",
-                    "image_url": "233/983/637075723026900986.png",
-                    "mod_url": "carpet", 
-                    "disabled": true 
+                    "id": "worldedit",
+                    "title": "WorldEdit",
+                    "download_url": "3559/499/worldedit-mod-7.2.8.jar",
+                    "image_url": "308/38/637390518698344085.png",
+                    "mod_url": "worldedit"
+                },
+                {
+                    "id": "fabric-api",
+                    "title": "Fabric API",
+                    "download_url" : "3577/46/fabric-api-0.45.0%2B1.18.jar",
+                    "image_url": "thumbnails/185/822/64/64/636829723898798601.png",
+                    "mod_url": "fabric-api"
+                },
+                {
+                    "id": "replay-mod",
+                    "title": "ReplayMod",
+                    "download_absolute_url" : "https://minio.replaymod.com/replaymod/replaymod-1.18.1-2.6.3.jar",
+                    "image_absolute_url": "https://www.replaymod.com/img/logo_nocom.png",
+                    "mod_absolute_url": "https://www.replaymod.com/download/",
+                    "dependencies": ["fabric-api"]
+                },
+                {
+                    "id": "sodium",
+                    "title": "Sodium",
+                    "download_url": "3542/74/sodium-fabric-mc1.18-0.4.0-alpha5%2Bbuild.9.jar",
+                    "image_url": "284/773/637298471098686391.png",
+                    "mod_url": "sodium"
+                },
+                {
+                    "id": "irisshaders",
+                    "title": "Iris Shaders",
+                    "download_url": "3558/900/iris-mc1.18.1-1.1.3.jar",
+                    "image_url" : "393/276/637588493674460514.png",
+                    "mod_url": "irisshaders",
+                    "dependencies": ["sodium"]
+                },
+                {
+                    "id": "camera-utils",
+                    "title": "Camera Utils",
+                    "download_url": "3557/166/camerautils-1.18.1-1.0.0.jar",
+                    "image_url": "413/340/637634129657463378.png",
+                    "mod_url": "camera-utils",
+                    "dependencies": ["fabric-api"]
+                },
+                {
+                    "id": "effective",
+                    "title": "Effective 💦",
+                    "download_url": "3580/78/effective-1.1.jar",
+                    "image_url": "467/123/637748529243644133.png",
+                    "mod_url": "effective",
+                    "dependencies": ["fabric-api"]
+                },
+                {
+                    "id": "sodium-shadowy-path-blocks",
+                    "title": "Sodium Shadowy Path Blocks",
+                    "download_url": "3577/236/sodium-shadowy-path-blocks-0.2.0.jar",
+                    "image_url" : "467/156/637748563641228976.png",
+                    "mod_url": "sodium-shadowy-path-blocks",
+                    "dependencies": ["sodium"]
+                },
+                {
+                    "id": "xaeros-world-map",
+                    "title": "Xaero's World Map",
+                    "download_url": "3582/993/XaerosWorldMap_1.19.0_Forge_1.18.jar",
+                    "image_url": "196/654/636886857118683130.png",
+                    "mod_url": "xaeros-world-map"
+                },
+                {
+                    "id": "xaeros-minimap",
+                    "title": "Xaero's Minimap",
+                    "download_url": "3582/980/Xaeros_Minimap_21.23.0_Forge_1.18.jar",
+                    "image_url": "92/854/636258666554688823.png",
+                    "mod_url": "xaeros-minimap",
+                    "dependencies": ["xaeros-world-map"]
+                },
+                {
+                    "id": "voxelmap",
+                    "title": "VoxelMap",
+                    "download_url": "",
+                    "image_url": "11/698/635499892408422072.jpeg",
+                    "mod_url": "voxelmap",
+                    "disabled" : true,
+                    "default": false
+                },
+                {
+                    "id": "optifine",
+                    "title": "OptiFine",
+                    "download_absolute_url": "https://optifine.net/downloadx?f=OptiFine_1.18.1_HD_U_H4.jar&x=5476e7ed20bdb65fa947d38b0f8c922e",
+                    "image_absolute_url": "https://optifine.net/images/of16r.png",
+                    "mod_absolute_url": "https://optifine.net/home",
+                    "default": false
+                },
+                {
+                    "id": "optifabric",
+                    "title": "OptiFabric",
+                    "download_url": "3568/115/optifabric-1.12.10.jar",
+                    "image_url": "https://media.forgecdn.net/avatars/204/621/636941511294490034.png",
+                    "mod_url": "optifabric",
+                    "default": false
+                },
+                {
+                    "id": "logical-zoom",
+                    "title": "Logical Zoom",
+                    "download_url": "3557/320/logical_zoom-0.0.13.jar",
+                    "image_url" : "242/159/637132666671562903.png",
+                    "mod_url": "logical-zoom",
+                    "dependencies": ["fabric-api"],
+                    "default": false
+                },
+                {
+                    "id": "lambdynamiclights",
+                    "title": "LambDynamicLights",
+                    "download_url": "3541/670/lambdynamiclights-2.1.0%2B1.17.jar",
+                    "image_url" : "283/615/637293943794404701.png",
+                    "mod_url": "lambdynamiclights",
+                    "dependencies": ["fabric-api"],
+                    "default": false
+                },
+                {
+                    "id": "custom-entity-models-cem",
+                    "title": "Custom Entity Models (CEM)",
+                    "download_url": "3561/474/cem-0.7.0.jar",
+                    "image_url": "376/508/637553120425124546.png", 
+                    "mod_url": "custom-entity-models-cem",
+                    "default": false
+                },
+                {
+                    "id": "lambdabettergrass",
+                    "title": "LambdaBetterGrass",
+                    "download_url": "3584/355/lambdabettergrass-1.2.2%2B1.17.jar",
+                    "image_url": "291/462/637322198772917679.png",
+                    "mod_url": "lambdabettergrass",
+                    "dependencies": ["fabric-api"],
+                    "default": false
+                },
+                {
+                    "id": "continuity",
+                    "title": "Continuity",
+                    "download_url": "3549/420/continuity-1.0.3%2B1.18.jar",
+                    "image_url": "437/816/637682110255957193.png",
+                    "mod_url": "continuity",
+                    "dependencies": ["fabric-api"],
+                    "default": false
+                },
+                {
+                    "id": "cit-resewn",
+                    "title": "CIT Resewn",
+                    "download_url": "3586/968/CITResewn-0.8.2%2B1.18.1.jar",
+                    "image_url": "426/701/637657532550330185.png",
+                    "mod_url": "cit-resewn",
+                    "default": false
+                },
+                {
+                    "id": "of-capes",
+                    "title": "OF Capes",
+                    "download_url": "",
+                    "image_url": "300/29/637355906425147066.png",
+                    "mod_url": "of-capes",
+                    "dependencies": ["fabric-api"],
+                    "disabled" : true,
+                    "default": false
                 }
             ],
 
