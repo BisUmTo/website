@@ -5,9 +5,68 @@
 #header h1 {
     line-height: 1;
 }
+#downloadButton {
+    float: right;
+    margin-right: 5%;
+}
+.resourceButton {
+    float: right;
+    margin-right: 5%;
+}
 .bg-white .card .bg-primary {
     background-color: var(--redcraft-red)!important;
 }
 h2 {
     font-variant: small-caps;
+}
+.btn {
+    background-color: var(--youtube-red);
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.btn:hover {
+    background-color: var(--redcraft-red);
+}
+
+.hide {
+    display: none;
+}
+
+#download-form {
+    width: 100%;
+}
+
+.tab-content > .active.dynamic {
+    display: flex;
+}
+
+#result-area{
+    text-align: center;
+}
+
+#download-form .card-footer{
+    text-align: center;
+}
+
+#download-form .card-title {
+    font-weight: bold;
+}
+
+#download-form .btn-secondary.active .aggiungi{display: none;}
+#download-form .btn-secondary:not(.active) .aggiungi{display: inline;}
+#download-form .btn-secondary.active .aggiunto{display: inline;}
+#download-form .btn-secondary:not(.active) .aggiunto{display: none;}
+#download-form .progress.hide {display: none;}
+#download-form .progress:not(.hide) {display: block;}
+
+#download-form .btn-group-toggle:not(.disabled) .btn-secondary:not(:disabled):not(.disabled).active, 
+#download-form .btn-group-toggle:not(.disabled) .btn-secondary:not(:disabled):not(.disabled):active {
+    background-color:#08eb2e;
+}
+#download-form .btn-group-toggle:not(.disabled) .btn-secondary:not(:disabled):not(.disabled).active:hover, 
+#download-form .btn-group-toggle:not(.disabled) .btn-secondary:not(:disabled):not(.disabled):active:hover {
+    background-color:#0ca70c;
 }

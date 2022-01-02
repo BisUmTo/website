@@ -33,6 +33,9 @@
     </script>   
 
     <title>BisUmTo - ModPack</title>
+        <script src='https://stuk.github.io/jszip/dist/jszip.min.js' defer></script>
+    <script src='https://stuk.github.io/jszip-utils/dist/jszip-utils.min.js' defer></script>
+    <script src='https://stuk.github.io/jszip/vendor/FileSaver.js' defer></script>
     <script src="../js/pages/modpack.js" defer></script>
     <link rel="stylesheet" href="../css/pages/modpack.css">
 </head>
@@ -43,27 +46,32 @@
             <h1>ModPack<br><small>RedCraft Client Mods</small></h1>
         </div>
     </section>
-    <section id="contant">
+    <section id="content">
         <div class="container-fluid bg-white block">
-            Hai sempre sognato di avere lo stesso ModPack dei membri della RedCraft2? Questa istanza di MultiMC fa per te!<br/><br/>
-            <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link" id="nav-13-tab" data-toggle="tab" href="#nav-13" role="tab" aria-controls="nav-13" aria-selected="false">1.13.2</a>
-                    <a class="nav-item nav-link" id="nav-14-tab" data-toggle="tab" href="#nav-14" role="tab" aria-controls="nav-14" aria-selected="false">1.14.4</a>
-                    <a class="nav-item nav-link" id="nav-15-tab" data-toggle="tab" href="#nav-15" role="tab" aria-controls="nav-15" aria-selected="false">1.15.2</a>
-                    <a class="nav-item nav-link" id="nav-16-tab" data-toggle="tab" href="#nav-16" role="tab" aria-controls="nav-16" aria-selected="false">1.16.5</a>
-                    <a class="nav-item nav-link" id="nav-17-1-tab" data-toggle="tab" href="#nav-17-1" role="tab" aria-controls="nav-17-1" aria-selected="false">1.17.1</a>
-                    <a class="nav-item nav-link active" id="nav-18-tab" data-toggle="tab" href="#nav-18" role="tab" aria-controls="nav-18" aria-selected="true">1.18</a>
+            <form action="#" id="download-form">
+                Hai sempre sognato di avere lo stesso ModPack dei membri della RedCraft2? Questa istanza di MultiMC fa per te!<br/><br/>
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link" id="nav-13-tab" data-toggle="tab" href="#nav-13" role="tab" aria-controls="nav-13" aria-selected="false">1.13.2</a>
+                        <a class="nav-item nav-link" id="nav-14-tab" data-toggle="tab" href="#nav-14" role="tab" aria-controls="nav-14" aria-selected="false">1.14.4</a>
+                        <a class="nav-item nav-link" id="nav-15-tab" data-toggle="tab" href="#nav-15" role="tab" aria-controls="nav-15" aria-selected="false">1.15.2</a>
+                        <a class="nav-item nav-link" id="nav-16-tab" data-toggle="tab" href="#nav-16" role="tab" aria-controls="nav-16" aria-selected="false">1.16.5</a>
+                        <a class="nav-item nav-link" id="nav-17-1-tab" data-toggle="tab" href="#nav-17-1" role="tab" aria-controls="nav-17-1" aria-selected="false">1.17.1</a>
+                        <a class="nav-item nav-link active" id="nav-18-tab" data-toggle="tab" href="#nav-18" role="tab" aria-controls="nav-18" aria-selected="true">1.18</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade" id="nav-13" role="tabpanel" aria-labelledby="nav-13-tab" include-html="components/modpacks/rift/1_13_2.html"></div>
+                    <div class="tab-pane fade" id="nav-14" role="tabpanel" aria-labelledby="nav-14-tab" include-html="components/modpacks/fabric/1_14_4.html"></div>
+                    <div class="tab-pane fade" id="nav-15" role="tabpanel" aria-labelledby="nav-15-tab" include-html="components/modpacks/fabric/1_15_2.html"></div>
+                    <div class="tab-pane fade" id="nav-16" role="tabpanel" aria-labelledby="nav-16-tab" include-html="components/modpacks/fabric/1_16_5.html"></div>
+                    <div class="tab-pane fade" id="nav-17-1" role="tabpanel" aria-labelledby="nav-17-1-tab" include-html="components/modpacks/fabric/1_17_1.html"></div>
+                    <div class="tab-pane fade show active" id="nav-18" role="tabpanel" aria-labelledby="nav-18-tab" include-html="components/modpacks/fabric/1_18.html"></div>
                 </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade" id="nav-13" role="tabpanel" aria-labelledby="nav-13-tab" include-html="components/modpacks/rift/1_13_2.html"></div>
-                <div class="tab-pane fade" id="nav-14" role="tabpanel" aria-labelledby="nav-14-tab" include-html="components/modpacks/fabric/1_14_4.html"></div>
-                <div class="tab-pane fade" id="nav-15" role="tabpanel" aria-labelledby="nav-15-tab" include-html="components/modpacks/fabric/1_15_2.html"></div>
-                <div class="tab-pane fade" id="nav-16" role="tabpanel" aria-labelledby="nav-16-tab" include-html="components/modpacks/fabric/1_16_5.html"></div>
-                <div class="tab-pane fade" id="nav-17-1" role="tabpanel" aria-labelledby="nav-17-1-tab" include-html="components/modpacks/fabric/1_17_1.html"></div>
-                <div class="tab-pane fade show active" id="nav-18" role="tabpanel" aria-labelledby="nav-18-tab" include-html="components/modpacks/fabric/1_18.html"></div>
-            </div>
+                <div id="result-area" style="display: none;">
+                    <button type="submit" class="btn" ><i class="fa fa-download"></i> Scarica il tuo ModPack!</button>
+                </div>
+            </form>
             <div class="clearfix"></div>
         </div>
     </section>
