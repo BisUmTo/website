@@ -16,7 +16,7 @@ function download(files) {
 $("#download-form").on("submit", function () {
     var urls = [];
 
-    $(this).find(":checked").each(function () {
+    $(this).find(":checked:visible").each(function () {
         var $this = $(this);
         urls.push($this.data("url"));
     });
@@ -42,7 +42,7 @@ $(document).ready(()=>{
                 if(version.files) version.files.forEach((file)=>{
                     if(!file.hidden) {
                         // CARD
-                        var card = $(`<div class="card" id="card-${file.id}" style="width: 18rem; display: inline-block; margin:10px;">
+                        var card = $(`<div class="card" id="card-${version.id}-${file.id}" style="width: 18rem; display: inline-block; margin:10px;">
                             <img src="${config.image_url_base + file.image_url}" class="card-img-top" alt="Mod image" />
                             <div class="card-body">
                                 <h5 class="card-title">${file.title}</h5>
@@ -55,7 +55,7 @@ $(document).ready(()=>{
                                     </small>   
                                     <div class="btn-group-toggle ${file.disabled?" disabled":""}" data-toggle="buttons">
                                         <label class="btn btn-secondary${file.default==false||file.disabled?"":" active"}${file.disabled?" disabled":""}">
-                                            <input type="checkbox" data-url="${file.download_url?config.download_url_base + file.download_url:""}" checked autocomplete="off"> 
+                                            <input type="checkbox" data-url="${file.download_url?config.download_url_base + file.download_url:""}" ${file.default==false||file.disabled?"":"checked"} autocomplete="off"> 
                                             <span class="aggiungi">Aggiungi</span>
                                             <span class="aggiunto">Aggiunto</span>
                                         </label>
@@ -67,13 +67,14 @@ $(document).ready(()=>{
                             card.find('.card-footer input').on('change',(e)=>{
                                 if($(e.target).prop("checked")){
                                     $.each(file.dependencies, (key, value)=>{
-                                        var button = $(`#card-${value} .btn-secondary`);
-                                        var list = dependent[value] || [];
+                                        var button = $(`#card-${version.id}-${value} .btn-secondary`);
+                                        var list = dependent[version.id+'-'+value] || [];
                                         if(!list.length){
-                                            dependent_default[value] = button.find('> input').prop("checked")
+                                            dependent_default[version.id+'-'+value] = button.find('> input').prop("checked")
                                         }
-                                        list.push(file.id);
-                                        dependent[value] = list; 
+                                        var index = list.indexOf(version.id+'-'+file.id);
+                                        if(index == -1) list.push(version.id+'-'+file.id);
+                                        dependent[version.id+'-'+value] = list; 
                                         
                                         button.find('> input').prop("checked", true);
                                         button.addClass("active");
@@ -81,17 +82,17 @@ $(document).ready(()=>{
                                     })
                                 } else {
                                     $.each(file.dependencies, (key, value)=>{
-                                        var list = dependent[value] || [];
-                                        var index = list.indexOf(file.id);
+                                        var list = dependent[version.id+'-'+value] || [];
+                                        var index = list.indexOf(version.id+'-'+file.id);
                                         if(index != -1){
                                             list.splice(index, 1)
-                                            dependent[value] = list;
+                                            dependent[version.id+'-'+value] = list;
                                         }
                                         if(list.length == 0) {
-                                            var button = $(`#card-${value} .btn-secondary`);
+                                            var button = $(`#card-${version.id}-${value} .btn-secondary`);
                                             button.parent().removeClass("disabled");
                                             button.removeClass("disabled");
-                                            if(!dependent_default[value]){
+                                            if(!dependent_default[version.id+'-'+value]){
                                                 button.find('> input').prop("checked", false);
                                                 button.removeClass("active");
                                             }
