@@ -57,7 +57,7 @@ $(document).ready(()=>{
                             <div class="card-footer">
                                     <small>
                                         <a href="${file.download_url?download_url:"#/"}"
-                                            ${file.download_url?'target="_blank"':''}>${file.download_text||"download"}</a> |
+                                            ${file.download_url?'target="_blank"':''}>${!file.download_url?"download non disponibile":(file.download_text || "download")}</a> |
                                         <a href="${file.mod_url?mod_url:"#/"}" target="_blank">${file.information_text||"informazioni"}</a>
                                     </small>   
                                     <div class="btn-group-toggle ${file.disabled?" disabled":""}" data-toggle="buttons">
