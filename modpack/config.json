@@ -26,7 +26,7 @@
                     "id": "litematica",
                     "title": "Litematica",
                     "description": "Crea ologrammi per la ricostruzione di strutture da te salvate come ologramma",
-                    "download_url": "3545/947/litematica-fabric-1.18.0-0.0.0-dev.20211203.013300.jar",
+                    "download_url": "3615/865/litematica-fabric-1.18.1-0.10.0.jar",
                     "image_url": "181/712/636802492918868562.jpeg",
                     "mod_url": "litematica",
                     "dependencies": ["malilib"]
@@ -53,7 +53,7 @@
                     "id": "minihud",
                     "title": "MiniHUD",
                     "description": "Agevola la visualizzazione di alcune info",
-                    "download_url": "",
+                    "download_url": "3615/867/minihud-fabric-1.18.1-0.21.2.jar",
                     "image_url": "213/409/636992403483369946.png",
                     "mod_url": "minihud",
                     "dependencies": ["malilib"],
@@ -115,7 +115,7 @@
                     "id": "irisshaders",
                     "title": "Iris Shaders",
                     "description": "Permette di utilizzare le shaders con Sodium",
-                    "download_url": "3558/900/iris-mc1.18.1-1.1.3.jar",
+                    "download_url": "3612/857/iris-mc1.18.1-1.2.0-pre.jar",
                     "image_url" : "393/276/637588493674460514.png",
                     "mod_url": "irisshaders",
                     "dependencies": ["sodium"]
@@ -139,6 +139,23 @@
                     "dependencies": ["fabric-api"]
                 },
                 {
+                    "id": "fabrishot",
+                    "title": "Fabrishot",
+                    "description": "Permette di fare screenshot di qualità",
+                    "download_url":"3542/922/fabrishot-1.6.0.jar",
+                    "image_url":"335/447/637470408666855956.png",
+                    "mod__url":"fabrishot",
+                    "dependencies": ["fabric-api"]
+                },
+                {
+                    "id":"modmenu",
+                    "title":"Mod Menu",
+                    "description":"Aggiunge un menù con tutte le mod attive",
+                    "download_url":"3570/652/modmenu-3.0.1.jar",
+                    "image_url":"281/367/637285257027983134.png",
+                    "mod_url":"modmenu"
+                },
+                {
                     "id": "sodium-shadowy-path-blocks",
                     "title": "Sodium Shadowy Path Blocks",
                     "description": "Rimette i blocchi sentiero ombrosi con Sodium",
@@ -151,7 +168,7 @@
                     "id": "xaeros-minimap",
                     "title": "Xaero's Minimap",
                     "description": "Aggiunge una mappa a schermo intero",
-                    "download_url": "3582/980/Xaeros_Minimap_21.23.0_Forge_1.18.jar",
+                    "download_url": "3599/501/Xaeros_Minimap_21.23.1_Fabric_1.18.jar",
                     "image_url": "92/854/636258666554688823.png",
                     "mod_url": "xaeros-minimap",
                     "dependencies": ["xaeros-world-map"]
@@ -160,7 +177,7 @@
                     "id": "xaeros-world-map",
                     "title": "Xaero's World Map",
                     "description": "Aggiunge la minimappa della Xaero's World Map",
-                    "download_url": "3582/993/XaerosWorldMap_1.19.0_Forge_1.18.jar",
+                    "download_url": "3599/516/XaerosWorldMap_1.19.1_Fabric_1.18.jar",
                     "image_url": "196/654/636886857118683130.png",
                     "mod_url": "xaeros-world-map"
                 },
