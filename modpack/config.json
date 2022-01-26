@@ -99,7 +99,7 @@
                     "download_absolute_url": true,
                     "image_url": "https://www.replaymod.com/img/logo_nocom.png",
                     "image_absolute_url": true,
-                    "mod__url": "https://www.replaymod.com/download/",
+                    "mod_url": "https://www.replaymod.com/download/",
                     "mod_absolute_url": true,
                     "dependencies": ["fabric-api"]
                 },
@@ -144,7 +144,7 @@
                     "description": "Permette di fare screenshot di qualità",
                     "download_url":"3542/922/fabrishot-1.6.0.jar",
                     "image_url":"335/447/637470408666855956.png",
-                    "mod__url":"fabrishot",
+                    "mod_url":"fabrishot",
                     "dependencies": ["fabric-api"]
                 },
                 {
@@ -279,6 +279,34 @@
                     "image_url": "300/29/637355906425147066.png",
                     "mod_url": "of-capes",
                     "dependencies": ["fabric-api"],
+                    "default": false
+                },
+                {
+                    "id": "appleskin",
+                    "title": "AppleSkin",
+                    "description": "Mostra alcune meccaniche di solito non visibili come la stamina",
+                    "download_url": "3549/846/appleskin-forge-mc1.18-2.2.0.jar",
+                    "image_url": "47/527/636066936394500688.png",
+                    "mod_url": "appleskin",
+                    "default":false
+                },
+                {
+                    "id": "oh-my-minecraft-client",
+                    "title": "OMMC",
+                    "description": "Riporta il client ai tempi d'oro",
+                    "download_url": "3620/803/oh-my-minecraft-client-1.18.1-0.4.1.jar",
+                    "image_url": "352/799/637508675216169015.png",
+                    "mod_url": "oh-my-minecraft-client",
+                    "default": false
+                },
+                {
+                    "id": "syncmatica",
+                    "title": "Syncmatica",
+                    "description": "Permette di condividere litematiche all'interno del server",
+                    "download_url": "3559/999/syncmatica-0.2.6.jar",
+                    "image_url": "430/795/637665275706886929.png",
+                    "mod_url": "syncmatica",
+                    "dependencies": ["malilib", "litematica"],
                     "default": false
                 }
             ],
