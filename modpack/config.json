@@ -195,7 +195,7 @@
                     "id": "optifine",
                     "title": "OptiFine",
                     "description": "Migliora le performance",
-                    "download_url": "https://optifine.net/downloadx?f=OptiFine_1.18.1_HD_U_H4.jar&x=5476e7ed20bdb65fa947d38b0f8c922e",
+                    "download_url": "https://optifine.net/downloadx?f=OptiFine_1.18.1_HD_U_H4.jar&x=34b5723a9dc3e10d6c3f9a23efe4b3b3",
                     "download_absolute_url": true,
                     "image_url": "https://optifine.net/images/of16r.png",
                     "image_absolute_url": true,
@@ -275,11 +275,10 @@
                     "id": "of-capes",
                     "title": "OF Capes",
                     "description": "Aggiunge i mantelli della Optifine",
-                    "download_url": "",
+                    "download_url": "3556/372/fabric-optifine-capes-2.0.0.jar",
                     "image_url": "300/29/637355906425147066.png",
                     "mod_url": "of-capes",
                     "dependencies": ["fabric-api"],
-                    "disabled" : true,
                     "default": false
                 }
             ],
