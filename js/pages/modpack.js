@@ -58,7 +58,7 @@ $(document).ready(()=>{
                                     <small>
                                         <a href="${file.download_url?download_url:"#/"}"
                                             ${file.download_url?'target="_blank"':''}>${!file.download_url?"download non disponibile":(file.download_text || "download")}</a> |
-                                        <a href="${file.mod_url?mod_url:"#/"}" target="_blank">${file.information_text||"informazioni"}</a>
+                                        <a href="${file.mod_url?mod_url:(file.mod_absolute_url?'':config.mod_url_base) + file.id}" target="_blank">${file.information_text||"informazioni"}</a>
                                     </small>   
                                     <div class="btn-group-toggle ${file.disabled?" disabled":""}" data-toggle="buttons">
                                         <label class="btn btn-secondary${file.default==false||file.disabled?"":" active"}${file.disabled?" disabled":""}">

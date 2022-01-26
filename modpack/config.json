@@ -14,7 +14,6 @@
                     "description": "Introduce le funzionalità caratteristiche della RedCraft",
                     "download_url": "3485/889/carpet-redcraft-addons-1.17.1-1.4.47%2Bv211009.jar",
                     "image_url": "394/667/637591979598818555.png",
-                    "mod_url": "carpet-redcraft-addons",
                     "dependencies": ["carpet"],
                     "download_text": "download",
                     "information_text": "informazioni",
@@ -28,7 +27,6 @@
                     "description": "Crea ologrammi per la ricostruzione di strutture da te salvate come ologramma",
                     "download_url": "3615/865/litematica-fabric-1.18.1-0.10.0.jar",
                     "image_url": "181/712/636802492918868562.jpeg",
-                    "mod_url": "litematica",
                     "dependencies": ["malilib"]
                 },
                 {
@@ -37,7 +35,6 @@
                     "description": "Aggiunge degli aggiustamenti a Minecraft",
                     "download_url": "3579/871/tweakeroo-fabric-1.18.0-0.11.0.jar",
                     "image_url": "thumbnails/159/939/64/64/636662314665459977.jpeg",
-                    "mod_url": "tweakeroo",
                     "dependencies": ["malilib"]
                 },
                 {
@@ -46,7 +43,6 @@
                     "description": "Semplifica lo spostamento di oggetti",
                     "download_url": "3544/231/itemscroller-fabric-1.18.0-0.15.0.jar",
                     "image_url": "34/849/635915728962120488.jpeg",
-                    "mod_url": "item-scroller",
                     "dependencies": ["malilib"]
                 },
                 {
@@ -55,41 +51,35 @@
                     "description": "Agevola la visualizzazione di alcune info",
                     "download_url": "3615/867/minihud-fabric-1.18.1-0.21.2.jar",
                     "image_url": "213/409/636992403483369946.png",
-                    "mod_url": "minihud",
-                    "dependencies": ["malilib"],
-                    "disabled" : true
+                    "dependencies": ["malilib"]
                 },
                 {
                     "id": "malilib",
                     "title": "MaLiLib",
                     "description": "Masa Litemod Library, libreria necessaria per Litematica, Tweakeroo, ItemScroller e MiniHUD",
                     "download_url": "3544/210/malilib-fabric-1.18.0-0.10.0-dev.26.jar",
-                    "image_url": "171/135/636727036520163113.png",
-                    "mod_url": "malilib"
+                    "image_url": "171/135/636727036520163113.png"
                 },
                 {
                     "id": "carpet",
                     "title": "Carpet",
                     "description": "Permette di aggiungere nuove funzionalità al vanilla",
                     "download_url": "3542/18/fabric-carpet-1.18-1.4.56%2Bv211130.jar",
-                    "image_url": "233/983/637075723026900986.png",
-                    "mod_url": "carpet" 
+                    "image_url": "233/983/637075723026900986.png"
                 },
                 {
                     "id": "worldedit",
                     "title": "WorldEdit",
                     "description": "Permette la modifica a 360° del mondo di minecraft",
                     "download_url": "3559/499/worldedit-mod-7.2.8.jar",
-                    "image_url": "308/38/637390518698344085.png",
-                    "mod_url": "worldedit"
+                    "image_url": "308/38/637390518698344085.png"
                 },
                 {
                     "id": "fabric-api",
                     "title": "Fabric API",
                     "description":"Libreria necessaria per ReplayMod, Camera Utils, Effective, Logical Zoom, LambdaBetterGrass, Continuity, OF Capes",
                     "download_url" : "3577/46/fabric-api-0.45.0%2B1.18.jar",
-                    "image_url": "thumbnails/185/822/64/64/636829723898798601.png",
-                    "mod_url": "fabric-api"
+                    "image_url": "thumbnails/185/822/64/64/636829723898798601.png"
                 },
                 {
                     "id": "replay-mod",
@@ -108,8 +98,7 @@
                     "title": "Sodium",
                     "description": "Migliora le performance",
                     "download_url": "3542/74/sodium-fabric-mc1.18-0.4.0-alpha5%2Bbuild.9.jar",
-                    "image_url": "284/773/637298471098686391.png",
-                    "mod_url": "sodium"
+                    "image_url": "284/773/637298471098686391.png"
                 },
                 {
                     "id": "irisshaders",
@@ -117,7 +106,6 @@
                     "description": "Permette di utilizzare le shaders con Sodium",
                     "download_url": "3612/857/iris-mc1.18.1-1.2.0-pre.jar",
                     "image_url" : "393/276/637588493674460514.png",
-                    "mod_url": "irisshaders",
                     "dependencies": ["sodium"]
                 },
                 {
@@ -126,7 +114,6 @@
                     "description": "Aggiunge funzioni all'anogolo visivo del giocatore",
                     "download_url": "3557/166/camerautils-1.18.1-1.0.0.jar",
                     "image_url": "413/340/637634129657463378.png",
-                    "mod_url": "camera-utils",
                     "dependencies": ["fabric-api"]
                 },
                 {
@@ -135,7 +122,6 @@
                     "description": "Aggiunge effetti ambientali",
                     "download_url": "3580/78/effective-1.1.jar",
                     "image_url": "467/123/637748529243644133.png",
-                    "mod_url": "effective",
                     "dependencies": ["fabric-api"]
                 },
                 {
@@ -144,7 +130,6 @@
                     "description": "Permette di fare screenshot di qualità",
                     "download_url":"3542/922/fabrishot-1.6.0.jar",
                     "image_url":"335/447/637470408666855956.png",
-                    "mod_url":"fabrishot",
                     "dependencies": ["fabric-api"]
                 },
                 {
@@ -152,8 +137,7 @@
                     "title":"Mod Menu",
                     "description":"Aggiunge un menù con tutte le mod attive",
                     "download_url":"3570/652/modmenu-3.0.1.jar",
-                    "image_url":"281/367/637285257027983134.png",
-                    "mod_url":"modmenu"
+                    "image_url":"281/367/637285257027983134.png"
                 },
                 {
                     "id": "sodium-shadowy-path-blocks",
@@ -161,7 +145,6 @@
                     "description": "Rimette i blocchi sentiero ombrosi con Sodium",
                     "download_url": "3577/236/sodium-shadowy-path-blocks-0.2.0.jar",
                     "image_url" : "467/156/637748563641228976.png",
-                    "mod_url": "sodium-shadowy-path-blocks",
                     "dependencies": ["sodium"]
                 },
                 {
@@ -170,7 +153,6 @@
                     "description": "Aggiunge una mappa a schermo intero",
                     "download_url": "3599/501/Xaeros_Minimap_21.23.1_Fabric_1.18.jar",
                     "image_url": "92/854/636258666554688823.png",
-                    "mod_url": "xaeros-minimap",
                     "dependencies": ["xaeros-world-map"]
                 },
                 {
@@ -178,8 +160,7 @@
                     "title": "Xaero's World Map",
                     "description": "Aggiunge la minimappa della Xaero's World Map",
                     "download_url": "3599/516/XaerosWorldMap_1.19.1_Fabric_1.18.jar",
-                    "image_url": "196/654/636886857118683130.png",
-                    "mod_url": "xaeros-world-map"
+                    "image_url": "196/654/636886857118683130.png"
                 },
                 {
                     "id": "voxelmap",
@@ -187,7 +168,6 @@
                     "description": "Aggiunge una minimappa",
                     "download_url": "",
                     "image_url": "11/698/635499892408422072.jpeg",
-                    "mod_url": "voxelmap",
                     "disabled" : true,
                     "default": false
                 },
@@ -210,7 +190,6 @@
                     "description": "Rende compatibili Optifine e Fabric. Update non garantiti",
                     "download_url": "3568/115/optifabric-1.12.10.jar",
                     "image_url": "204/621/636941511294490034.png",
-                    "mod_url": "optifabric",
                     "default": false
                 },
                 {
@@ -219,7 +198,6 @@
                     "description": "Aggiunge lo zoom",
                     "download_url": "3557/320/logical_zoom-0.0.13.jar",
                     "image_url" : "242/159/637132666671562903.png",
-                    "mod_url": "logical-zoom",
                     "dependencies": ["fabric-api"],
                     "default": false
                 },
@@ -229,7 +207,6 @@
                     "description": "Aggiunge la luce dinamica",
                     "download_url": "3541/670/lambdynamiclights-2.1.0%2B1.17.jar",
                     "image_url" : "283/615/637293943794404701.png",
-                    "mod_url": "lambdynamiclights",
                     "dependencies": ["fabric-api"],
                     "default": false
                 },
@@ -238,8 +215,7 @@
                     "title": "Custom Entity Models (CEM)",
                     "description": "Permette di aggiungere modelli delle entità personalizzati",
                     "download_url": "3561/474/cem-0.7.0.jar",
-                    "image_url": "376/508/637553120425124546.png", 
-                    "mod_url": "custom-entity-models-cem",
+                    "image_url": "376/508/637553120425124546.png",
                     "default": false
                 },
                 {
@@ -248,7 +224,6 @@
                     "description": "Migliora la grafica del blocco d'erba",
                     "download_url": "3584/355/lambdabettergrass-1.2.2%2B1.17.jar",
                     "image_url": "291/462/637322198772917679.png",
-                    "mod_url": "lambdabettergrass",
                     "dependencies": ["fabric-api"],
                     "default": false
                 },
@@ -258,7 +233,6 @@
                     "description": "Aggiunge la possibilità di connettere le texture",
                     "download_url": "3549/420/continuity-1.0.3%2B1.18.jar",
                     "image_url": "437/816/637682110255957193.png",
-                    "mod_url": "continuity",
                     "dependencies": ["fabric-api"],
                     "default": false
                 },
@@ -268,7 +242,6 @@
                     "description": "Permette di aggiungere texture di oggetti personallizzate",
                     "download_url": "3586/968/CITResewn-0.8.2%2B1.18.1.jar",
                     "image_url": "426/701/637657532550330185.png",
-                    "mod_url": "cit-resewn",
                     "default": false
                 },
                 {
@@ -277,7 +250,6 @@
                     "description": "Aggiunge i mantelli della Optifine",
                     "download_url": "3556/372/fabric-optifine-capes-2.0.0.jar",
                     "image_url": "300/29/637355906425147066.png",
-                    "mod_url": "of-capes",
                     "dependencies": ["fabric-api"],
                     "default": false
                 },
@@ -287,7 +259,6 @@
                     "description": "Mostra alcune meccaniche di solito non visibili come la stamina",
                     "download_url": "3549/846/appleskin-forge-mc1.18-2.2.0.jar",
                     "image_url": "47/527/636066936394500688.png",
-                    "mod_url": "appleskin",
                     "default":false
                 },
                 {
@@ -296,7 +267,6 @@
                     "description": "Riporta il client ai tempi d'oro",
                     "download_url": "3620/803/oh-my-minecraft-client-1.18.1-0.4.1.jar",
                     "image_url": "352/799/637508675216169015.png",
-                    "mod_url": "oh-my-minecraft-client",
                     "default": false
                 },
                 {
@@ -305,7 +275,6 @@
                     "description": "Permette di condividere litematiche all'interno del server",
                     "download_url": "3559/999/syncmatica-0.2.6.jar",
                     "image_url": "430/795/637665275706886929.png",
-                    "mod_url": "syncmatica",
                     "dependencies": ["malilib", "litematica"],
                     "default": false
                 }
