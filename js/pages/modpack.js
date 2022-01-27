@@ -47,7 +47,7 @@ $(document).ready(()=>{
                         // CARD
                         var image_url = (file.image_absolute_url?'':config.image_url_base) + file.image_url;
                         var download_url = (file.download_absolute_url?'':config.download_url_base) + file.download_url;
-                        var mod_url = (file.mod_absolute_url?'':config.mod_url_base) + file.mod_url;
+                        var mod_url = (file.mod_absolute_url?file.mod_url:config.mod_url_base + (file.mod_url || file.id));
                         var card = $(`<div class="card" id="card-${version.id}-${file.id}">
                             <img src="${image_url}" class="card-img-top" alt="Mod image" />
                             <div class="card-body">
@@ -58,7 +58,7 @@ $(document).ready(()=>{
                                     <small>
                                         <a href="${file.download_url?download_url:"#/"}"
                                             ${file.download_url?'target="_blank"':''}>${!file.download_url?"download non disponibile":(file.download_text || "download")}</a> |
-                                        <a href="${file.mod_url?mod_url:(file.mod_absolute_url?'':config.mod_url_base) + file.id}" target="_blank">${file.information_text||"informazioni"}</a>
+                                        <a href="${mod_url?mod_url:"#/"}" target="_blank">${file.information_text||"informazioni"}</a>
                                     </small>   
                                     <div class="btn-group-toggle ${file.disabled?" disabled":""}" data-toggle="buttons">
                                         <label class="btn btn-secondary${file.default==false||file.disabled?"":" active"}${file.disabled?" disabled":""}">
