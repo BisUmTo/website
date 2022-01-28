@@ -277,6 +277,30 @@
                     "image_url": "430/795/637665275706886929.png",
                     "dependencies": ["malilib", "litematica"],
                     "default": false
+                },
+                {
+                    "id": "plasmo-voice",
+                    "title": "Plasmo Voice",
+                    "description": "Permette di parlare con i player vicini se nel server e nel client dei giocatori è presente",
+                    "download_url": "https://objects.githubusercontent.com/github-production-release-asset-2e65be/354806655/acb0366f-5c3d-4e6d-a7c6-f23140c20472?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220128%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220128T181222Z&X-Amz-Expires=300&X-Amz-Signature=dc2a4783e0a62764cd3a15666f759caf4f262619924e184163cccaee30b8b4b4&X-Amz-SignedHeaders=host&actor_id=75534398&key_id=0&repo_id=354806655&response-content-disposition=attachment%3B%20filename%3Dplasmovoice-fabric-1.18.1-1.2.10-alpha.jar&response-content-type=application%2Foctet-stream",
+                    "download_absolute_url": true,
+                    "image_url": "https://github.com/plasmoapp/plasmo-voice/blob/client-1.18-1.2.x/common/src/main/resources/assets/plasmo_voice/icon.png",
+                    "image_absolute_url": true,
+                    "mod_url": "https://github.com/plasmoapp/plasmo-voice",
+                    "mod_absolute_url": true,
+                    "default": false
+                },
+                {
+                    "id": "essential",
+                    "title": "Essential",
+                    "description": "Permette di invitare amici nel proprio mondo se hanno la mod installata",
+                    "download_url": "https://cdn.essential.gg/mods/60ecf53d6b26c76a26d49e5b/61b4e1475b559418a4988419/Essential-fabric_1-18-1.jar",
+                    "download_absolute_url": true,
+                    "image_url": "https://essential.gg/favicon.ico",
+                    "image_absolute_url": true,
+                    "mod_url": "https://essential.gg/",
+                    "mod_absolute_url": true,
+                    "default": false
                 }
             ],
 
