@@ -282,7 +282,7 @@
                     "id": "plasmo-voice",
                     "title": "Plasmo Voice",
                     "description": "Permette di parlare con i player vicini se nel server e nel client dei giocatori è presente",
-                    "download_url": "https://github.com/plasmoapp/plasmo-voice/releases/download/1.2.10-alpha/plasmovoice-fabric-1.18.1-1.2.10-alpha.jar",
+                    "download_url": "https://github.com/plasmoapp/plasmo-voice/releases/download/1.2.10-alpha/plasmovoice-fabric-1.18.1-1.2.10-alpha-1.jar",
                     "download_absolute_url": true,
                     "image_url": "https://github.com/plasmoapp/plasmo-voice/blob/client-1.18-1.2.x/common/src/main/resources/assets/plasmo_voice/icon.png",
                     "image_absolute_url": true,
