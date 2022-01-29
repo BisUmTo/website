@@ -277,6 +277,30 @@
                     "image_url": "430/795/637665275706886929.png",
                     "dependencies": ["malilib", "litematica"],
                     "default": false
+                },
+                {
+                    "id": "plasmo-voice",
+                    "title": "Plasmo Voice",
+                    "description": "Permette di parlare con i player vicini se nel server e nel client dei giocatori è presente",
+                    "download_url": "https://github.com/plasmoapp/plasmo-voice/releases/download/1.2.10-alpha/plasmovoice-fabric-1.18.1-1.2.10-alpha-1.jar",
+                    "download_absolute_url": true,
+                    "image_url": "https://github.com/plasmoapp/plasmo-voice/blob/client-1.18-1.2.x/common/src/main/resources/assets/plasmo_voice/icon.png",
+                    "image_absolute_url": true,
+                    "mod_url": "https://github.com/plasmoapp/plasmo-voice",
+                    "mod_absolute_url": true,
+                    "default": false
+                },
+                {
+                    "id": "essential",
+                    "title": "Essential",
+                    "description": "Permette di invitare amici nel proprio mondo se hanno la mod installata",
+                    "download_url": "https://cdn.essential.gg/mods/60ecf53d6b26c76a26d49e5b/61b4e1475b559418a4988419/Essential-fabric_1-18-1.jar",
+                    "download_absolute_url": true,
+                    "image_url": "https://essential.gg/favicon.ico",
+                    "image_absolute_url": true,
+                    "mod_url": "https://essential.gg/",
+                    "mod_absolute_url": true,
+                    "default": false
                 }
             ],
 
