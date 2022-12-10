@@ -47,8 +47,8 @@
             <h2 id="title">Di cosa si tratta?</h2>
             <p id="subtitle">Questa piccola pagina ti permetter&agrave; di contare periodicamente ad alta voce.</p>
         </div>
-        <div class="progress">
-            <div class="progress-bar bg-red" role="progressbar" id="progresso" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progresso">
+            <div class="bg-red" id="barra" style="width: 100%"></div>
         </div>
         <div class="container-fluid bg-white block">
             <div class="row">
@@ -58,8 +58,8 @@
                         <input type="number" id="intervallo" value="2.5" min="1" max="9999.9" step="0.1"> secondi<br />
                         <label for="attesa">Attesa iniziale:</label>
                         <input type="number" id="attesa" value="2.5" min="0" max="30" step="1"> secondi<br />
-                        <input type="button" id="start" value="Inizia" onclick="startClick()"><span > </span>
-                        <input type="button" id="stop" value="Pausa" disabled onclick="stopClick()">
+                        <input class="btn btn-dark btn-lg" type="button" id="start" value="Inizia" onclick="startClick()"><span > </span>
+                        <input class="btn btn-dark btn-lg" type="button" id="stop" value="Pausa" disabled onclick="stopClick()">
                     </form>
                 </div>
                 <div class="col-sm-6 colonna">

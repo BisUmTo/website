@@ -27,9 +27,11 @@ form {
 #contatore {
     margin-top: 30px
 }
-.progress {
+.progresso {
     height: 4px;
+    width: 100%;
 }
-#progresso {
+#barra {
     transition: none;
+    height: 100%;
 }

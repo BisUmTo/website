@@ -17,7 +17,8 @@ const SpeechSynthesisUtterance =
 function startClick(){
     // START
     stato = 1;
-    $("#stop").val("Pause");
+    $("#start").val("Riprendi");
+    $("#stop").val("Pausa");
     $("#start").prop("disabled", true);
     $("#stop").prop("disabled", true);
     
@@ -26,26 +27,26 @@ function startClick(){
         curTime = context.currentTime;
         schedule();
     }, $('#attesa').val()*1000);
-    $('#progresso').width("100%");
-    $('#progresso').animate({width: 0}, $('#attesa').val()*1000, 'linear');
+    $('#barra').width("100%");
+    $('#barra').animate({width: 0}, $('#attesa').val()*1000, 'linear');
 }
 
 function stopClick(){
     if(stato == 1){ // PAUSE
         stato = 2;
         $("#stop").val("Stop");
-        $("#start").val("Resume");
+        $("#start").val("Riprendi");
     } else if(stato == 2){ // STOP
         contatore = 0;
         $("#contatore").html(contatore);
         stato = 0;
-        $("#stop").val("Pause");
+        $("#stop").val("Pausa");
         $("#stop").prop("disabled", true);
         $("#start").val("Start");
     }
     $("#start").prop("disabled", false);
-    $('#progresso').stop();
-    $('#progresso').width("100%");
+    $('#barra').stop();
+    $('#barra').width("100%");
     window.clearInterval(timer);
 }
 
@@ -64,7 +65,7 @@ function updateTime() {
     let time = parseInt($("#intervallo").val(),10);
     curTime += time
     contatore++;
-    $('#progresso').animate({width: $(document).width()}, time*1000, 'linear', () => {$('#progresso').width(0)});
+    $('#barra').animate({width: $(document).width()}, time*1000, 'linear', () => {$('#barra').width(0)});
     $("#contatore").html(contatore);
 }
 
