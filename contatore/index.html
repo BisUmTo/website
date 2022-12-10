@@ -31,7 +31,7 @@
       gtag('config', 'UA-146517603-1');
     </script>   
 
-    <title>BisUmTo - Contatore Ripetizioni</title>
+    <title>BisUmTo - Contatore</title>
     <script src="../js/pages/contatore.js" defer></script>
     <link rel="stylesheet" href="../css/pages/contatore.css">
 </head>
@@ -39,13 +39,16 @@
     <div include-html="../components/navbar.html"></div> 
     <section id="header" class="bg-red">
         <div class="container-fluid block">
-            <h1>Contatore Ripetizioni<br><small>Per chi non vuole nemmeno contare</small></h1>
+            <h1>Contatore<br><small>Conta al posto tuo!</small></h1>
         </div>
     </section>
     <section id="content">
         <div class="container-fluid bg-gray block">
             <h2 id="title">Di cosa si tratta?</h2>
             <p id="subtitle">Questa piccola pagina ti permetter&agrave; di contare periodicamente ad alta voce.</p>
+        </div>
+        <div class="progress">
+            <div class="progress-bar bg-red" role="progressbar" id="progresso" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <div class="container-fluid bg-white block">
             <div class="row">
@@ -64,7 +67,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid bg-gray block">
+        <div class="container-fluid bg-red block">
             <h2 id="title">ATTENZIONE</h2>
             <p id="subtitle">Con intervalli rapidi o con numeri elevati, il sintetizzatore vocale potrebbe non essere in grado di mantenere il passo.</p>
         </div>

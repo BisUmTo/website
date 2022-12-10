@@ -18,13 +18,16 @@ function startClick(){
     // START
     stato = 1;
     $("#stop").val("Pause");
-    $("#stop").prop("disabled", false);
     $("#start").prop("disabled", true);
-
+    $("#stop").prop("disabled", true);
+    
     setTimeout(() => {
+        $("#stop").prop("disabled", false);
         curTime = context.currentTime;
         schedule();
     }, $('#attesa').val()*1000);
+    $('#progresso').width("100%");
+    $('#progresso').animate({width: 0}, $('#attesa').val()*1000, 'linear');
 }
 
 function stopClick(){
@@ -41,6 +44,8 @@ function stopClick(){
         $("#start").val("Start");
     }
     $("#start").prop("disabled", false);
+    $('#progresso').stop();
+    $('#progresso').width("100%");
     window.clearInterval(timer);
 }
 
@@ -49,27 +54,29 @@ Scheduling Help by: https://www.html5rocks.com/en/tutorials/audio/scheduling/
 */
 function schedule() {
     while(curTime < context.currentTime + 0.1) {
-        updateTime();
         playNote(curTime);
+        updateTime();
     }
     timer = window.setTimeout(schedule, 0.1);
 }
     
 function updateTime() {
-    curTime += parseInt($("#intervallo").val(),10);
+    let time = parseInt($("#intervallo").val(),10);
+    curTime += time
     contatore++;
+    $('#progresso').animate({width: $(document).width()}, time*1000, 'linear', () => {$('#progresso').width(0)});
     $("#contatore").html(contatore);
 }
 
 /* Play note on a delayed interval of t */
 function playNote(t) {
     var note = context.createOscillator();
-    note.frequency.value = 380;
+    note.frequency.value = 400;
     note.connect(context.destination);
 
     note.start(t);
     note.stop(t + 0.05);
 
-    let speak = new SpeechSynthesisUtterance(contatore.toString());
+    let speak = new SpeechSynthesisUtterance(`${contatore + 1}`);
     window.speechSynthesis.speak(speak);
 }
