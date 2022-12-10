@@ -31,32 +31,42 @@
       gtag('config', 'UA-146517603-1');
     </script>   
 
-    <title>BisUmTo - Color Picker</title>
-    <script src="../js/pages/colore.js" defer></script>
-    <link rel="stylesheet" href="../css/pages/colore.css">
+    <title>BisUmTo - Contatore Ripetizioni</title>
+    <script src="../js/pages/contatore.js" defer></script>
+    <link rel="stylesheet" href="../css/pages/contatore.css">
 </head>
 <body>
     <div include-html="../components/navbar.html"></div> 
     <section id="header" class="bg-red">
         <div class="container-fluid block">
-            <h1>Color Picker<br><small>Genera i tuoi codici colore</small></h1>
+            <h1>Contatore Ripetizioni<br><small>Per chi non vuole nemmeno contare</small></h1>
         </div>
     </section>
     <section id="content">
         <div class="container-fluid bg-gray block">
             <h2 id="title">Di cosa si tratta?</h2>
-            <p id="subtitle">Questa piccola pagina ti permetter&agrave; di ottenere i codici del colore selezionato.</p>
+            <p id="subtitle">Questa piccola pagina ti permetter&agrave; di contare periodicamente ad alta voce.</p>
         </div>
         <div class="container-fluid bg-white block">
             <div class="row">
-                <form>
-                    <label for="colorpicker">Colore:</label>
-                    <input type="color" id="colorpicker" onchange="calculate()" value="#ff0000"><br />
-                    HEX: <code id="coloreHEX" class="coloreOutput">#FF0000</code><br />
-                    DECIMALE: <code id="coloreDEC" class="coloreOutput">16711680</code><br />
-                    FLOAT: <code id="coloreFLOAT_R" class="coloreOutput">1</code> <code id="coloreFLOAT_G" class="coloreOutput">0</code> <code id="coloreFLOAT_B" class="coloreOutput">0</code>
-                </form>
+                <div class="col-sm-6 colonna">
+                    <form>
+                        <label for="intervallo">Intervallo:</label>
+                        <input type="number" id="intervallo" value="2.5" min="1" max="9999.9" step="0.1"> secondi<br />
+                        <label for="attesa">Attesa iniziale:</label>
+                        <input type="number" id="attesa" value="2.5" min="0" max="30" step="1"> secondi<br />
+                        <input type="button" id="start" value="Inizia" onclick="startClick()"><span > </span>
+                        <input type="button" id="stop" value="Pausa" disabled onclick="stopClick()">
+                    </form>
+                </div>
+                <div class="col-sm-6 colonna">
+                    <h2 id="contatore" class="align-middle">0</h2>
+                </div>
             </div>
+        </div>
+        <div class="container-fluid bg-gray block">
+            <h2 id="title">ATTENZIONE</h2>
+            <p id="subtitle">Con intervalli rapidi o con numeri elevati, il sintetizzatore vocale potrebbe non essere in grado di mantenere il passo.</p>
         </div>
     </section>
     <div include-html="../components/footer.html"></div> 
