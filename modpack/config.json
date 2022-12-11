@@ -1158,6 +1158,328 @@
             ],
             "hidden":false
 
+        },
+        {
+            "id": "1_19_2",
+            "title": "1.19.2",
+            "last_update": "06/12/22",
+            "files":[
+                {
+                    "id": "carpet-redcraft-addons",
+                    "title": "Carpet RedCraft Addons",
+                    "description": "Introduce le funzionalità caratteristiche della RedCraft",
+                    "download_url": "3485/889/carpet-redcraft-addons-1.17.1-1.4.47%2Bv211009.jar",
+                    "image_url": "394/667/637591979598818555.png",
+                    "dependencies": ["carpet"],
+                    "download_text": "download",
+                    "information_text": "informazioni",
+                    "hidden": true,
+                    "default": false
+                },
+                
+                {
+                    "id": "litematica",
+                    "title": "Litematica",
+                    "description": "Crea ologrammi per la ricostruzione di strutture da te salvate come ologramma",
+                    "download_url": "4026/753/litematica-fabric-1.19.2-0.12.5.jar",
+                    "image_url": "181/712/636802492918868562.jpeg",
+                    "dependencies": ["malilib"]
+                },
+                {
+                    "id": "tweakeroo",
+                    "title": "Tweakeroo",
+                    "description": "Aggiunge degli aggiustamenti a Minecraft",
+                    "download_url": "3923/75/tweakeroo-fabric-1.19.2-0.14.3.jar",
+                    "image_url": "thumbnails/159/939/64/64/636662314665459977.jpeg",
+                    "dependencies": ["malilib"]
+                },
+                {
+                    "id": "item-scroller",
+                    "title": "ItemScroller",
+                    "description": "Semplifica lo spostamento di oggetti",
+                    "download_url": "3923/75/tweakeroo-fabric-1.19.2-0.14.3.jar",
+                    "image_url": "34/849/635915728962120488.jpeg",
+                    "dependencies": ["malilib"]
+                },
+                {
+                    "id": "minihud",
+                    "title": "MiniHUD",
+                    "description": "Agevola la visualizzazione di alcune info",
+                    "download_url": "3923/228/minihud-fabric-1.19.2-0.23.3.jar",
+                    "image_url": "213/409/636992403483369946.png",
+                    "dependencies": ["malilib"]
+                },
+                {
+                    "id": "malilib",
+                    "title": "MaLiLib",
+                    "description": "Masa Litemod Library, libreria necessaria per Litematica, Tweakeroo, ItemScroller e MiniHUD",
+                    "download_url": "3923/52/malilib-fabric-1.19.2-0.13.0.jar",
+                    "image_url": "171/135/636727036520163113.png"
+                },
+                {
+                    "id": "carpet",
+                    "title": "Carpet",
+                    "description": "Permette di aggiungere nuove funzionalità al vanilla",
+                    "download_url": "4033/215/fabric-carpet-1.19.2-1.4.84%2Bv221018.jar",
+                    "image_url": "233/983/637075723026900986.png"
+                },
+                {
+                    "id":"armor-statues",
+                    "title":"Armor Statues",
+                    "description":"Migliora l'utilizzo degli armor stand",
+                    "download_url":"4035/323/ArmorStatues-v4.0.2-1.19.2-Forge.jar",
+                    "image_url":"615/156/638000369925907933.png",
+                    "dependencies":["puzzles-lib"],
+                    "default": false
+                },
+                {
+                    "id":"better-third-person",
+                    "title":"Better Third Person",
+                    "description":"Migliora la terza persona",
+                    "download_url":"3834/422/BetterThirdPerson-Forge-1.19-1.8.1.jar",
+                    "image_url":"392/806/637587416534783614.png",
+                    "default": false
+                },
+                {
+                    "id":"bobby",
+                    "title":"Bobby",
+                    "description":"Permette di usare una distanza di rendering maggiore di quella del server",
+                    "download_url":"4096/481/bobby-4.0.1.jar",
+                    "image_url":"301/608/637363142883032981.png",
+                    "default": false
+                },
+                {
+                    "id":"chat-heads",
+                    "title":"Chat Heads",
+                    "description":"Aggiunge la testa del giocatore accanto al suo messaggio nella chat",
+                    "download_url":"3923/445/chat_heads-0.7.1-forge-1.19.1.jar",
+                    "image_url":"299/225/637352537610256484.png",
+                    "dependencies":["cloth-config"],
+                    "default": false
+                },
+                {
+                    "id":"cloth-config",
+                    "title":"Cloth Config API (Fabric/Forge)",
+                    "description":"Finestra dei config",
+                    "download_url":"3972/420/cloth-config-8.2.88-fabric.jar",
+                    "image_url":"282/467/637289313020452406.png",
+                    "default": false
+                },
+                {
+                    "id": "fabric-api",
+                    "title": "Fabric API",
+                    "description":"Libreria necessaria per ReplayMod, Camera Utils, Effective, Logical Zoom, LambdaBetterGrass, Continuity, OF Capes",
+                    "download_url" : "4123/950/fabric-api-0.68.0%2B1.19.2.jar",
+                    "image_url": "thumbnails/185/822/64/64/636829723898798601.png"
+                },
+                {
+                    "id": "fabrishot",
+                    "title": "Fabrishot",
+                    "description": "Permette di fare screenshot di qualità",
+                    "download_url":"4017/838/fabrishot-1.9.1.jar",
+                    "image_url":"335/447/637470408666855956.png",
+                    "dependencies": ["fabric-api"],
+                    "default": false
+                },
+                {
+                    "id":"forge-config-api-port-fabric",
+                    "title":"Forge Config API Port",
+                    "description":"Libreria che porta l'API di config di Forge su Fabric",
+                    "download_url":"4104/948/ForgeConfigAPIPort-v4.2.7-1.19.2-Fabric.jar",
+                    "image_url":"456/127/637725989881574992.png",
+                    "dependencies":["fabric-api", "modmenu"],
+                    "default": false
+                },
+                {
+                    "id": "irisshaders",
+                    "title": "Iris Shaders",
+                    "description": "Permette di utilizzare le shaders con Sodium",
+                    "download_url": "4119/878/iris-mc1.19.2-1.4.3.jar",
+                    "image_url" : "393/276/637588493674460514.png",
+                    "dependencies": ["sodium"]
+                },
+                {
+                    "id":"jumpprooffarmland",
+                    "title":"JumpProofFarmland",
+                    "description":"Impedisce alla terra coltivata di ritornare terra saltandoci sopra",
+                    "download_url":"4153/596/jumpprooffarmland-1.19.2-1.0.1.jar",
+                    "image_url":"667/550/638061833586280270.png"
+                },
+                {
+                    "id":"lithium",
+                    "title":"Lithium (Fabric)",
+                    "description":"Migliora le performance",
+                    "download_url":"4077/220/lithium-fabric-mc1.19.2-0.10.2.jar",
+                    "image_url":"246/646/637158441743060329.png"
+                },
+                {
+                    "id": "logical-zoom",
+                    "title": "Logical Zoom",
+                    "description": "Aggiunge lo zoom",
+                    "download_url": "3919/920/logical_zoom-0.0.17.jar",
+                    "image_url" : "242/159/637132666671562903.png",
+                    "dependencies": ["fabric-api"],
+                    "default": false
+                },
+                {
+                    "id":"modmenu",
+                    "title":"Mod Menu",
+                    "description":"Aggiunge un menù con tutte le mod attive",
+                    "download_url":"4100/232/modmenu-4.1.1.jar",
+                    "image_url":"281/367/637285257027983134.png"
+                },
+                {
+                    "id":"nether-coords-fabric",
+                    "title":"Nether Coords (Fabric)",
+                    "description":"Semplifica la creazione di portali a specifiche coordinate",
+                    "download_url":"4049/331/nether-coords-1.19.x-1.1.2.jar",
+                    "image_url":"602/463/637983002888933832.png",
+                    "default": false
+                },
+                {
+                    "id":"optigui",
+                    "title":"OptiGUI",
+                    "description":"Permette la personalizzazione delle GUI come la Optifine",
+                    "download_url":"4010/511/optigui-1.1.6.jar",
+                    "image_url":"542/397/637870827519355273.png",
+                    "default": false
+                },
+                {
+                    "id":"phosphor",
+                    "title":"Phosphor (Fabric)",
+                    "description":"Migliora i light update",
+                    "download_url":"3832/74/phosphor-fabric-mc1.19.x-0.8.1.jar",
+                    "image_url":"284/775/637298471783289760.png"
+                },
+                {
+                    "id":"pick-block-pro",
+                    "title":"Pick Block Pro",
+                    "description":"Migliora il Pick Block di Minecraft",
+                    "download_url":"3864/262/Pick-Block-Pro-1.6.12-mc1.19.jar",
+                    "image_url":"556/425/637901365666638597.png",
+                    "dependencies":["cloth-config", "fabric-api", "modmenu"],
+                    "default": false
+                },
+                {
+                    "id":"placeable",
+                    "title":"Placeable Plants",
+                    "description":"Permette di piazzare le piante su quasi tutti i blocchi",
+                    "download_url":"4066/341/placeable-forge-1.19.2-1.0.2.jar",
+                    "image_url":"594/624/637968671344745580.png"
+                },
+                {
+                    "id": "plasmo-voice",
+                    "title": "Plasmo Voice",
+                    "description": "Permette di parlare con i player vicini se nel server e nel client dei giocatori è presente",
+                    "download_url": "3903/846/plasmovoice-forge-1.19.1-1.2.19.jar",
+                    "image_url": "thumbnails/365/621/64/64/637532352743073267.png",
+                    "default": false
+                },
+                {
+                    "id":"puzzles-lib",
+                    "title":"Puzzles Lib",
+                    "description":"Libreria per la ArmorStatues",
+                    "download_url":"4041/205/PuzzlesLib-v4.3.12-1.19.2-Fabric.jar",
+                    "image_url":"398/964/637602138760356859.png",
+                    "default": false
+                },
+                {
+                    "id":"reeses-sodium-options",
+                    "title":"Reese's Sodium Options",
+                    "description":"Migliora le impostazioni di Sodium",
+                    "download_url":"4126/247/reeses_sodium_options-1.4.9%2Bmc1.19.2-build.67.jar",
+                    "image_url":"414/599/637636962431399112.png",
+                    "dependencies":["irisshaders", "sodium", "sodium-extra"]
+                },
+                {
+                    "id": "replay-mod",
+                    "title": "ReplayMod",
+                    "description": "Permette di vedere i replay delle giocate",
+                    "download_url" : "https://minio.replaymod.com/replaymod/replaymod-1.19.1-2.6.8.jar",
+                    "download_absolute_url": true,
+                    "image_url": "https://www.replaymod.com/img/logo_nocom.png",
+                    "image_absolute_url": true,
+                    "mod_url": "https://www.replaymod.com/download/",
+                    "mod_absolute_url": true,
+                    "dependencies": ["fabric-api"]
+                },
+                {
+                    "id":"sodium-extra",
+                    "title":"Sodium Extra",
+                    "description":"Porta le impostazioni di Optifine su Sodium",
+                    "download_url":"4126/62/sodium-extra-0.4.14%2Bmc1.19.2-build.80.jar",
+                    "image_url":"344/698/637491211740686215.png",
+                    "dependencies":["fabric-api", "irisshaders", "reeses-sodium-options", "sodium"]
+                },
+                {
+                    "id": "sodium",
+                    "title": "Sodium",
+                    "description": "Migliora le performance",
+                    "download_url": "3957/319/sodium-fabric-mc1.19.2-0.4.4%2Bbuild.18.jar",
+                    "image_url": "284/773/637298471098686391.png"
+                },
+                {
+                    "id": "sodium-shadowy-path-blocks",
+                    "title": "Sodium Shadowy Path Blocks",
+                    "description": "Rimette i blocchi sentiero ombrosi con Sodium",
+                    "download_url": "3963/343/sodium-shadowy-path-blocks-3.1.0.jar",
+                    "image_url" : "467/156/637748563641228976.png",
+                    "dependencies": ["sodium"]
+                },
+                {
+                    "id": "worldedit",
+                    "title": "WorldEdit",
+                    "description": "Permette la modifica a 360° del mondo di minecraft",
+                    "download_url": "3922/622/worldedit-mod-7.2.12.jar",
+                    "image_url": "308/38/637390518698344085.png"
+                },
+                {
+                    "id": "xaeros-minimap",
+                    "title": "Xaero's Minimap",
+                    "description": "Aggiunge una mappa a schermo intero",
+                    "download_url": "4127/325/Xaeros_Minimap_22.16.3_Forge_1.19.1.jar",
+                    "image_url": "92/854/636258666554688823.png",
+                    "dependencies": ["xaeros-world-map"]
+                },
+                {
+                    "id": "xaeros-world-map",
+                    "title": "Xaero's World Map",
+                    "description": "Aggiunge la minimappa della Xaero's World Map",
+                    "download_url": "4127/340/XaerosWorldMap_1.28.4_Forge_1.19.1.jar",
+                    "image_url": "196/654/636886857118683130.png"
+                },
+                {
+                    "id": "appleskin",
+                    "title": "AppleSkin",
+                    "description": "Mostra alcune meccaniche di solito non visibili come la stamina",
+                    "download_url": "3927/567/appleskin-fabric-mc1.19-2.4.1.jar",
+                    "image_url": "47/527/636066936394500688.png",
+                    "default":false
+                },
+                {
+                    "id": "optifine",
+                    "title": "OptiFine",
+                    "description": "Migliora le performance",
+                    "download_url": "https://optifine.net/downloadx?f=OptiFine_1.19.2_HD_U_H9.jar&x=239b757ecb9df7254a02bd54f5f4aade",
+                    "download_absolute_url": true,
+                    "image_url": "https://optifine.net/images/of16r.png",
+                    "image_absolute_url": true,
+                    "mod_url": "https://optifine.net/home",
+                    "mod_absolute_url": true,
+                    "dependencies": ["optifabric"],
+                    "default": false
+                },
+                {
+                    "id": "optifabric",
+                    "title": "OptiFabric",
+                    "description": "Rende compatibili Optifine e Fabric. Update non garantiti",
+                    "download_url": "3961/344/optifabric-1.13.16.jar",
+                    "image_url": "204/621/636941511294490034.png",
+                    "default": false
+                }
+            ],
+            "hidden":false
+
         }
     ]
     
