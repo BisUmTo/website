@@ -1596,6 +1596,13 @@
                     "default": false
                 },
                 {
+                    "id":"inventory-sorting",
+                    "title":"Inventory Sorting",
+                    "description":"Riordina l'inventario",
+                    "download_url":"4168/828/InventorySorter-1.8.10-1.19.3.jar",
+                    "image_url":"219/943/637017846777406794.png"
+                },
+                {
                     "id": "irisshaders",
                     "title": "Iris Shaders",
                     "description": "Permette di utilizzare le shaders con Sodium",
@@ -1625,6 +1632,15 @@
                     "image_url":"246/646/637158441743060329.png"
                 },
                 {
+                    "id": "logical-zoom",
+                    "title": "Logical Zoom",
+                    "description": "Aggiunge lo zoom",
+                    "download_url": "4143/630/logical_zoom-0.0.18.jar",
+                    "image_url" : "242/159/637132666671562903.png",
+                    "dependencies": ["fabric-api"],
+                    "default": false
+                },
+                {
                     "id":"modmenu",
                     "title":"Mod Menu",
                     "description":"Aggiunge un menù con tutte le mod attive",
@@ -1637,6 +1653,15 @@
                     "description":"Permette la personalizzazione delle GUI come la Optifine",
                     "download_url":"",
                     "image_url":"542/397/637870827519355273.png",
+                    "default": false
+                },
+                {
+                    "id":"pick-block-pro",
+                    "title":"Pick Block Pro",
+                    "description":"Migliora il Pick Block di Minecraft",
+                    "download_url":"4142/211/Pick-Block-Pro-1.6.14-mc1.19.3.jar",
+                    "image_url":"556/425/637901365666638597.png",
+                    "dependencies":["cloth-config", "fabric-api", "modmenu"],
                     "default": false
                 },
                 {
@@ -1721,10 +1746,19 @@
                     "image_url": "308/38/637390518698344085.png"
                 },
                 {
+                    "id":"dynamic-sound-filters",
+                    "title":"Dynamic Sound Filters",
+                    "description":"Rende più realistico l'audio",
+                    "download_url":"4142/153/DynamicSoundFilters-1.3.0%2B1.19.3.jar",
+                    "image_url":"282/73/637287854424696992.png",
+                    "dependencies":["cloth-config", "fabric-api", "modmenu"],
+                    "default":false
+                },
+                {
                     "id": "appleskin",
                     "title": "AppleSkin",
                     "description": "Mostra alcune meccaniche di solito non visibili come la stamina",
-                    "download_url": "",
+                    "download_url": "4171/199/appleskin-fabric-mc1.19.3-2.4.2.jar",
                     "image_url": "47/527/636066936394500688.png",
                     "default":false
                 },
