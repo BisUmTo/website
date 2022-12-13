@@ -1587,6 +1587,15 @@
                     "image_url": "thumbnails/185/822/64/64/636829723898798601.png"
                 },
                 {
+                    "id": "fabrishot",
+                    "title": "Fabrishot",
+                    "description": "Permette di fare screenshot di qualità",
+                    "download_url":"4017/838/fabrishot-1.9.1.jar",
+                    "image_url":"335/447/637470408666855956.png",
+                    "dependencies": ["fabric-api"],
+                    "default": false
+                },
+                {
                     "id":"forge-config-api-port-fabric",
                     "title":"Forge Config API Port",
                     "description":"Libreria che porta l'API di config di Forge su Fabric",
