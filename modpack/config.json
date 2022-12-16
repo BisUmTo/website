@@ -1620,6 +1620,14 @@
                     "dependencies": ["sodium"]
                 },
                 {
+                    "id":"itemswapper",
+                    "title":"ItemSwapper",
+                    "description":"Aggiunge un'interfaccia per cambiare tra oggetti simili",
+                    "download_url":"4178/243/itemswapper-fabric-0.3.2-mc1.19.3.jar",
+                    "image_url":"628/389/638024941935588974.png",
+                    "dependencies":["fabric-api"]
+                },
+                {
                     "id":"journeymap",
                     "title":"JourneyMap",
                     "description":"Aggiunge una minimappa",
@@ -1660,7 +1668,7 @@
                     "id":"optigui",
                     "title":"OptiGUI",
                     "description":"Permette la personalizzazione delle GUI come la Optifine",
-                    "download_url":"",
+                    "download_url":"4178/354/optigui-1.1.6.jar",
                     "image_url":"542/397/637870827519355273.png",
                     "default": false
                 },
