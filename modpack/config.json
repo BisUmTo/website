@@ -1197,7 +1197,7 @@
                     "id": "item-scroller",
                     "title": "ItemScroller",
                     "description": "Semplifica lo spostamento di oggetti",
-                    "download_url": "3923/75/tweakeroo-fabric-1.19.2-0.14.3.jar",
+                    "download_url": "3923/56/itemscroller-fabric-1.19.2-0.17.1.jar",
                     "image_url": "34/849/635915728962120488.jpeg",
                     "dependencies": ["malilib"]
                 },
