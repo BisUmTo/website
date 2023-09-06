@@ -6,3 +6,4 @@ js/pages/redpack.old.js
 js/libs/jso.js
 js/libs/jso.js.map
 redpack/files/RedPack_-*.zip
+.DS_Store
