@@ -36,3 +36,6 @@ h2 {
 .card {
     margin-bottom: 10px;
 }
+iframe {
+    max-width: 100%;
+}

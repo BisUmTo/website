@@ -82,3 +82,6 @@ footer {
     right:10px;
     top:5px;
 }
+body {
+    background-color: var(--almost-black);
+}
