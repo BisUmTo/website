@@ -20,8 +20,9 @@ $('#levelpicker').on('change', ()=>{
                     "value": {
                         "type": "string",
                         "value": [
-                            "minecraft:update_1_20",
+                            "minecraft:update_1_21",
                             "minecraft:bundle",
+                            "minecraft:trade_rebalance",
                             "minecraft:vanilla"
                         ]
                     }
@@ -32,14 +33,16 @@ $('#levelpicker').on('change', ()=>{
                 if(datapacks.Enabled.value.type == "string"){
                     const enabled = datapacks.Enabled.value.value;
                     if(!enabled.includes("bundle")) enabled.push("bundle");
-                    if(!enabled.includes("update_1_20")) enabled.push("update_1_20");
+                    if(!enabled.includes("update_1_21")) enabled.push("update_1_21");
+                    if(!enabled.includes("trade_rebalance")) enabled.push("trade_rebalance");
                 } else { 
                     datapacks.Enabled.value = {
                         "type": "string",
                         "value": [
                             "vanilla",
                             "bundle",
-                            "update_1_20"
+                            "trade_rebalance",
+                            "update_1_21"
                         ]
                     }
                 }
