@@ -1,15 +1,24 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-    <!--Header - Light:-->
+    <!--Header:-->
     <meta charset="UTF-8">
     <meta name="description" content="Il sito ufficiale di BisUmTo">
     <meta name="keywords" content="multicore network, multicore, bisumto">
     <meta name="author" content="LoreSchaeffer, BisUmTo">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#282828">
-    <base href="https://www.bisumto.it/">
     <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/86dcb577e8.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="/css/multicore.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+    <script src="/js/scripts.js" defer></script>
     <!--:Header-->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,16 +31,181 @@
       gtag('config', 'UA-146517603-1');
     </script>   
 
-    <meta http-equiv="refresh" content="0; url=https://bisumto.it/juvenes/bologna/">
-    <title>BisUmTo - Reindirizzamento in corso</title>
-    <script type="text/javascript" defer>
-        window.location.href = "https://bisumto.it/juvenes/ultreya/bologna/"
-    </script>    
+    <title>BisUmTo - Ultreya</title>
+    <script src="/js/pages/ultreya.js" defer></script>
+    <link rel="stylesheet" href="/css/pages/ultreya.css">
 </head>
 <body>
-    Se non sei stato reindirizzato automaticamente,
-    procedi manualmente sul <a href='https://bisumto.it/juvenes/bologna/'>sito di reindirizzamento</a>.
-    <br/>
-    Questo sito fa uso di cookie per migliorare l'esperienza di navigazione degli utenti, per presentare annunci pubblicitari personalizzati e per raccogliere informazioni sull'utilizzo del sito stesso. Usando il sito accetti questo utilizzo. Consulta l'<a href="../legal/cookie-policy.html">Informativa sui cookie</a>.
+    <div include-html="/components/navbar.html"></div> 
+    <section id="header" class="bg-red">
+        <div class="container-fluid block">
+            <h1>Ultreya</h1>
+            <p>Pellegrinaggi organizzati dall'Associazione Juvenes APS per i ragazzi delle scuole superiori.</p>
+            <a class="btn btn-outline-light" href="https://www.juvenes.it/home/attivita/attivita-estive/" target="_blank">Maggiori informazioni</a>
+        </div>
+    </section>
+
+    <section id="content" class="bg-white pt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Pellegrinaggio a Asti-Torino -->
+                <div class="col-12 col-xxl-6 mb-5">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6" style="overflow: hidden;">
+                                    <iframe src="/juvenes/ultreya/torino/index.html" frameborder="0" 
+                                    allowfullscreen width="100%" height="350px" 
+                                    style="border:0; margin-bottom:-20px; margin-top: -50px;"></iframe>
+                                </div>
+                                <div class="col-md-6 d-flex flex-column">
+                                    <div>
+                                        <h2 class="d-flex flex-row">
+                                            <span class="align-middle">Asti - Torino</span>
+                                            &nbsp;
+                                            <span class="badge badge-pill badge-warning ml-auto align-middle">2024</span>
+                                        </h2>
+                                    </div>
+                                    <p class="card-text text-justify">Pellegrinaggio dedicato ai ragazzi del biennio delle scuole superiori sulle orme di <a href="https://it.wikipedia.org/wiki/Giovanni_Bosco" target="_blank">San Giovanni Bosco</a>.</p>
+                                    <a class="btn btn-outline-light mt-auto w-100" href="/juvenes/ultreya/torino/" target="_blank">Mostra il percorso</a>
+                                    <a class="btn btn-outline-dark mt-3 w-100" href="#">Guarda il video</a>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pellegrinaggio a Innsbruck-Bolzano -->
+                <div class="col-12 col-xxl-6 mb-5">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6" style="overflow: hidden;">
+                                    <iframe src="/juvenes/ultreya/innsbruck/index.html" frameborder="0" 
+                                    allowfullscreen width="100%" height="350px" 
+                                    style="border:0; margin-bottom:-20px; margin-top: -50px;"></iframe>
+                                </div>
+                                <div class="col-md-6 d-flex flex-column">
+                                    <div>
+                                        <h2 class="d-flex flex-row">
+                                            <span class="align-middle">Innsbruck - Bolzano</span>
+                                            &nbsp;
+                                            <span class="badge badge-pill badge-success ml-auto align-middle">2023</span>
+                                        </h2>
+                                    </div>
+                                    <p class="card-text text-justify">Pellegrinaggio dedicato ai ragazzi di prima superiore sulle orme di <a href="https://it.wikipedia.org/wiki/Josef_Mayr-Nusser" target="_blank">Beato Josef Mayr-Nusser</a>.</p>
+                                    <a class="btn btn-outline-light mt-auto w-100" href="/juvenes/ultreya/innsbruck/" target="_blank">Mostra il percorso</a>
+                                    <a class="btn btn-outline-light mt-3 w-100" href="https://www.youtube.com/watch?v=IX6FPOlxRbc" target="_blank">Guarda il video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pellegrinaggio a Roma-Greccio -->
+                <div class="col-12 col-xxl-6 mb-5">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6" style="overflow: hidden;">
+                                    <iframe src="/juvenes/ultreya/greccio/index.html" frameborder="0" 
+                                    allowfullscreen width="100%" height="350px" 
+                                    style="border:0; margin-bottom:-20px; margin-top: -50px;"></iframe>
+                                </div>
+                                <div class="col-md-6 d-flex flex-column">
+                                    <div>
+                                        <h2 class="d-flex flex-row">
+                                            <span class="align-middle">Roma - Greccio</span>
+                                            &nbsp;
+                                            <span class="badge badge-pill badge-warning ml-auto align-middle">2023</span>
+                                        </h2>
+                                    </div>
+                                    <p class="card-text text-justify">Pellegrinaggio dedicato ai ragazzi del biennio delle scuole alla scoperta del <a href="https://it.wikipedia.org/wiki/Presepe_di_Greccio" target="_blank">primo presepe</a> 
+                                        creato da <a href="https://it.wikipedia.org/wiki/Francesco_d%27Assisi" target="_blank">San Francesco d'Assisi</a>.</p>
+                                    <a class="btn btn-outline-light mt-auto w-100" href="/juvenes/ultreya/greccio/" target="_blank">Mostra il percorso</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pellegrinaggio a Grenoble-Annecy -->
+                <div class="col-12 col-xxl-6 mb-5">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6" style="overflow: hidden;">
+                                    <iframe src="/juvenes/ultreya/annecy/index.html" frameborder="0" 
+                                    allowfullscreen width="100%" height="350px" 
+                                    style="border:0; margin-bottom:-20px; margin-top: -50px;"></iframe>
+                                </div>
+                                <div class="col-md-6 d-flex flex-column">
+                                    <div>
+                                        <h2 class="d-flex flex-row">
+                                            <span class="align-middle">Grenoble - Annecy</span>
+                                            &nbsp;
+                                            <span class="badge badge-pill badge-danger ml-auto align-middle">2022</span>
+                                        </h2>
+                                    </div>
+                                    <p class="card-text text-justify">Pellegrinaggio dedicato ai ragazzi del triennio delle scuole superiori sulle orme di <a href="https://it.wikipedia.org/wiki/Francesco_di_Sales" target="_blank">San Francesco di Sales</a>.</p>
+                                    <a class="btn btn-outline-light mt-auto w-100" href="/juvenes/ultreya/annecy/" target="_blank">Mostra il percorso</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pellegrinaggio a Trento-Treviso -->
+                <div class="col-12 col-xxl-6 mb-5">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6" style="overflow: hidden;">
+                                    <iframe src="/juvenes/ultreya/treviso/index.html" frameborder="0" 
+                                    allowfullscreen width="100%" height="350px" 
+                                    style="border:0; margin-bottom:-20px; margin-top: -50px;"></iframe>
+                                </div>
+                                <div class="col-md-6 d-flex flex-column">
+                                    <div>
+                                        <h2 class="d-flex flex-row">
+                                            <span class="align-middle">Trento - Treviso</span>
+                                            &nbsp;
+                                            <span class="badge badge-pill badge-warning ml-auto align-middle">2022</span>
+                                        </h2>
+                                    </div>
+                                    <p class="card-text text-justify">Pellegrinaggio dedicato ai ragazzi del biennio delle scuole superiori sulle orme del cuore di <a href="https://it.wikipedia.org/wiki/Francesco_di_Sales" target="_blank">San Francesco di Sales</a>.</p>
+                                    <a class="btn btn-outline-light mt-auto w-100" href="/juvenes/ultreya/trento/" target="_blank">Mostra il percorso</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pellegrinaggio a Firenze-Bologna -->
+                <div class="col-12 col-xxl-6 mb-5">
+                    <div class="card bg-dark text-white">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6" style="overflow: hidden;">
+                                    <iframe src="/juvenes/ultreya/bologna/index.html" frameborder="0" 
+                                    allowfullscreen width="100%" height="350px" 
+                                    style="border:0; margin-bottom:-20px; margin-top: -50px;"></iframe>
+                                </div>
+                                <div class="col-md-6 d-flex flex-column">
+                                    <div>
+                                        <h2 class="d-flex flex-row">
+                                            <span class="align-middle">Firenze - Bologna</span>
+                                            &nbsp;
+                                            <span class="badge badge-pill badge-danger ml-auto align-middle">2021</span>
+                                        </h2>
+                                    </div>
+                                    <p class="card-text text-justify">Pellegrinaggio dedicato ai ragazzi delle scuole superiori sulle orme di <a href="https://it.wikipedia.org/wiki/Domenico_di_Guzm%C3%A1n" target="_blank">San Domenico</a>.</p>
+                                    <a class="btn btn-outline-light mt-auto w-100" href="/juvenes/ultreya/bologna/" target="_blank">Mostra il percorso</a>
+                                    <a class="btn btn-outline-light mt-3 w-100" href="https://www.youtube.com/watch?v=fXIe7GrpYrY&list=PLPUfoAKtA_EDLupFZnHpXVbqmHcRjyU3-&ab_channel=CentroGiovaniJuvenes" target="_blank">Guarda i video</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div include-html="/components/footer.html"></div> 
 </body>
 </html>
